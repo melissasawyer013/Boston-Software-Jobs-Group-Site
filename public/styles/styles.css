@@ -250,6 +250,34 @@ body {
     border-bottom: 2px solid;
 }
 
+.navbar-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 160px;
+    background-color: var(--white);
+    box-shadow: 0px 8px 16px 0px;
+}
+
+.navbar-dropdown:hover {
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+.navbar-dropdown:hover .dropdown-content {
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;  
+}
+
 .whole-width-content-container-with-image-3 {
     display: flex;
     justify-content: center;
