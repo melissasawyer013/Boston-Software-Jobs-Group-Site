@@ -21,4 +21,8 @@ router.get('/organizations', (req, res) => {
     res.render('pages/organizations')
 })
 
+router.get('/add-org', (req, res) => {
+    res.render('pages/add-org')
+})
+
 module.exports = router;
