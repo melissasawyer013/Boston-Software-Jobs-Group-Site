@@ -1,3 +1,4 @@
+/* Variable */
 :root {
     --red: #CB352A;
     --light-grey: #A0A09E;
@@ -7,35 +8,14 @@
   }
 
 body {
-    background-color: var(--dark-grey);
+    background-color: var(--white);
     size: 100%;
     padding: 0;
     margin: 0;
     font-family: Lato, sans-serif;
 }
 
-/* We could do palettes */
-.palette-a {
-    background-color: var(--white);
-    color: var(--dark-grey);
-}
-
-.palette-b {
-    background-color: var(--white);
-    color: var(--red);
-}
-
-.palette-c {
-    background-color: var(--dark-grey);
-    color: var(--white);
-}
-
-.palette-d {
-    background-color: var(--dark-grey);
-    color: var(--red);
-}
-
-/* Or we could do classes for text color and background color separately (or both palettes & background/text color classes) */
+/* Background and Text Classes */
 .red-text {
     color: var(--red);
 }
@@ -60,7 +40,7 @@ body {
     background-color: var(--white);
 }
 
-.dark-greay-background {
+.dark-grey-background {
     background-color: var(--dark-grey);
 }
 
@@ -72,178 +52,46 @@ body {
     background-color: var(--black);
 }
 
-/* Navbar 1 */
-.navbar-logo-container-1 {
-    display: flex;
-    justify-content: center;
-    background-color: var(--white);
-    width: 100%;
-    padding: 10px 0;
-    /* flex-direction: column; */
-}
-
-.navbar-logo-container-1 img{
-    width: 280px;
-    height: 118px;
-}
-
-.navbar-links-container-1 {
-    display: flex;
-    justify-content: center;
-    background-color: var(--white);
-    align-items: baseline;
-}
-
-.navbar-links-container-1 a {
-    margin: 10px 10px;
-    padding: 5px;
-}
-
-.navbar-links-container-1 a:link,
-.navbar-links-container-1 a:visited {
-    color: var(--dark-grey);
-    text-decoration: none;
-}
-
-.navbar-links-container-1 a:hover,
-.navbar-links-container-1 a:focus,
-.navbar-links-container-1 a:active {
-    color: var(--red);
-    font-weight: bold;
-    text-decoration: none;
-    /* border: 2px solid var(--light-grey); */
-}
-
-.whole-width-content-container-with-image-1 {
-    display: flex;
-    justify-content: center;
-    background-image: url(../images/stock-image-coders-1-red-tint.jpg);
-    width: 100%;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.three-quarters-width-content-container-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 75%;
-    font-size: 200%;
-    color: var(--white);
-    text-align: center;
-    text-shadow: 2px 2px 30px var(--dark-grey);
-}
-
-/* Navbar 2 */
-.navbar-logo-container-2 {
-    display: flex;
-    justify-content: center;
-    background-color: #000000;
-    width: 100%;
-    padding: 10px 0;
-}
-
-.navbar-logo-container-2 img{
-    width: 280px;
-    height: 118px;
-}
-
-.navbar-links-container-2 {
-    display: flex;
-    justify-content: center;
-    background-color: #000000;
-    align-items: baseline;
-}
-
-.navbar-links-container-2 input {
-    display: flex;
-    height: 20px;
-    font-family: Font Awesome 5 Free;
-    margin-left: 10px;
-}
-
-.navbar-links-container-2 a {
-    margin: 10px 10px;
-    padding: 5px;
-}
-
-.navbar-links-container-2 a:link,
-.navbar-links-container-2 a:visited {
-    color: var(--white);
-    text-decoration: none;
-}
-
-.navbar-links-container-2 a:hover,
-.navbar-links-container-2 a:focus,
-.navbar-links-container-2 a:active {
-    color: var(--red);
-    font-weight: bold;
-    border: 2px solid var(--red);
-}
-
-.whole-width-content-container-with-image-2 {
-    display: flex;
-    justify-content: center;
-    background-image: url(../images/stock-image-coder-2.jpg);
-    width: 100%;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.three-quarters-width-content-container-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 75%;
-    font-size: 200%;
-    text-align: center;
-    text-shadow: 2px 2px 30px var(--red);
-}
-
-/* Navbar 3 */
-.navbar-container-3 {
+/* Navbar */
+.navbar-container {
     display: flex;
     width: 100%;
 }
 
-.navbar-logo-container-3 {
+.navbar-logo-container {
     display: flex;
     justify-content: center;
-    /* background-color: var(--white); */
     width: 20%;
     padding: 10px 0;
 }
 
-.navbar-logo-container-3 img{
+.navbar-logo-container img{
     width: 140px;
     height: 59px;
 }
 
-.navbar-links-container-3 {
+.navbar-links-container {
     display: flex;
     justify-content: flex-end;
     width: 80%;
     align-items: center;
+    margin-right: 20px;
 }
 
-.navbar-links-container-3 a {
+.navbar-links-container a {
     margin: 10px 10px;
     padding: 5px;
 }
 
-.navbar-links-container-3 a:link,
-.navbar-links-container-3 a:visited {
+.navbar-links-container a:link,
+.navbar-links-container a:visited {
     color: var(--dark-grey);
     text-decoration: none;
 }
 
-.navbar-links-container-3 a:hover,
-.navbar-links-container-3 a:focus,
-.navbar-links-container-3 a:active {
+.navbar-links-container a:hover,
+.navbar-links-container a:focus,
+.navbar-links-container a:active {
     color: var(--red);
     font-weight: bold;
     text-decoration: none;
@@ -260,7 +108,6 @@ body {
     position: absolute;
     z-index: 1;
     min-width: 160px;
-    background-color: var(--white);
     box-shadow: 0px 8px 16px 0px;
 }
 
@@ -278,7 +125,7 @@ body {
     display: block;  
 }
 
-.whole-width-content-container-with-image-3 {
+.whole-width-content-container-with-image {
     display: flex;
     justify-content: center;
     background-image: url(../images/stock-image-coders-1.jpg);
@@ -289,7 +136,7 @@ body {
     background-size: cover;
 }
 
-.three-quarters-width-content-container-3 {
+.three-quarters-width-content-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
