@@ -1,10 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-
-
 <!-- PROJECT INTRO -->
 <br />
 
@@ -14,7 +7,7 @@
     A MERN stack web application that lists all Boston companies and job for CodeSquad graduates.
     <br />
     <br />
-    <a href="#">View Demo (coming soon)</a>
+    <a href="#">View Demo</a>  (coming soon)
     ·
     <a href="https://github.com/melissasawyer013/Boston-Software-Jobs-Group-Site/issues">Report Bug</a>
   </p>
@@ -39,9 +32,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+A MERN stack web application that lists all Boston companies and job for CodeSquad graduates.
 
 
 ### Built With
