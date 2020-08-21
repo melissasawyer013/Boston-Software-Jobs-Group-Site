@@ -147,6 +147,83 @@ body {
     text-shadow: 2px 2px 30px var(--red);
 }
 
+/*footer 1st option*/
+/* .footerbar-container{
+    display: flex;
+    width: auto;
+    background-color: var(--light-grey);
+    padding: 10px;
+}
+
+.footer-socialmedia{
+    margin: 2px 0px 0px 1000px;   
+}
+
+.symbol{
+    font-size: 40px;
+}
+
+#footer-emailaddress{
+    display: flex;
+    justify-content: space-evenly;
+    margin: -55px 55px 35px 15px;
+    padding: 15px;
+}
+
+#footer-joinnow{
+    display: flex;
+    justify-content: space-evenly;
+    margin: -85px 0px 35px 255px;
+    padding: 15px;
+} */
+
+/*footer option 2*/
+style{
+    text-decoration: none;
+}
+
+.footerbar-container{
+    display: flex;
+    width: auto;
+    background-color: var(--light-grey);
+    color: var(--white);
+    padding: 10px;
+}
+.footer-container img{
+    width: 150px;
+    height: 120px;
+    margin: 0px 0px 135px 25px;
+}
+.footer-quicklinks {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;     
+}
+
+.footer-quicklinks a {
+    text-decoration: none;
+}
+
+.footer-quicklinks > div {
+    margin: -265px 0px 10px 125px;
+    padding: 5px; 
+}
+
+.footer-socialmedia{
+    margin:  -180px 0px 0px 1035px;  
+    padding: 2px; 
+}
+
+.symbol{
+    font-size: 40px;
+}
+
+
+
+
+
+
+
 
 
 
