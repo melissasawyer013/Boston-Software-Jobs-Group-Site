@@ -25,4 +25,8 @@ router.get('/add-org', (req, res) => {
     res.render('pages/add-org')
 })
 
+router.get('/style-guide', (req, res) => {
+  res.render('pages/style-guide')
+})
+
 module.exports = router;
