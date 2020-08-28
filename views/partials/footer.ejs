@@ -1,68 +1,64 @@
-<!--footer bar begins Option #1-->
-<!-- <footer class="footerbar" role="footer">
+<!--footer bar begins-->
+<footer class="footerbar" role="footer">
     <div class="footerbar-container light-grey-background">
         <div class="footer-container">
-            <h2>Join CodeSquad's Boston Software Job Network:</h1> 
+            <h2>Join CodeSquad's Boston Software Job Network:</h2> 
+            <a href="http://codesquad.org/" target="_blank" title="opens CodeSquad.org in a new tab">
+            <img src="images/Codesquad-logo-large.png" alt="CodeSquad Logo">
+            </a>
 
         <div class="footer-socialmedia">
             <h2>Follow us</h2>
             <a href="http://www.facebook.com/CodeSquadOrg"><i class="fab symbol fa-facebook-square"></i></a>
+            <a href="https://www.linkedin.com/company/codesquad.org/"><i class="fab symbol fa-linkedin"></i></a>
         </div>
 
+        <!--if the user is not login starts here-->
         <div class="footer-signup">
             <form id ="signup_form" action="/signup" method="POST" target="_blank">
             <input type="text" name="Email Address" id="footer-emailaddress" placeholder="Email Address">
             </form>
         </div>
 
+
         <div class="footer-joinnow">
-                <button id="footer-joinnow" class='btn btn-primary btn-large'>Join Now</button>  
+            <button id="footer-joinnow" class='btn btn-primary btn-large'>Join Now</button>  
         </div>  
+
+        <div class="footer-login">
+            <h4>Already have an account?</h4><a href="login">Login Here</a>
+        </div>
+        <!--if the user is not login ends here-->
+
+        <!--if the user is login starts here-->
+        <!-- <div class="footer-account-profile">
+            <h4>Welcome to Boston Software Job!</h4>
+            <a class="logout" href="#">Sign Out</a>
+        </div> -->
+        <!--if the user is login starts here-->
         
         <div class="reserved">
-            <h3>Copyright &#169; 2021| CodeSquad.org| All rights Reserved</h2>
+            <h3>Copyright &#169; 2021| CodeSquad.org| All rights Reserved</h3>
         </div>
-
-        </div>
-    </div>
-</footer> -->
-
-<!--footer bar begins Option #2-->
-<footer class="footerbar" role="footer">
-    <div class="footerbar-container light-grey-background">
-        <div class="footer-container">
-            <a href="http://codesquad.org/" target="_blank" title="opens CodeSquad.org in a new tab">
-                <img src="images/Codesquad-logo-large.png" alt="CodeSquad Logo">
-            </a>
-
+        
         <div class="footer-quicklinks">
-                <div>
-                    <h3>CodeSquad</h3>
-                        <li><a href="#">About</a></li>
-                </div>
+            <div>
+                <h3>CodeSquad</h3>
+                    <li><a href="about-us">About</a></li>
+            </div>
 
-                <div>
-                    <h3>Organizations</h3>
-                        <li><a href="#">All Organizations</a></li>
-                        <li><a href="#">Add Organizations</a></li>
-               </div>
+            <div>
+                <h3>Organizations</h3>
+                    <li><a href="organizations">All Organizations</a></li>
+                    <li><a href="add-org">Add Organizations</a></li>
+            </div>
 
-                <div>
-                    <h3>Cohorts</h3>
-                        <li><a href="#">Current Cohorts</a></li>
-                        <li><a href="#">Past Cohorts</a></li>
-                </div>
+            <div>
+                <h3>Graduates</h3>
+                    <li><a href="graduates">Graduates</a></li>
+            </div>
+
         </div>
-
-        <div class="footer-socialmedia">
-            <h4>Follow us <a href="http://www.facebook.com/CodeSquadOrg"><i class="fab symbol fa-facebook-square"></i></a>
-            </h4>
-        </div>
-
-        <div class="reserved">
-            <h4>Copyright &#169; 2021| CodeSquad.org| All rights Reserved</h4>
-        </div>
-
         </div>
     </div>
 </footer>
