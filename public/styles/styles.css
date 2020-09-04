@@ -1,4 +1,4 @@
-/* Variable */
+/* Variables */
 :root {
     --red: #CB352A;
     --light-grey: #A0A09E;
@@ -32,6 +32,10 @@ body {
     color: var(--light-grey);
 }
 
+.black-text {
+    color: var(--black);
+}
+
 .red-background {
     background-color: var(--red);
 }
@@ -50,6 +54,18 @@ body {
 
 .black-background {
     background-color: var(--black);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.font-size-130 {
+    font-size: 130%;
 }
 
 /* Navbar */
@@ -125,6 +141,7 @@ body {
     display: block;  
 }
 
+/* Containers */
 .whole-width-content-container-with-image {
     display: flex;
     justify-content: center;
@@ -136,7 +153,7 @@ body {
     background-size: cover;
 }
 
-.three-quarters-width-content-container {
+.three-quarters-width-content-container-text-over-img {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,6 +162,20 @@ body {
     color: var(--white);
     text-align: center;
     text-shadow: 2px 2px 30px var(--red);
+}
+
+.content-container-whole-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-container-width-70 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 50px;
+    padding: 25px;
 }
 
 
