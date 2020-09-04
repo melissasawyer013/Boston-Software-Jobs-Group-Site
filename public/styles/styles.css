@@ -148,14 +148,52 @@ body {
 }
 /* Footer begins here */
 .footerbar-container{
-    display: flex;
-    width: auto;
     background-color: var(--light-grey);
-    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+.footer-socialmedia{
+    margin:  -120px 0px 0px 1035px;  
+    padding: 2px; 
+}
+
+.footer-socialmedia > a{
+    text-decoration-line: none;
+    font-weight: bold;
 }
 
 .symbol{
     font-size: 40px;
+}
+
+.footer-quicklinks-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;      
+}
+
+.footer-quicklinks-container > a {
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: var(--black);
+    margin: -200px;
+}
+
+.footer-quicklinks-container a:hover,
+.footer-quicklinks-container a:focus,
+.footer-quicklinks-container a:active {
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+.footer-links-container a:link,
+.footer-links-container a:visited {
+    color: var(--dark-grey);
+    text-decoration: none;
 }
 
 #footer-emailaddress{
@@ -172,41 +210,10 @@ body {
     padding: 15px; 
 } 
 
-.footerbar-container{
-    display: flex;
-    width: auto;
-    background-color: var(--light-grey);
-    color: var(--white);
-    padding: 10px;
-}
 .footer-container img{
     width: 150px;
     height: 120px;
     margin: 0px 0px 135px 25px;
-}
-.footer-quicklinks {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;     
-}
-
-.footer-quicklinks a {
-    text-decoration: none;
-}
-
-.footer-quicklinks > div {
-    margin: -365px 0px 10px 125px;
-    padding: 5px; 
-}
-
-.footer-socialmedia{
-    margin:  -120px 0px 0px 1035px;  
-    padding: 2px; 
-}
-
-.footer-socialmedia > a{
-    text-decoration-line: none;
-    font-weight: bold;
 }
 
 style{
@@ -218,13 +225,15 @@ h2{
 }
 
 h3{
-    color: var(--black);
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--black);   
 }
 
 h4{
     color: var(--black);
 }
-
+/* Footer begins here */
 
 
 
