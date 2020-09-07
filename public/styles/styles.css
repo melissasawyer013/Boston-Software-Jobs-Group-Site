@@ -153,32 +153,45 @@ body {
     width: auto;
 }
 
+.footerbar-container h2{
+    margin: 0px 0px 0px 32px;
+}
+
+.footerbar-container img{
+    width: 180px;
+    height: 150px;
+    margin: 25px 15px 0px 35px;
+}
+
 .footer-socialmedia{
-    margin:  -120px 0px 0px 1035px;  
+    margin: -110px 0px 0px 1035px;  
     padding: 2px; 
 }
 
-.footer-socialmedia > a{
-    text-decoration-line: none;
-    font-weight: bold;
+.footer-socialmedia > h2{
+    color: var(--black);
+    margin: 0px 35px 0px 0px;
 }
 
-.symbol{
+.footer-socialmedia .symbol{
+    margin: 5px;
     font-size: 40px;
 }
 
 .footer-quicklinks-container {
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;      
+    justify-content: center;
+    margin: -115px 85px 0px 0px;
+    padding: 2px;
 }
 
-.footer-quicklinks-container > a {
-    display: flex;
+.footer-quicklinks-container a {
+    display: list-item;
     justify-content: space-evenly;
+    text-align: left;
     text-decoration: none;
     color: var(--black);
-    margin: -200px;
+    margin: 3px;
 }
 
 .footer-quicklinks-container a:hover,
@@ -187,53 +200,77 @@ body {
     color: var(--red);
     font-weight: bold;
     text-decoration: none;
-    border-bottom: 2px solid;
+    border-bottom: solid;
 }
-
-.footer-links-container a:link,
-.footer-links-container a:visited {
-    color: var(--dark-grey);
-    text-decoration: none;
-}
-
-#footer-emailaddress{
+/*footer user logged out css begins here*/
+.footer-signup{
     display: flex;
     justify-content: space-evenly;
-    margin: -55px 55px 35px 15px;
-    padding: 15px;
-}
-
-#footer-joinnow{
-    display: flex;
-    justify-content: space-evenly;
-    margin: -85px 0px 35px 255px;
-    padding: 15px; 
+    margin: 85px 1100px 25px 0px;
+    padding: 3px;
 } 
 
-.footer-container img{
-    width: 150px;
-    height: 120px;
-    margin: 0px 0px 135px 25px;
+.footer-signup input{
+    width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 1px;
+	margin-bottom: 16px;
+    font-weight: bold;
 }
-
-style{
-    text-decoration: none;
-}
-
-h2{
-    color: var(--black);
-}
-
-h3{
+#footer-joinnow {
     display: flex;
-    justify-content: space-evenly;
+    margin: -80px 0px 10px 285px;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;  
+}   
+
+.footer-login > h4 {
+    margin: 5px 0px 25px 35px;
+}
+
+.footer-login > a{
+    text-decoration: none;
+    margin: 80px 0px 15px 35px;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.footer-login a:hover{
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: solid;
+}
+/*footer user logged out css begins here*/
+
+/*footer user login css begins here*/
+.footer-account-profile > h4{
+    margin: 5px 0px 15px 320px;
+    padding: 5px;
+    font-size: 20px;
+} 
+
+#footer-account-profile{
+    display: flex;
+    margin: -10px 0px 15px 325px;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;  
+}
+
+.reserved > h3{
     color: var(--black);   
 }
-
-h4{
-    color: var(--black);
-}
-/* Footer begins here */
+/*footer user login css ends here*/
+/* Footer ends here */
 
 
 

@@ -1,55 +1,86 @@
 <!--footer bar begins-->
 <footer class="footerbar" role="footer">
     <div class="footerbar-container">
-        <div class="footer-container">
-            <h2>Join CodeSquad's Boston Software Job Network:</h2> 
-            <a href="/" target="_blank" title="opens BSJ's home page in a new tab">
-            <img src="images/BSJ-logo.png" alt="BSJ Logo">
-            </a>
-
-        <div class="footer-socialmedia">
-            <h2>Follow us</h2>
-            <a href="http://www.facebook.com/CodeSquadOrg"><i class="fab symbol fa-facebook-square"></i></a>
-            <a href="https://www.linkedin.com/company/codesquad.org/"><i class="fab symbol fa-linkedin"></i></a>
-        </div>
-
-       
-        <div class="footer-quicklinks-container">
-            <a href="about-us">ABOUT US</a>
-            <a href="">ALL COMPANIES</a>
-            <a href="">INDIVIDUAL COMPANY</a>
-            <a href="graduates">GRADUATES</a>
-            <a href="login">LOGIN</a>
-        </div>
-
-        <!--if the user is not login starts here-->
-        <div class="footer-signup">
-            <form id ="signup_form" action="/signup" method="POST" target="_blank">
-            <input type="text" name="Email Address" id="footer-emailaddress" placeholder="Email Address">
-            </form>
-        </div>
-
-        <div class="footer-joinnow">
-            <button id="footer-joinnow" class='btn btn-primary btn-large'>Join Now</button>  
-        </div>  
-
-        <div class="footer-login">
-            <h4>Already have an account?</h4><a href="login">Login Here</a>
-        </div>
-        <!--if the user is not login ends here-->
-
-        <!--if the user is login starts here-->
-        <!-- <div class="footer-account-profile">
-            <h4>Welcome to Boston Software Job!</h4>
-            <a class="logout" href="#">Sign Out</a>
-        </div>
-        
-        <div class="reserved">
-            <h3>Copyright &#169; 2021| CodeSquad.org| All rights Reserved</h3>
-        </div>
-      
-        </div> -->
+        <h2>Join CodeSquad's Boston Software Job Network:</h2> 
+        <a href="/" target="_blank" title="opens BSJ's home page in a new tab">
+        <img src="images/BSJ-logo.png" alt="BSJ Logo">
+        </a>
+ 
+    <div class="footer-socialmedia">
+        <h2>Follow us:</h2>
+        <a href="http://www.facebook.com/CodeSquadOrg"><i class="fab symbol fa-facebook-square"></i></a>
+        <a href="https://www.linkedin.com/company/codesquad.org/"><i class="fab symbol fa-linkedin"></i></a>
     </div>
-</div>
+   
+    <!--if the user is not login starts here-->
+    <div class="footer-quicklinks-container">
+        <ul class>
+            <strong>BSJ</strong>
+                <li><a href="about-us">About Us</a></li>
+        </ul>
+        
+        <ul class>
+            <strong>VIEW COMPANIES</strong>
+                <li><a href="">All Companies</a></li>
+                <li><a href="">Individual Company</a></li>
+        </ul>
+       
+        <ul class>
+            <strong>SEARCH</strong>  
+                <li><a href="">Companies</a></li>
+                <li><a href="graduates">Graduates</a></li>
+        </ul> 
+    </div>
+
+    <div class="footer-signup">
+        <form id ="form" action="/signup" method="POST" autocomplete="off">
+        <input type="text" placeholder="Email Address" required>
+        </form> 
+    </div>
+
+    <div class="footer-joinnow"> 
+        <button id="footer-joinnow" class='btn btn-primary btn-large'>Join Now</button>  
+    </div>  
+
+    <div class="footer-login">
+        <h4>Already have an account?</h4>
+            <a href="login">Login Here</a>
+    </div> 
+    <!--if the user is not login ends here-->
+
+    <!--if the user is login starts here-->
+    <!-- <div class="footer-quicklinks-container">
+        <ul class>
+            <strong>HOME</strong>
+                <li><a href="/">Add an Experience</a></li>
+                <li><a href="">CodeSquad Graduates</a></li>
+        </ul>
+        
+        <ul class>
+            <strong>INDIVIDUAL COMPANY</strong>
+                <li><a href="graduates">View Graduate's Company</a></li>
+                <li><a href="add-org">Add a Company</a></li>
+                <li><a href="add-exp">Add an Experience</a></li>
+        </ul>
+       
+        <ul class>
+            <strong>USER LOGIN</strong>  
+                <li><a href="">User Profile</a></li>
+                <li><a href="forgotpwd">Forgot Password</a></li>
+        </ul> 
+    </div>
+
+    <div class="footer-account-profile">
+        <h4>Welcome to Boston Software Jobs!</h4>
+        <button id="footer-account-profile" class='btn btn-primary btn-large'>Sign Out</button>  
+    </div>
+        
+    <div class="reserved">
+        <h3>Copyright &#169; 2021| CodeSquad.org| All rights Reserved</h3>
+    </div>  
+       -->
+   </div>
 
 </footer>
+</body>
+</html>
