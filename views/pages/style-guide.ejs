@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boston Software Jobs Database Style Guide & Pattern Library</title>
+  <link rel="stylesheet" type="text/css" href="styleguide.css">
+  <style>
+    h2.cat {
+      background-color:lightseagreen;
+      padding: .5em;
+      margin: 0;
+    }
+    h3.sub-cat {
+      background-color: #c8f5f3;
+      padding: .5em;
+      margin: 0;
+    }
+    .wrapper-bg {
+      display: flex;
+      flex-direction: row;
+    }
+    .wrapper-bg div {
+      width: 150px;
+      padding: 3em;
+      margin: 1em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Boston Software Jobs Database Style Guide &amp; Pattern Library</h1>
+  <p>To maintain brand consistency, this project adheres to the same fonts and color palette as the main <a href="https://www.codesquad.org/">CodeSquad website</a>.</p>
+
+  <h2 class="cat">Branding</h2>
+  <h3 class="sub-cat">Logo</h3>
+  <a href="http://codesquad.org/" target="_blank" title="opens CodeSquad.org in a new tab">
+    <img src="images/Codesquad-logo-large.png" alt="CodeSquad Logo">
+  </a>
+  <h3 class="sub-cat">Landing Page</h3>
+  <div class="whole-width-content-container-with-image">
+        <div class="three-quarters-width-content-container-text-over-img">
+            <h1>Explore Coding Jobs<br>Make Connections</h1>
+            <p>Find out where CodeSquad graduates are working and interviewing and make connections.</p>
+        </div>  
+    </div>
+  <h3 class="sub-cat">Other</h3>
+  <p>TBD</p>
+  
+  <h2 class="cat">Background Colors</h2>
+  <div class="wrapper-bg">
+    <div class="red-background"></div>
+    <div class="dark-grey-background"></div>
+    <div class="light-grey-background"></div>
+    <div class="black-background"></div>
+    <div class="white-background"></div>
+  </div>
+
+  <h2 class="cat">Typography</h2>
+  <h3 class="sub-cat">Font</h3>
+  <p><a href="https://fonts.google.com/specimen/Lato">Lato</a>, sans serif</p>
+  <h3 class="sub-cat">Font Size</h3>
+  <p>Medium</p>
+  <h3 class="sub-cat">Font Weight</h3>
+  <p>700</p>
+  <h3 class="sub-cat">Font Spacing</h3>
+  <p>TBD</p>
+  <h3 class="sub-cat">Links</h3>
+  <h4>Not Visited</h4>
+  <p><span class="gray">Gray</span>: rgb(160, 160, 158)</p>
+  <h4>Active</h4>
+  <h4>Hover</h4>
+  <h4>Visited</h4>
+  <h3 class="sub-cat">Headings</h3>
+  <h4>H1</h4>
+  <p>Color: black</br>
+    Font Size: xx-large</br>
+    Font Weight: bold</br>
+    Line Height: 1.3</p>
+  <h4>H2</h4>
+  <p>Color: red</br>
+  Font Size: xx-large</br>
+  Font Weight: bold</br>
+  Text Transform: uppercase</p>
+  <h4>H3</h4>
+  <p>Font Size: x-large</br>
+  Font Weight: bold</br>
+  Text Transform: uppercase</p>
+  <h4>H4</h4>
+  <p>Font Size: x-large</p>
+  <h4>H5</h4>
+  <p>Font Size: large</br>
+  Font Weight: bold</p>
+  <h4>H6</h4>
+  <p>TBD</p>
+  <h3 class="sub-cat">Lists</h3>
+  <h4>Ordered (OL)</h4>
+  <h4>Unordered (UL)</h4>
+
+  <h2 class="cat">Iconography</h2>
+  <p><a href="https://fontawesome.com/">Font Awesome</a></p>
+  <p>Display icons here for home, etc.</p>
+
+  <h2 class="cat">Base Styles &amp; Pattern Library</h2>
+  <h3 class="sub-cat">Buttons</h3>
+  <h4>Submit</h4>
+  <h4>Add</h4>
+  <h4>Other</h4>
+  <h3 class="sub-cat">Forms</h3>
+  <h4>Company Data</h4>
+  <h4>CodeSquad Graduate Data (User Profiles)</h4>
+  <h3 class="sub-cat">Cards</h3>
+  <h4>Tech Companies</h4>
+  <h4>CodeSquad Graduates</h4>
+  <h3 class="sub-cat">Partials</h3>
+  <h4>Header</h4>
+  <h4>Footer</h4>
+  <h4>Navigation Bar</h4>
+  <%- include('../partials/header') %> 
+  <h3 class="sub-cat">Images</h3>
+  <h4>Hero</h4>
+  <h4>User Avatars</h4>
+  <h3 class="sub-cat">Pagination</h3>
+
+  <h2 class="cat">Page Layouts &amp; Templates</h2>
+
+  <h2 class="cat">Spelling, Grammar, &amp; Formatting</h2>
+  <ul>
+    <li>One space (not two) after each sentence.</li>
+  </ul>
+
+</body>
+</html>
