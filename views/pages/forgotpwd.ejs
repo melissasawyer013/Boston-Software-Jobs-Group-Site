@@ -1,0 +1,24 @@
+<!-- Navbar -->
+<%- include('../partials/header')-%>
+<!-- Page Content Starts -->
+
+<div id="forgotpwd-container">
+    <div class="forgotpwd">
+        <h2>Forgot your Password?</h2>
+        <h4>We can send you reset instructions.</h4>
+        <form id = "forgotpwd_form" action="/add" method="POST" autocomplete="off">
+            <input type="text" name="username" id="username" placeholder= "Username" required>
+            <br>
+            <input type="text" name="emailaddress" id="emailaddress" value="" placeholder= "Email Address" required>
+            <br>
+        </form>
+    
+    <div class="resetpwd">
+        <button id="resetpwd" class='btn btn-primary btn-large'>Reset Password</button>
+    </div>
+
+    </div>
+
+</div>
+
+<%- include('../partials/footer')-%>

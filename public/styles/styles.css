@@ -272,7 +272,38 @@ body {
 /*footer user login css ends here*/
 /* Footer ends here */
 
+/*forgot pwd starts here*/
+#forgotpwd-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: grey;
+    padding: 10px;
+	margin: 0px 50px 0px 430px;
+	width: 480px;
+	height: 250px;
+}
 
+.forgotpwd > h2, h4{
+    text-align: center;
+}
+
+.forgotpwd input{
+    width: auto;
+    height: 35px;
+    border: 1px solid;
+    font-weight: bold;
+    margin: 0px 100px 15px 95px; 
+}
+
+.resetpwd button{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: 0px 0px 35px 120px;
+    border-radius: 12px;
+}
+/*forgot pwd ends here*/
 
 
 
