@@ -388,3 +388,29 @@ ul.org-card {
     margin-top: 50px;
     padding-top: 10px;
 }
+
+/* add-experience css starts here */
+.addexperience{
+	margin: 5x 50px 0px 30px;
+	
+}
+
+.addexperience > h2{
+    text-align: center;
+    margin: 55px 0px 25px 150px;
+}
+
+.addexperience label[for=text] {
+    margin: 5px 15px 15px 50px;
+}
+
+.addexperience input[type=text] {
+    width: 90%;
+    padding: 5px;
+    margin: 5px 15px 15px 50px;
+}
+
+.addexp-submit {
+   margin: 5px 15px 15px 50px;
+}  
+/* add-experience css ends here */

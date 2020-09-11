@@ -1,0 +1,27 @@
+<!-- Navbar -->
+<%- include('../partials/header')-%>
+<!-- Page Content Starts -->
+
+<div class="addexperience">
+    <h2>Add-in your work experiences.</h2>
+    <form id = "form" action="/contact" method="POST" autocomplete="off">
+        <label for="text">Company Name:</label>
+        <input type="text" id="company_name" name="Company Name" placeholder="Please input the name of your Company." required>
+        <br>
+        <label for="text">CodeSquad Alum's name:</label>
+        <input type="text" id="your_name" name="Your Name" placeholder="Please input your full name." required>
+        <br>
+        <label for="text">Tech Stacks:</label>
+        <input type="text" id="tech_stack" name="Tech Stacks" placeholder="Please input technologies your company utilized to build applications." required>
+        <br>
+        <label for="text">Experience</label>
+        <input type="text" id="experience" name="Experience" placeholder="Please input about your interview process at your company." required>
+        <br>
+    </form>
+
+    <div class="addexp-submit">
+        <button id="addexp-submit" class='button'>Submit</button>
+    </div>
+</div>
+
+<%- include('../partials/footer')-%>
