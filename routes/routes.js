@@ -29,4 +29,17 @@ router.get('/style-guide', (req, res) => {
   res.render('pages/style-guide')
 })
 
+router.get('/graduate-card', (req, res) => {
+    res.render('pages/graduate-card')
+  })
+
+  router.get('/organization-card', (req, res) => {
+    res.render('pages/organization-card')
+  })
+
+router.get('/forgotpwd', (req, res) =>{
+  res.render('pages/forgotpwd')
+})
+
+
 module.exports = router;
