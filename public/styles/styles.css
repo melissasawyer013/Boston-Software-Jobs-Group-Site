@@ -310,11 +310,18 @@ body {
     margin: 50px 100px;
     border: 2px solid rgb(203, 53, 36);
     padding: 10px;
+    display: flex;
+ }
+ .grad-card-left-container {
+    width: 50%;
 }
 
-.grad-card-headshot-contacts-container {
-    display: flex;
-    justify-content: space-between;
+.grad-card-right-container {
+    width: 50%;
+    text-align: right;
+}
+.grad-card-right-container ul {
+    list-style-type: none;
 }
 
 .grad-card-headshot {
@@ -388,3 +395,32 @@ ul.org-card {
     margin-top: 50px;
     padding-top: 10px;
 }
+
+
+/* Search Page Starts here */
+.search-results-main-container h1 {
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+}
+.search-form input {
+    margin-right: 5px;
+}
+.org-name-and-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.org-name-and-logo-container a {
+    margin-right: 20px;
+}
+.top-half-page {
+    margin: auto;
+}
+
+.bottom-half-page {
+margin-left: 20px;
+}
+/* Search Page Ends Here */
