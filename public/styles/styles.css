@@ -5,6 +5,7 @@
     --dark-grey: #343434;
     --white: #ffffff;
     --black: #000000;
+    --light-light-grey: #f1f1f1;
   }
 
 body {
@@ -66,6 +67,10 @@ body {
 
 .font-size-130 {
     font-size: 130%;
+}
+
+.border-black-1pt {
+    border: 1pt solid var(--black);
 }
 
 /* Navbar */
@@ -299,8 +304,16 @@ body {
     display: flex;
     flex-direction: column;
     width: 70%;
-    margin: 50px;
+    margin: 50px 50px 0 50px;
     padding: 25px;
+}
+
+.container-whole-width-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10%;
 }
 /*can be use for other format ends here*/
 
@@ -317,7 +330,7 @@ body {
     justify-content: space-between;
 }
 
-.grad-card-headshot {
+.grad-card-headshot img { 
     width: 100px; 
     height: 100px;
     border: 1px solid black;
@@ -329,6 +342,18 @@ body {
     padding: 50px;
     margin: 20px;
 }
+
+.image-graduates-headshot {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
 
 /* Responsive Design for Grad Cards starts here*/
 @media only screen and (max-width: 600px) {
@@ -387,4 +412,64 @@ ul.org-card {
     border: 1px solid grey;
     margin-top: 50px;
     padding-top: 10px;
+}
+
+
+/* collapsibles */
+
+.collapsible-button {
+    background-color: var(--red);
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-size: 20pt;
+    vertical-align: middle;
+    border: none;
+    text-align: center;
+    align-items: center;
+    outline: none;
+    /* align-self: flex-start; */
+  }
+  
+.active, .collapsible-button:hover .collapsible-button:active .collapsible-button:focus {
+    background-color: var(--white);
+    color: var(--red);
+    border: 1pt solid var(--red);
+}
+  
+.content {
+    margin: 18px 0 0 0;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--light-light-grey);
+}
+
+.container-collapsible-content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+}
+
+.container-collapsible-column {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 10px 20px 0 10px;
+}
+
+.container-collapsible-column a:link,
+.container-collapsible-column a:visited {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.container-collapsible-column a:hover,
+.container-collapsible-column a:focus,
+.container-collapsible-column a:active {
+    color: var(--red);
+    font-weight: bold;
+    /* text-decoration: underline; */
+    /* border-bottom: 2px solid; */
 }
