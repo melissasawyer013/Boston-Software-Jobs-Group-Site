@@ -295,7 +295,7 @@ body {
     border-radius: 5px;
     background-color: grey;
     padding: 10px;
-	margin: 0px 50px 0px 430px;
+	margin: 55px 50px 25px 430px;
 	width: 480px;
 	height: 250px;
 }
@@ -309,14 +309,14 @@ body {
     height: 35px;
     border: 1px solid;
     font-weight: bold;
-    margin: 0px 100px 15px 95px; 
+    margin: 10px 100px 15px 95px; 
 }
 
 .resetpwd button{
     display: flex;
     width: auto;
     height: auto;
-    margin: 0px 0px 35px 120px;
+    margin: 15px 0px 35px 120px;
     border-radius: 12px;
 }
 /*forgot pwd ends here*/
