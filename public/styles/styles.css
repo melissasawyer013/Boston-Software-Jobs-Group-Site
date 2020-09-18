@@ -165,7 +165,6 @@ body {
 }
 /* Footer begins here */
 .footerbar-container{
-    background-color: var(--light-grey);
     height: auto;
     width: auto;
 }

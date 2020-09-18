@@ -12,27 +12,40 @@
         <a href="https://www.linkedin.com/company/codesquad.org/"><i class="fab symbol fa-linkedin"></i></a>
     </div>
    
-    <!--if the user is not login starts here-->
-    <!-- <div class="footer-quicklinks-container">
-        <ul class>
-            <strong>BSJ</strong>
-                <li><a href="about-us">About Us</a></li>
-        </ul>
-        
-        <ul class>
-            <strong>VIEW COMPANIES</strong>
-                <li><a href="">All Companies</a></li>
-                <li><a href="">Individual Company</a></li>
-        </ul>
-       
-        <ul class>
-            <strong>SEARCH</strong>  
-                <li><a href="">Companies</a></li>
-                <li><a href="graduates">Graduates</a></li>
+    <div class="footer-quicklinks-container">
+        <ul class="footer-links">
+            <strong>QuickLinks</strong>
+            <li><a href="about-us">About Us</a></li>
+           
+            <li class="dropdown-footer">
+                <a href="#" class="dropdown-toogle"data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Organizations<span class="footer-org"></span></a> 
+                <ul class="footer-dropdown-menu-org" id="footerOrgdropdown">
+                    <li><a href="">All Organizations</a></li>
+                    <li><a href="">An individual Organization</a></li>
+                </ul>
+            </li>
+    <!-- if logged in only starts here-->
+            <li>
+                <a href="#" class="dropdown-toogle"data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                   Graduates<span class="footer-org"></span></a> 
+                   <ul class="footer-dropdown-menu-org" id="footerOrgdropdown">
+                    <li><a href="">Add a Company</a></li>
+                    <li><a href="">Add an Experience</a></li>
+                    </ul>
+            </li> 
+            <li class="dropdown-footer">
+                <a href="#" class="dropdown-toogle"data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Login<span class="footer-org"></span></a> 
+                <ul class="footer-dropdown-menu-org" id="footerlogindropdown">
+                    <li><a href="">User Profile</a></li>
+                    <li><a href="">Forgot Password</a></li>
+                </ul>
+            </div>
         </ul> 
     </div>
-
-    <div class="footer-signup">
+     <!--if the user is not login starts here-->
+    <!-- <div class="footer-signup">
         <form id ="form" action="/signup" method="POST" autocomplete="off">
         <input type="text" placeholder="Email Address" required>
         </form> 
@@ -45,30 +58,8 @@
     <div class="footer-login">
         <h4>Already have an account?</h4>
             <a href="login">Login Here</a>
-    </div>  -->
+    </div>    -->
     <!--if the user is not login ends here-->
-
-    <!--if the user is login starts here-->
-    <div class="footer-quicklinks-container">
-        <ul class>
-            <strong>HOME</strong>
-                <li><a href="/">Add an Experience</a></li>
-                <li><a href="">CodeSquad Graduates</a></li>
-        </ul>
-        
-        <ul class>
-            <strong>INDIVIDUAL COMPANY</strong>
-                <li><a href="graduates">View Graduate's Company</a></li>
-                <li><a href="add-org">Add a Company</a></li>
-                <li><a href="add-exp">Add an Experience</a></li>
-        </ul>
-       
-        <ul class>
-            <strong>USER LOGIN</strong>  
-                <li><a href="">User Profile</a></li>
-                <li><a href="forgotpwd">Forgot Password</a></li>
-        </ul> 
-    </div>
 
     <div class="footer-account-profile">
         <h4>Welcome to Boston Software Jobs!</h4>
@@ -78,7 +69,7 @@
     <div class="reserved">
         <h3>Copyright &#169; 2021| CodeSquad.org| All rights Reserved</h3>
     </div>  
-      
+     
    </div>
 
 </footer>
