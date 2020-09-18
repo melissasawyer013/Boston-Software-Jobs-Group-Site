@@ -388,3 +388,41 @@ ul.org-card {
     margin-top: 50px;
     padding-top: 10px;
 }
+
+/*add-org starts here*/
+.addorg{
+    border: 3px groove;
+    border-radius: 25px;
+    margin: 95px 125px 65px 125px;
+    border-color: red;
+}
+
+.addorgName> h2{
+    text-align: center;
+    font-size: 55px;
+    margin: 15px 0px 25px 0px;
+}
+
+.addorgImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: auto; 
+    border-radius: 15px;
+    border: 15px groove;
+} 
+
+.addorgHomepg{
+    text-align: center;
+    font-size: 35px;
+    margin: 15px 0px 25px 0px;
+}
+
+.addorgHomepg a:link{
+    color: var(--dark-grey);
+    text-decoration: none;
+}
+/*add-org ends here*/
+
+
