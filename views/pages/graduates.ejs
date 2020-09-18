@@ -1,11 +1,263 @@
 <!-- Navbar -->
 <%- include('../partials/header')-%>
 <!-- Page Content Starts -->
-<div class="whole-width-content-container-with-image-2">
-    <div class="three-quarters-width-content-container-2">
-        <h1 class="white-text">Explore Coding Jobs<br>Make Connections</h1>
-        <p class="white-text">Find out where CodeSquad graduates are working and interviewing and make connections.</p>
-    </div>  
+<div class="content-container-whole-page">
+    <div class="content-container-width-70">
+        <h1 class="red-text text-center">CODESQUAD GRADS</h1>
+        <br>
+        <p class="font-size-130">Click on the plus button next to each graduate's name to see their contact information, bio, where they work, where they've worked in the past, and where they've interviewed. Use this page to reach out and network with past grads, especially if they've interviewed at an organization where you're interested in applying or if they've worked there in the past or work there presently.</p>
+    </div>
+    <!-- THE FOLLOWING DIV CAN BE TURNED INTO A PARTIAL AND A LOOP CAN BE USED HERE TO ACCESS NAMES, INDIVIDUAL INFORMATION, PHOTOS, ETC. FROM THE DATABASE -->
+    <div class="content-container-width-70 border-black-1pt">
+        <div class="container-whole-width-row">
+            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Angulo.jpeg)"></div>
+            <h2 class="red-text text-center">Irving Angulo <br>2018 Cohort</h2>
+            <button type="button" class="collapsible-button">+</button>
+        </div>
+        <div class="content">
+            <div class="container-collapsible-content">
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CONTACT INFO</h4>
+                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                    <h4 class="red-text">BIO</h4>
+                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                </div>
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CURRENT EMPLOYER</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">INTERVIEWED WITH</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
+    <div class="content-container-width-70 border-black-1pt">
+        <div class="container-whole-width-row">
+            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Beckford.jpg)"></div>
+            <h2 class="red-text text-center">Anthony Beckford <br>2019 Cohort</h2>
+            <button type="button" class="collapsible-button">+</button>
+        </div>
+        <div class="content">
+            <div class="container-collapsible-content">
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CONTACT INFO</h4>
+                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                    <h4 class="red-text">BIO</h4>
+                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                </div>
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CURRENT EMPLOYER</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">INTERVIEWED WITH</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
+    <div class="content-container-width-70 border-black-1pt">
+        <div class="container-whole-width-row">
+            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Becquart.jpeg)"></div>
+            <h2 class="red-text text-center">Ninon Becquart <br>2018 Cohort</h2>
+            <button type="button" class="collapsible-button">+</button>
+        </div>
+        <div class="content">
+            <div class="container-collapsible-content">
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CONTACT INFO</h4>
+                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                    <h4 class="red-text">BIO</h4>
+                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                </div>
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CURRENT EMPLOYER</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">INTERVIEWED WITH</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
+    <div class="content-container-width-70 border-black-1pt">
+        <div class="container-whole-width-row">
+            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Cruz.jpg)"></div>
+            <h2 class="red-text text-center">Melissa Cruz <br>2018 Cohort</h2>
+            <button type="button" class="collapsible-button">+</button>
+        </div>
+        <div class="content">
+            <div class="container-collapsible-content">
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CONTACT INFO</h4>
+                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                    <h4 class="red-text">BIO</h4>
+                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                </div>
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CURRENT EMPLOYER</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">INTERVIEWED WITH</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
+    <div class="content-container-width-70 border-black-1pt">
+        <div class="container-whole-width-row">
+            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Easington.jpg)"></div>
+            <h2 class="red-text text-center">Tahj Easington <br>2019 Cohort</h2>
+            <button type="button" class="collapsible-button">+</button>
+        </div>
+        <div class="content">
+            <div class="container-collapsible-content">
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CONTACT INFO</h4>
+                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                    <h4 class="red-text">BIO</h4>
+                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                </div>
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CURRENT EMPLOYER</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">INTERVIEWED WITH</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
+    <div class="content-container-width-70 border-black-1pt">
+        <div class="container-whole-width-row">
+            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Freeman.jpeg)"></div>
+            <h2 class="red-text text-center">Clydies Freeman<br>2018 Cohort</h2>
+            <button type="button" class="collapsible-button">+</button>
+        </div>
+        <div class="content">
+            <div class="container-collapsible-content">
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CONTACT INFO</h4>
+                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                    <h4 class="red-text">BIO</h4>
+                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                </div>
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CURRENT EMPLOYER</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">INTERVIEWED WITH</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
+    <div class="content-container-width-70 border-black-1pt">
+        <div class="container-whole-width-row">
+            <div class="image-graduates-headshot" style="background-image: url(/images/headshot.jpg)"></div>
+            <h2 class="red-text text-center">Lois Simpson <br>2020 Cohort</h2>
+            <button type="button" class="collapsible-button">+</button>
+        </div>
+        <div class="content">
+            <div class="container-collapsible-content">
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CONTACT INFO</h4>
+                    <p>lsimpson@gmail.com<br>github.com/lsimpson<br>www.linkedin.com/in/lois-simpson<br>617-283-4555</p>
+                    <h4 class="red-text">BIO</h4>
+                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                </div>
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">CURRENT EMPLOYER</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                    <h4 class="red-text">INTERVIEWED WITH</h4>
+                    <ul>
+                        <a href="#"><li>Company Name link + position</li></a>
+                        <a href="#"><li>Company Name link + position</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
 </div>
-    <p style="text-align: center;" class="black-text">Graduates Page - wouldn't have this picture, but wanted to show different options.</p>
+
+
+
+
+
+
 <%- include('../partials/footer')-%>

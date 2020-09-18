@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const app = express();
+
+app.use("/static", express.static('./static/'));
 
 // router.get('/about-us', (req, res) => {
 //     res.render('/about-us');
