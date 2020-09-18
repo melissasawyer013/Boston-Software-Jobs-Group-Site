@@ -1,0 +1,43 @@
+
+<%-include('../partials/header')-%>
+<div class="content-container-whole-page user-profile">
+        <form>
+        <div class="flex-container">
+
+            <div class="column-left">
+                <label for="pic">Image:</label><br>
+                <input type="file" name="pic" ><br>
+                <label for="name">Name:*</label><br>
+                <input type="text" id="flname" name="name"required><br>
+                <label for="email">Email:*</label><br>
+                <input type="text" id="flname" name="email" required><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" name="phone"><br>
+                <label for="link">LinkedIn:</label><br>
+                <input type="text"  height="50" name="link"><br>
+                <label for="bio">Bio:</label><br>
+                <textarea rows="10" cols="50" name="bio" ></textarea><br>
+            </div>
+            <div class="column-right">
+                <label for="history">Pervious Employment History:</label><br>
+                <textarea rows="5" cols="50" name="history"></textarea><br>
+
+                <label for="interview">Where You Interviewed:</label><br>
+                <textarea rows="5" cols="50" name="interview"></textarea><br>
+
+                <label for="exp-interview">Interview Expirence:</label><br>
+                <textarea rows="5" cols="50" name="exp-interview"></textarea><br>
+
+                <label for="employed">Currently Employed:</label><br>
+                <textarea rows="5" cols="50" name="employed"></textarea><br>
+
+
+
+            </div>
+        </div>
+        </form>
+    
+
+</div>
+
+<%-include('../partials/footer')-%>

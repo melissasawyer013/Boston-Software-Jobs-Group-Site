@@ -569,3 +569,31 @@ ul.org-card {
     color: var(--white);
     font-weight: bold;
 } 
+
+/*User Profile*/
+
+.user-profile .flex-container{
+    display: flex;
+    
+}
+
+.user-profile .column-left{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    
+}
+.user-profile .column-right{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    
+}
+
+.user-profile input{
+    height: 30px;
+}
+
+
+
+/*END User Profile*/

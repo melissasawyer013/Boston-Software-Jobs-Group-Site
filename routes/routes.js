@@ -45,4 +45,10 @@ router.get('/forgotpwd', (req, res) =>{
 })
 
 
+router.get('/user-profile', (req, res) =>{
+  res.render('pages/userprofile')
+})
+
+
+
 module.exports = router;
