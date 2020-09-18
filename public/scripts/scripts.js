@@ -14,3 +14,15 @@ for (let i = 0; i < coll.length; i++) {
     }
     });
 }
+
+function confirmAddWorkHere () {
+    confirm("Do you want to add yourself to the list of people who currently work at this organization?");
+}
+
+function confirmAddWorkedHere () {
+    confirm("Do you want to add yourself to the list of people who have worked at this organization in the past?");
+}
+
+function confirmInterviewHere () {
+    prompt("Do you want to add yourself to the list of people who have interviewed at this organization?\n \nTell us briefly about your experience being interviewed here.", " hiring process | interviewing questions | whiteboard challenge | etc.");
+}

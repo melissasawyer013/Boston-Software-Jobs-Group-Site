@@ -315,6 +315,11 @@ body {
     align-items: center;
     margin: 0 10%;
 }
+
+.container-modification-height-120 {
+    height: 120px;
+}
+
 /*can be use for other format ends here*/
 
  /* Beginning of Grad Card */
@@ -351,6 +356,25 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.image-organizations-logo {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    max-height: 150px;
+    height: auto;
+    width: 300px;
+    /* border: 1px solid black; */
+    /* background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto */
+}
+
+.image-organizations-logo img {
+    width: 100%;
+    height: auto;
+
 }
 
 
@@ -419,7 +443,7 @@ ul.org-card {
 
 .collapsible-button {
     background-color: var(--red);
-    color: white;
+    color: var(--white);
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -473,3 +497,43 @@ ul.org-card {
     /* text-decoration: underline; */
     /* border-bottom: 2px solid; */
 }
+
+.container-collapsible-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px 0 10px;
+}
+
+.container-organization-card-buttons {
+    background-color: var(--red);
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    vertical-align: middle;
+    border: none;
+    text-align: center;
+    align-items: center;
+    outline: none;
+    margin: 0 0 18px 0;
+}
+
+.container-organization-card-buttons:hover {
+    font-weight: bold;
+    color: var(--white);
+}
+
+.container-organization-card-buttons a:link,
+.container-organization-card-buttons a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.container-organization-card-buttons a:hover,
+.container-organization-card-buttons a:focus,
+.container-organization-card-buttons a:active {
+    color: var(--white);
+    font-weight: bold;
+} 
