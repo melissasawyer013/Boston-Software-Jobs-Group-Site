@@ -40,5 +40,9 @@ router.get('/graduate-card', (req, res) => {
     res.render('pages/organization-card')
   })
 
+router.get('/forgotpwd', (req, res) =>{
+  res.render('pages/forgotpwd')
+})
+
 
 module.exports = router;
