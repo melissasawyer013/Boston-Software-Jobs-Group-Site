@@ -470,6 +470,128 @@ ul.org-card {
     padding-top: 10px;
 }
 
+/* add-experience css starts here */
+.addexperience{
+    width: auto;
+    height: auto;
+    border: 5px groove;
+    border-radius: 10px;
+    margin: 55px 35px 55px 50px;
+}
+
+.addstudentpic{
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+    border: 15px groove;
+    margin: 35px 10px 35px 20px;
+}
+
+.addstudentName > h2{
+    margin: 35px 10px 35px 20px;
+    font-size: 25px;
+}
+
+.title-addexperience{
+    text-align: center;
+    margin: -235px 10px 35px 20px;
+}
+
+/*add exp: add current org starts here*/
+.dropdown-current-organization{
+    border: 3px groove;
+    border-radius: 35px;
+    margin: 185px 25px 65px 25px;
+}
+
+.dropdown-current-organization >h2{
+    margin: 15px 10px 15px 15px;
+    font-size: 22px;
+}
+
+#dropdownMenuButton{
+    margin: 15px 35px 35px 15px;
+}
+
+.adding-neworganization{
+    margin: -70px 35px 15px 495px;
+}
+
+#exp-currentOrganization{
+    position: absolute;
+    height: auto;
+    width: auto;
+    border-radius: 10px; 
+    margin: -55px 35px 15px 895px;
+    padding: 10px; 
+}  
+/*add exp: add current org ends here*/
+
+/*add exp: add previous org starts here*/
+.dropdown-previous-organization{
+    border: 3px groove;
+    border-radius: 35px;
+    margin: -35px 25px 65px 25px;  
+}
+
+.dropdown-previous-organization >h2{
+    margin: 15px 10px 15px 15px;
+    font-size: 22px;
+}
+
+.adding-previousexprience{
+    margin: -75px 35px 15px 495px;
+}
+
+#exp-previousOrganization  {
+    position: absolute;
+    height: auto;
+    width: 250px;
+    border-radius: 10px; 
+    margin: -55px 35px 15px 895px;
+    padding: 10px; 
+} 
+/*add exp: add previous org ends here*/
+
+/*add exp: add interview starts here*/
+.dropdown-addInterview{
+    border: 3px groove;
+    border-radius: 35px;
+    margin: -35px 25px 65px 25px;  
+}
+
+.dropdown-addInterview >h2{
+    margin: 15px 10px 15px 15px;
+    font-size: 22px;
+}
+
+.add-Interview{
+    margin: -75px 35px 15px 495px;
+}
+
+#add-interview{
+    position: absolute;
+    height: auto;
+    width: auto;
+    border-radius: 10px; 
+    margin: -55px 35px 15px 895px;
+    padding: 10px; 
+}
+
+/*add exp: add interview ends here*/
+/* add-experience css ends here */
+
+/*add-org starts here*/
+.addorg{
+    border: 3px groove;
+    border-radius: 25px;
+    margin: 95px 25px 65px 25px;
+}
+
+.addorgName> h2{
+    text-align: center;
+    font-size: 55px;
+}
 
 /* collapsibles */
 
