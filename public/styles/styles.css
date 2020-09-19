@@ -5,6 +5,7 @@
     --dark-grey: #343434;
     --white: #ffffff;
     --black: #000000;
+    --light-light-grey: #f1f1f1;
   }
 
 body {
@@ -66,6 +67,10 @@ body {
 
 .font-size-130 {
     font-size: 130%;
+}
+
+.border-black-1pt {
+    border: 1pt solid var(--black);
 }
 
 /* Navbar */
@@ -288,6 +293,38 @@ body {
 }
 /*footer user login css ends here*/
 
+/*forgot pwd starts here*/
+#forgotpwd-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: grey;
+    padding: 10px;
+	margin: 55px 50px 25px 430px;
+	width: 480px;
+	height: 250px;
+}
+
+.forgotpwd > h2, h4{
+    text-align: center;
+}
+
+.forgotpwd input{
+    width: auto;
+    height: 35px;
+    border: 1px solid;
+    font-weight: bold;
+    margin: 10px 100px 15px 95px; 
+}
+
+.resetpwd button{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: 15px 0px 35px 120px;
+    border-radius: 12px;
+}
+/*forgot pwd ends here*/
 /*can be use for other format starts here*/
 .content-container-whole-page {
     display: flex;
@@ -299,9 +336,22 @@ body {
     display: flex;
     flex-direction: column;
     width: 70%;
-    margin: 50px;
+    margin: 50px 50px 0 50px;
     padding: 25px;
 }
+
+.container-whole-width-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10%;
+}
+
+.container-modification-height-120 {
+    height: 120px;
+}
+
 /*can be use for other format ends here*/
 
  /* Beginning of Grad Card */
@@ -317,7 +367,7 @@ body {
     justify-content: space-between;
 }
 
-.grad-card-headshot {
+.grad-card-headshot img { 
     width: 100px; 
     height: 100px;
     border: 1px solid black;
@@ -329,6 +379,37 @@ body {
     padding: 50px;
     margin: 20px;
 }
+
+.image-graduates-headshot {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-organizations-logo {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    max-height: 150px;
+    height: auto;
+    width: 300px;
+    /* border: 1px solid black; */
+    /* background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto */
+}
+
+.image-organizations-logo img {
+    width: 100%;
+    height: auto;
+
+}
+
+
 
 /* Responsive Design for Grad Cards starts here*/
 @media only screen and (max-width: 600px) {
@@ -512,4 +593,101 @@ ul.org-card {
     font-size: 55px;
 }
 
+/* collapsibles */
 
+.collapsible-button {
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-size: 20pt;
+    vertical-align: middle;
+    border: none;
+    text-align: center;
+    align-items: center;
+    outline: none;
+    /* align-self: flex-start; */
+  }
+  
+.active, .collapsible-button:hover .collapsible-button:active .collapsible-button:focus {
+    background-color: var(--white);
+    color: var(--red);
+    border: 1pt solid var(--red);
+}
+  
+.content {
+    margin: 18px 0 0 0;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--light-light-grey);
+}
+
+.container-collapsible-content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+}
+
+.container-collapsible-column {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 10px 20px 0 10px;
+}
+
+.container-collapsible-column a:link,
+.container-collapsible-column a:visited {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.container-collapsible-column a:hover,
+.container-collapsible-column a:focus,
+.container-collapsible-column a:active {
+    color: var(--red);
+    font-weight: bold;
+    /* text-decoration: underline; */
+    /* border-bottom: 2px solid; */
+}
+
+.container-collapsible-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px 0 10px;
+}
+
+.container-organization-card-buttons {
+    background-color: var(--red);
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    vertical-align: middle;
+    border: none;
+    text-align: center;
+    align-items: center;
+    outline: none;
+    margin: 0 0 18px 0;
+}
+
+.container-organization-card-buttons:hover {
+    font-weight: bold;
+    color: var(--white);
+}
+
+.container-organization-card-buttons a:link,
+.container-organization-card-buttons a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.container-organization-card-buttons a:hover,
+.container-organization-card-buttons a:focus,
+.container-organization-card-buttons a:active {
+    color: var(--white);
+    font-weight: bold;
+} 
