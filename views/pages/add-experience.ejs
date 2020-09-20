@@ -1,0 +1,95 @@
+<!-- Navbar -->
+<%- include('../partials/header')-%>
+<!-- Page Content Starts -->
+
+<div class="addexperience">
+    <div class="addstudentpic">
+        <source srcset="images/BSJ-logo.png" type="image">
+            <img src="images/BSJ-logo.png" class="img-fluid" alt="Responsive image">  
+    </div>
+
+    <div class="addstudentName">
+        <h2>Student Name</h2>
+    </div>
+    
+    <div class="title-addexperience">
+        <h2>Add an Experience</h2>
+    </div>
+    <!--add current organization starts here-->
+    <div class="dropdown-current-organization">
+        <h2>Add current Organization</h2>
+            <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose an Organization
+            </button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Option 1</a>
+            <a class="dropdown-item" href="#">Option 2</a>
+            <a class="dropdown-item" href="#">Option 3</a>
+        </div>
+
+        <div class="adding-neworganization">
+            <button type="button" class="btn btn-secondary">Add a new Organization</button> 
+        </div>
+
+        <!--only will display if users clicked add new button starts here-->
+        <div class="add-info1">
+            <input type="text" id="exp-currentOrganization" name="currentOrganization" placeholder="Current Organization Name" required>             
+        </div>
+         <!--only will display if users clicked add new button ends here-->
+
+    </div>
+     <!--add current organization ends here-->
+
+    <!--add previous organization starts here--> 
+    <div class="dropdown-previous-organization">
+        <h2>Add previous Organization</h2>
+            <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose previous Organization
+            </button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Option 1</a>
+            <a class="dropdown-item" href="#">Option 2</a>
+            <a class="dropdown-item" href="#">Option 3</a>
+        </div>
+
+        <div class="adding-previousexprience">
+            <button type="button" class="btn btn-secondary">Add a previous Organization</button> 
+        </div>
+
+        <!--only will display if users clicked add new button starts here-->
+        <div class="add-info2">
+            <input type="text" id="exp-previousOrganization" name="previousOrganization" placeholder="Previous Organization Name" required>
+        </div> 
+        <!--only will display if users clicked add new button ends here-->
+    </div> 
+
+    <!--add previous organization ends here--> 
+
+    <!--add an interview starts here-->
+    <div class="dropdown-addInterview">
+        <h2>Add previous Organization</h2>
+            <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose an Organization
+            </button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Option 1</a>
+            <a class="dropdown-item" href="#">Option 2</a>
+            <a class="dropdown-item" href="#">Option 3</a>
+        </div>
+
+        <div class="add-Interview">
+            <button type="button" class="btn btn-secondary">Add an Interview</button> 
+        </div>
+
+        <!--only will display if users clicked add new button starts here-->
+        <div class="add-info3">
+            <input type="text" id="add-interview" name="addInterview" placeholder="Interview Experience" required>
+        </div> 
+        <!--only will display if users clicked add new button ends here-->
+    </div> 
+    
+    <!--add an interview ends here-->
+
+</div>
+   
+<%- include('../partials/footer')-%>
