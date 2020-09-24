@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const app = express();
+
+app.use("/static", express.static('./static/'));
 
 // router.get('/about-us', (req, res) => {
 //     res.render('/about-us');
@@ -37,5 +40,12 @@ router.get('/graduate-card', (req, res) => {
     res.render('pages/organization-card')
   })
 
+router.get('/add-experience', (req, res) => {
+  res.render('pages/add-experience')
+})
+
+router.get('/forgotpwd', (req, res) =>{
+  res.render('pages/forgotpwd')
+})
 
 module.exports = router;

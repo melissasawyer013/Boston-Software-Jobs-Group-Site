@@ -2,18 +2,33 @@
 <%- include('../partials/header')-%>
 <!-- Page Content Starts -->
 
-<div class="addorg">
-    <div class="addorgName">
-        <h2>BSJ</h2>
-    </div>
+<form>
+    <div class="addorg">
+        <div class="addorg-name">
+            <h2><label for="addorg-name">Organization Name:</label>
+            <input type="text" class="form-control" id="addorg-name"
+            placeholder="Please input organization name." required>
+            </h2>
+        </div>
 
-    <div class="addorgImage">
-        <source srcset="images/BSJ-logo.png" type="image">
-            <img src="images/BSJ-logo.png" class="img-fluid" alt="Responsive image">  
-    </div>
+        <div class="addorg-logo">
+            <h2><label for="addorg-logo">Organization Logo:</label>
+            <input type="file" class="form-control-file" id="addorg-logo" placeholder="Default input">
+            </h2>
+        </div>
 
-    <div class="addorgHomepg">
-        <a href="http://codesquad.org/">CodeSquad Homepage</a>
+        <div class="addorg-URL">
+            <h2><label for="addorg-url">Organization URL:</label>
+            <input type="text" class="form-control" id="addorg-URL"
+            placeholder="Please input organization name." required>
+            </h2>
+        </div>
+
+        <div class="addorg-submit">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
     </div>
-</div>
+</form>
+
 <%- include('../partials/footer')-%>
