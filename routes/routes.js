@@ -16,6 +16,14 @@ router.get('/graduates', (req, res) => {
     res.render('pages/graduates')
 })
 
+router.get('/graduates-2', (req, res) => {
+  res.render('pages/graduates-2')
+})
+
+router.get('/graduates-3', (req, res) => {
+  res.render('pages/graduates-3')
+})
+
 router.get('/login', (req, res) => {
     res.render('pages/login')
 })
