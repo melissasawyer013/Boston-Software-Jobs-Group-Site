@@ -2,38 +2,38 @@
 <%- include('../partials/header')-%>
 <!-- Page Content Starts -->
 
-<div class="addexperience">
-    <div class="addstudentpic">
+<div class="add-experience">
+    <div class="add-student-pic">
         <source srcset="images/BSJ-logo.png" type="image">
             <img src="images/BSJ-logo.png" class="img-fluid" alt="Responsive image">  
     </div>
 
-    <div class="addstudentName">
+    <div class="add-student-name">
         <h2>Student Name</h2>
     </div>
     
-    <div class="title-addexperience">
+    <div class="title-add-experience">
         <h2>Add an Experience</h2>
     </div>
     <!--add current organization starts here-->
     <div class="dropdown-current-organization">
         <h2>Add current Organization</h2>
-            <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose an Organization
+            <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose an Organization
             </button>
 
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu" aria-labelledby="dropdown-menu-button">
             <a class="dropdown-item" href="#">Option 1</a>
             <a class="dropdown-item" href="#">Option 2</a>
             <a class="dropdown-item" href="#">Option 3</a>
         </div>
 
-        <div class="adding-neworganization">
-            <button type="button" class="btn btn-secondary">Add a new Organization</button> 
-        </div>
+        <div class="adding-new-organization">
+            <button type="button" class="btn btn-secondary" id="add-new-org">Add a new Organization</button> 
+        </div> 
 
         <!--only will display if users clicked add new button starts here-->
-        <div class="add-info1">
-            <input type="text" id="exp-currentOrganization" name="currentOrganization" placeholder="Current Organization Name" required>             
+        <div class="add-info1"> 
+            <input type="text" id="exp-current-organization" style="display: none" placeholder="Current Organization Name"  required>             
         </div>
          <!--only will display if users clicked add new button ends here-->
 
@@ -43,22 +43,22 @@
     <!--add previous organization starts here--> 
     <div class="dropdown-previous-organization">
         <h2>Add previous Organization</h2>
-            <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose previous Organization
+            <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose previous Organization
             </button>
 
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu" aria-labelledby="dropdown-menu-button">
             <a class="dropdown-item" href="#">Option 1</a>
             <a class="dropdown-item" href="#">Option 2</a>
             <a class="dropdown-item" href="#">Option 3</a>
         </div>
 
-        <div class="adding-previousexprience">
-            <button type="button" class="btn btn-secondary">Add a previous Organization</button> 
+        <div class="adding-previous-experience">
+            <button type="button" class="btn btn-secondary" id="add-previous-org">Add a previous Organization</button> 
         </div>
 
         <!--only will display if users clicked add new button starts here-->
         <div class="add-info2">
-            <input type="text" id="exp-previousOrganization" name="previousOrganization" placeholder="Previous Organization Name" required>
+            <input type="text" id="exp-previous-organization" style="display: none" placeholder="Previous Organization Name" required>
         </div> 
         <!--only will display if users clicked add new button ends here-->
     </div> 
@@ -66,30 +66,32 @@
     <!--add previous organization ends here--> 
 
     <!--add an interview starts here-->
-    <div class="dropdown-addInterview">
+    <div class="dropdown-add-interview">
         <h2>Add previous Organization</h2>
-            <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose an Organization
+            <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose an Organization
             </button>
 
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu" aria-labelledby="dropdown-menu-button">
             <a class="dropdown-item" href="#">Option 1</a>
             <a class="dropdown-item" href="#">Option 2</a>
             <a class="dropdown-item" href="#">Option 3</a>
         </div>
 
-        <div class="add-Interview">
-            <button type="button" class="btn btn-secondary">Add an Interview</button> 
+        <div class="add-interview">
+            <button type="button" class="btn btn-secondary" id="add-new-interview">Add an Interview</button> 
         </div>
 
         <!--only will display if users clicked add new button starts here-->
         <div class="add-info3">
-            <input type="text" id="add-interview" name="addInterview" placeholder="Interview Experience" required>
+            <input type="text" id="add-interview" style="display: none" placeholder="Interview Experience" required>
         </div> 
         <!--only will display if users clicked add new button ends here-->
     </div> 
     
     <!--add an interview ends here-->
-
+    
 </div>
-   
+
+<script src="/scripts/add-experience.js"></script>
+
 <%- include('../partials/footer')-%>
