@@ -1,0 +1,34 @@
+<!-- Navbar -->
+<%- include('../partials/header')-%>
+<!-- Page Content Starts -->
+
+<form>
+    <div class="addorg">
+        <div class="addorg-name">
+            <h2><label for="addorg-name">Organization Name:</label>
+            <input type="text" class="form-control" id="addorg-name"
+            placeholder="Please input organization name." required>
+            </h2>
+        </div>
+
+        <div class="addorg-logo">
+            <h2><label for="addorg-logo">Organization Logo:</label>
+            <input type="file" class="form-control-file" id="addorg-logo" placeholder="Default input">
+            </h2>
+        </div>
+
+        <div class="addorg-URL">
+            <h2><label for="addorg-url">Organization URL:</label>
+            <input type="text" class="form-control" id="addorg-URL"
+            placeholder="Please input organization name." required>
+            </h2>
+        </div>
+
+        <div class="addorg-submit">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+    </div>
+</form>
+
+<%- include('../partials/footer')-%>
