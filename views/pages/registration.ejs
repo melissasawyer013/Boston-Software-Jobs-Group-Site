@@ -1,0 +1,41 @@
+<!-- Navbar -->
+<%- include('../partials/header')-%>
+<!-- Page Content Starts -->
+
+<div class="registration-form-main-container">
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <!-- Form -->
+                <form class="form-example" action="" method="post">
+                    <h1>Register</h1>
+                    <p class="description">Enter your contact information below to register.</p>
+                    <!-- Input fields -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" style="width:400px;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Phone Number</label>
+                    <input type="phone-number" class="form-control" style="width:400px;" id="exampleInputPassword1" placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">Linked In</label>
+                    <input type="text" class="form-control" style="width:400px;" id="Linkedin" placeholder="LinkedIn">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button> 
+                    <!-- End input fields -->
+                    <p class="copyright">&copy; Boston Software Jobs by <a href="https://www.codesquad.org">CodeSquad</a>.</p>
+                </form>
+                <!-- Form end -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<%- include('../partials/footer')-%>
