@@ -793,3 +793,11 @@ margin-left: 20px;
     color: var(--white);
     font-weight: bold;
 } 
+
+/* Error Page starts here */
+.error-number {
+    text-align: center;
+}
+.error-message {
+    text-align: center;
+}
