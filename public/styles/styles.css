@@ -166,38 +166,44 @@ body {
 /* Footer begins here */
 .footerbar-container{
     height: auto;
-    width: auto;
+    width: auto; 
 }
 
-.footerbar-container h2{
-    margin: 0px 0px 0px 32px;
+.footerbar-container hr{
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+.footerbar-container > h2{
+    margin: 0px 0px 15px 32px;
 }
 
 .footerbar-container img{
     width: 180px;
     height: 150px;
-    margin: 25px 15px 0px 35px;
+    margin: 25px 15px 15px 35px;
 }
 
 .footer-socialmedia{
-    margin: -110px 0px 0px 1035px;  
+    margin: -150px 0px 0px 1035px;  
     padding: 2px; 
 }
 
 .footer-socialmedia > h2{
     color: var(--black);
     margin: 0px 35px 0px 0px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .footer-socialmedia .symbol{
-    margin: 5px;
-    font-size: 40px;
+    margin: 5px 0px 0px 15px;
+    font-size: 50px;
 }
 
 .footer-quicklinks-container {
     display: flex;
     justify-content: center;
-    margin: -115px 85px 0px 0px;
+    margin: -145px 550px 0px 0px;
     padding: 2px;
 }
 
@@ -218,74 +224,37 @@ body {
     text-decoration: none;
     border-bottom: solid;
 }
-/*footer user logged out css begins here*/
-.footer-signup{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 85px 1100px 25px 0px;
-    padding: 3px;
+
+.footer-access {
+    margin: -125px 35px 0px 595px; 
 } 
 
-.footer-signup input{
-    width: 100%;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: 1px;
-	margin-bottom: 16px;
+.footer-access > h2 {
+    font-size: 18px; 
     font-weight: bold;
-}
-#footer-joinnow {
-    display: flex;
-    margin: -80px 0px 10px 285px;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;  
-}   
-
-.footer-login > h4 {
-    margin: 5px 0px 25px 35px;
+    margin: 15px;
 }
 
-.footer-login > a{
+.footer-access a.footer-button {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px;
     text-decoration: none;
-    margin: 80px 0px 15px 35px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 24px;
+    font-weight: bold;
     color: var(--black);
+    background-color:  var(--light-grey);
+    margin: 0px 0px 20px 20px;    
+}
+
+.reserved > h3 {
     font-weight: bold;
+    font-size: 18px;
+    margin: 40px 0px 10px 35px;
 }
-
-.footer-login a:hover{
-    color: var(--red);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: solid;
-}
-/*footer user logged out css begins here*/
-
-/*footer user login css begins here*/
-.footer-account-profile > h4{
-    margin: 5px 0px 15px 320px;
-    padding: 5px;
-    font-size: 20px;
-} 
-
-#footer-account-profile{
-    display: flex;
-    margin: -10px 0px 15px 325px;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;  
-}
-
-.reserved > h3{
-    color: var(--black);   
-}
-/*footer user login css ends here*/
+/*footer css ends here*/
 
 /*can be use for other format starts here*/
 .content-container-whole-page {
