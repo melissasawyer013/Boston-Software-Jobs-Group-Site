@@ -328,7 +328,7 @@ body {
 	height: 250px;
 }
 
-.forgotpwd > h2, h4{
+.forgotpwd > h2 .forgotpwd > h4{
     text-align: center;
 }
 
