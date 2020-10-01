@@ -56,4 +56,8 @@ router.get('/forgotpwd', (req, res) =>{
   res.render('pages/forgotpwd')
 })
 
+router.get('/error', (req, res) =>{
+  res.render('pages/error')
+})
+
 module.exports = router;
