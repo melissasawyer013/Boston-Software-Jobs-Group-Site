@@ -86,9 +86,9 @@ body {
     padding: 10px 0;
 }
 
-.navbar-logo-container img{
-    width: 140px;
-    height: 59px;
+.navbar-logo-container img {
+    width: 120px;
+    height: 90px;
 }
 
 .navbar-links-container {
@@ -146,6 +146,29 @@ body {
     display: block;  
 }
 
+.navbar-sub-logo-container {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    padding-top: 35px;
+}
+
+.navbar-sub-logo-container img{
+    width: 90px;
+    height: 30px;
+}
+/* Bootstrap Navbar */
+.navbar-brand {
+    margin-right: 50px;
+}
+.navbar-codesquad-logo-container {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.navbar-codesquad-logo-container img{
+    width: 90px;
+    height: 40px;
+}
 /* Containers */
 .whole-width-content-container-with-image {
     display: flex;
@@ -770,3 +793,11 @@ margin-left: 20px;
     color: var(--white);
     font-weight: bold;
 } 
+
+/* Error Page starts here */
+.error-number {
+    text-align: center;
+}
+.error-message {
+    text-align: center;
+}
