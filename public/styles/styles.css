@@ -86,9 +86,9 @@ body {
     padding: 10px 0;
 }
 
-.navbar-logo-container img{
-    width: 140px;
-    height: 59px;
+.navbar-logo-container img {
+    width: 120px;
+    height: 90px;
 }
 
 .navbar-links-container {
@@ -146,6 +146,29 @@ body {
     display: block;  
 }
 
+.navbar-sub-logo-container {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    padding-top: 35px;
+}
+
+.navbar-sub-logo-container img{
+    width: 90px;
+    height: 30px;
+}
+/* Bootstrap Navbar */
+.navbar-brand {
+    margin-right: 50px;
+}
+.navbar-codesquad-logo-container {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.navbar-codesquad-logo-container img{
+    width: 90px;
+    height: 40px;
+}
 /* Containers */
 .whole-width-content-container-with-image {
     display: flex;
@@ -360,11 +383,18 @@ body {
     margin: 50px 100px;
     border: 2px solid rgb(203, 53, 36);
     padding: 10px;
+    display: flex;
+ }
+ .grad-card-left-container {
+    width: 50%;
 }
 
-.grad-card-headshot-contacts-container {
-    display: flex;
-    justify-content: space-between;
+.grad-card-right-container {
+    width: 50%;
+    text-align: right;
+}
+.grad-card-right-container ul {
+    list-style-type: none;
 }
 
 .grad-card-headshot img { 
@@ -470,6 +500,34 @@ ul.org-card {
     padding-top: 10px;
 }
 
+
+/* Search Page Starts here */
+.search-results-main-container h1 {
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+}
+.search-form input {
+    margin-right: 5px;
+}
+.org-name-and-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.org-name-and-logo-container a {
+    margin-right: 20px;
+}
+.top-half-page {
+    margin: auto;
+}
+
+.bottom-half-page {
+margin-left: 20px;
+}
+/* Search Page Ends Here */
 /* add-experience css starts here */
 .addexperience{
     width: auto;
@@ -735,3 +793,11 @@ ul.org-card {
     color: var(--white);
     font-weight: bold;
 } 
+
+/* Error Page starts here */
+.error-number {
+    text-align: center;
+}
+.error-message {
+    text-align: center;
+}

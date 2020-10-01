@@ -33,12 +33,20 @@ router.get('/style-guide', (req, res) => {
 })
 
 router.get('/graduate-card', (req, res) => {
-    res.render('pages/graduate-card')
-  })
+  res.render('pages/graduate-card')
+})
 
-  router.get('/organization-card', (req, res) => {
-    res.render('pages/organization-card')
-  })
+router.get('/organization-card', (req, res) => {
+  res.render('pages/organization-card')
+})
+
+router.get('/registration', (req, res) => {
+  res.render('pages/registration')
+})
+
+router.get('/search-page', (req, res) => {
+  res.render('pages/search-page')
+})
 
 router.get('/add-experience', (req, res) => {
   res.render('pages/add-experience')
@@ -46,6 +54,10 @@ router.get('/add-experience', (req, res) => {
 
 router.get('/forgotpwd', (req, res) =>{
   res.render('pages/forgotpwd')
+})
+
+router.get('/error', (req, res) =>{
+  res.render('pages/error')
 })
 
 module.exports = router;
