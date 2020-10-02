@@ -201,9 +201,6 @@ body {
     border: 2px solid grey;
     border-radius: 5px;
 }
-.footerbar-container > h2{
-    margin: 0px 0px 15px 32px;
-}
 
 .footerbar-container img{
     width: 180px;
@@ -219,19 +216,38 @@ body {
 .footer-socialmedia > h2{
     color: var(--black);
     margin: 0px 35px 0px 0px;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .footer-socialmedia .symbol{
-    margin: 5px 0px 0px 15px;
+    margin: 5px 10px 0px 5px;
     font-size: 50px;
+}
+
+.footer-affiliate{
+    position: absolute;
+    right: 0px; 
+    margin: 0px 0px 15px 0px;
+} 
+
+.footer-affiliate > h4{
+    font-size: 14px;
+    margin: 25px 150px 4px 0px;
+}
+
+.footer-affiliate img{
+    width: 75px;
+    height: 75px; 
+    object-fit: contain;
+    margin: 3px 0px 3px 0px;
+    
 }
 
 .footer-quicklinks-container {
     display: flex;
     justify-content: center;
-    margin: -145px 550px 0px 0px;
+    margin: -100px 550px 0px 0px;
     padding: 2px;
 }
 
@@ -254,11 +270,11 @@ body {
 }
 
 .footer-access {
-    margin: -125px 35px 0px 595px; 
+    margin: -140px 35px 0px 595px; 
 } 
 
 .footer-access > h2 {
-    font-size: 18px; 
+    font-size: 16px; 
     font-weight: bold;
     margin: 15px;
 }
@@ -279,8 +295,8 @@ body {
 
 .reserved > h3 {
     font-weight: bold;
-    font-size: 18px;
-    margin: 40px 0px 10px 35px;
+    font-size: 14px;
+    margin: 80px 0px 5px 35px;
 }
 /*footer css ends here*/
 
