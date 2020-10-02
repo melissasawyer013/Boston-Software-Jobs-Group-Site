@@ -113,7 +113,7 @@ function confirmAddWorkedHere () {
 
 function confirmInterviewHere () {
     prompt("Do you want to add yourself to the list of people who have interviewed at this organization?\n \nTell us briefly about your experience being interviewed here.", " hiring process | interviewing questions | whiteboard challenge | etc.");
-}
+};
 
 /**addexperience starts here */
 let addneworgbutton = document.getElementById('add-new-org');
@@ -128,7 +128,7 @@ function mynewOrg(){
     } else {
         x.style.display = "none";
     }
-}
+};
 
 let addpreviousorgbutton = document.getElementById('add-previous-org');
 addpreviousorgbutton.addEventListener('click', function (){
@@ -142,7 +142,7 @@ function mypreviousOrg(){
     } else {
         x.style.display = "none";
     }
-}
+};
 
 let addnewinterviewbutton = document.getElementById('add-new-interview');
 addnewinterviewbutton.addEventListener('click', function (){
@@ -156,6 +156,5 @@ function mynewInterview(){
     } else {
         x.style.display = "none";
     }
-}
+};
 /**addexperience ends here */
-
