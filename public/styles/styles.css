@@ -596,7 +596,7 @@ margin-left: 20px;
 /* Search Page Ends Here */
 
 /* add-experience css starts here */
-.addexperience {
+.add-experience{
     width: auto;
     height: auto;
     border: 5px groove;
@@ -604,7 +604,7 @@ margin-left: 20px;
     margin: 55px 35px 55px 50px;
 }
 
-.addstudentpic {
+.add-student-pic{
     width: 150px;
     height: auto;
     border-radius: 15px;
@@ -612,12 +612,12 @@ margin-left: 20px;
     margin: 35px 10px 35px 20px;
 }
 
-.addstudentName > h2 {
+.add-student-name > h2{
     margin: 35px 10px 35px 20px;
     font-size: 25px;
 }
 
-.title-addexperience {
+.title-add-experience{
     text-align: center;
     margin: -235px 10px 35px 20px;
 }
@@ -635,15 +635,15 @@ margin-left: 20px;
     font-size: 22px;
 }
 
-#dropdownMenuButton {
+#dropdown-menu-button{
     margin: 15px 35px 35px 15px;
 }
 
-.adding-neworganization {
+.adding-new-organization{
     margin: -70px 35px 15px 495px;
 }
 
-#exp-currentOrganization {
+#exp-current-organization{
     position: absolute;
     height: auto;
     width: auto;
@@ -665,11 +665,11 @@ margin-left: 20px;
     font-size: 22px;
 }
 
-.adding-previousexprience {
+.adding-previous-experience{
     margin: -75px 35px 15px 495px;
 }
 
-#exp-previousOrganization {
+#exp-previous-organization  {
     position: absolute;
     height: auto;
     width: 250px;
@@ -680,18 +680,18 @@ margin-left: 20px;
 /*add exp: add previous org ends here*/
 
 /*add exp: add interview starts here*/
-.dropdown-addInterview {
+.dropdown-add-interview{
     border: 3px groove;
     border-radius: 35px;
     margin: -35px 25px 65px 25px;  
 }
 
-.dropdown-addInterview > h2 {
+.dropdown-add-interview >h2{
     margin: 15px 10px 15px 15px;
     font-size: 22px;
 }
 
-.add-Interview {
+.add-interview{
     margin: -75px 35px 15px 495px;
 }
 
