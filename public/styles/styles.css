@@ -729,6 +729,12 @@ margin-left: 20px;
     margin-right: auto;
 }
 
+.addorg-name .required:after{
+    content:" *";
+    font-weight: bold;
+    color: red;
+}
+
 .addorg-logo > h2 {
     text-align: center;
     font-size: 25px;
