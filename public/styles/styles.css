@@ -342,8 +342,14 @@
 #forgotpwd-container{
     display: grid;
     justify-content: center;
-    background-color: var(--light-light-grey);
     padding: 50px; 
+    
+}
+
+.forgotpwd{
+    border: 1px solid black;
+    padding: 25px;
+    background-color: var(--light-light-grey);
 }
 
 .forgotpwd input {
