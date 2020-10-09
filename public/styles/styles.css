@@ -597,15 +597,29 @@ margin-left: 20px;
 /* Search Page Ends Here */
 
 /* add-experience css starts here */
-.add-experience{
-    width: auto;
-    height: auto;
-    border: 5px groove;
-    border-radius: 10px;
-    margin: 55px 35px 55px 50px;
+.add-experience-container{
+    display: grid;
+    grid-template-rows: repeat (6, 2fr);
+    row-gap: 10px;
+    border: 1px solid black;
+    margin: 20px 50px;
 }
 
 .add-student-pic{
+    display: grid;
+    margin: 50px 30px;
+    grid-gap: 20px;
+}
+
+.title-add-experience{
+    display: grid;
+    text-align: center;
+    margin-top: 2x;
+
+}
+
+
+/* .add-student-pic{
     width: 150px;
     height: auto;
     border-radius: 15px;
@@ -624,7 +638,7 @@ margin-left: 20px;
 }
 
 /*add exp: add current org starts here*/
-.dropdown-current-organization {
+/* .dropdown-current-organization {
     border: 3px groove;
     border-radius: 35px;
     margin: 185px 25px 65px 25px;
@@ -650,11 +664,11 @@ margin-left: 20px;
     border-radius: 10px; 
     margin: -55px 35px 15px 895px;
     padding: 10px; 
-}  
+}    */
 /*add exp: add current org ends here*/
 
 /*add exp: add previous org starts here*/
-.dropdown-previous-organization {
+/* .dropdown-previous-organization {
     border: 3px groove;
     border-radius: 35px;
     margin: -35px 25px 65px 25px;  
@@ -676,11 +690,11 @@ margin-left: 20px;
     border-radius: 10px; 
     margin: -55px 35px 15px 895px;
     padding: 10px; 
-} 
+}  */
 /*add exp: add previous org ends here*/
 
 /*add exp: add interview starts here*/
-.dropdown-add-interview{
+/* .dropdown-add-interview{
     border: 3px groove;
     border-radius: 35px;
     margin: -35px 25px 65px 25px;  
@@ -702,7 +716,7 @@ margin-left: 20px;
     border-radius: 10px; 
     margin: -55px 35px 15px 895px;
     padding: 10px; 
-}
+} */
 /*add exp: add interview ends here*/
 /* add-experience css ends here */
 
