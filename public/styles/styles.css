@@ -339,37 +339,29 @@
 
 
 /*forgot pwd starts here*/
-#forgotpwd-container {
-    display: flex;
+#forgotpwd-container{
+    display: grid;
     justify-content: center;
-    border-radius: 5px;
-    background-color: grey;
-    padding: 10px;
-	margin: 55px 50px 25px 430px;
-	width: 480px;
-	height: 250px;
+    padding: 50px; 
+    
 }
 
-
-.forgotpwd > h2, .forgotpwd > h4 {
-    text-align: center;
+.forgotpwd{
+    border: 1px solid black;
+    padding: 25px;
+    background-color: var(--light-light-grey);
 }
 
 .forgotpwd input {
     width: auto;
-    height: 35px;
-    border: 1px solid;
     font-weight: bold;
-    margin: 10px 100px 15px 95px; 
+    border-radius: 5px;
 }
 
-.resetpwd button {
-    display: flex;
-    width: auto;
-    height: auto;
-    margin: 15px 0px 35px 120px;
+.forgotpwd-reset button{
     border-radius: 12px;
-}
+    margin-top: 25px;
+}  
 /*forgot pwd ends here*/
 
 /*containers that can be used on multiple pages*/
