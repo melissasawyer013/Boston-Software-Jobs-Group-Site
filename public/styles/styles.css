@@ -339,37 +339,29 @@
 
 
 /*forgot pwd starts here*/
-#forgotpwd-container {
-    display: flex;
+#forgotpwd-container{
+    display: grid;
     justify-content: center;
-    border-radius: 5px;
-    background-color: grey;
-    padding: 10px;
-	margin: 55px 50px 25px 430px;
-	width: 480px;
-	height: 250px;
+    padding: 50px; 
+    
 }
 
-
-.forgotpwd > h2, .forgotpwd > h4 {
-    text-align: center;
+.forgotpwd{
+    border: 1px solid black;
+    padding: 25px;
+    background-color: var(--light-light-grey);
 }
 
 .forgotpwd input {
     width: auto;
-    height: 35px;
-    border: 1px solid;
     font-weight: bold;
-    margin: 10px 100px 15px 95px; 
+    border-radius: 5px;
 }
 
-.resetpwd button {
-    display: flex;
-    width: auto;
-    height: auto;
-    margin: 15px 0px 35px 120px;
+.forgotpwd-reset button{
     border-radius: 12px;
-}
+    margin-top: 25px;
+}  
 /*forgot pwd ends here*/
 
 /*containers that can be used on multiple pages*/
@@ -494,8 +486,8 @@
 
 .image-organizations-logo {
     display: flex;
-    flex-direction: center;
     align-items: center;
+    justify-content: center;
     max-height: 150px;
     height: auto;
     width: 300px;
@@ -747,58 +739,41 @@ margin-left: 20px;
 /* add-experience css ends here */
 
 /*add-org starts here*/
-.addorg {
-    border: 3px groove;
-    border-radius: 50px;
-    margin: 95px 125px 65px 125px;
-    border-color: var(--red);
-    margin: 95px 250px 65px 250px;
-}
-
-.addorg-name > h2 {
+.addorg-container{
+    display: grid;
+    grid-gap: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--light-light-grey);
+    border: 1px solid black;
     text-align: center;
-    font-size: 25px;
-    margin: 15px 0px 25px 0px;
+    font-size: 10px;
 }
 
-.addorg-name input {
-    text-align: center;
-    width: 35%;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
+.addorg-container > p{
+    font-size: 24px;
+}
+.addorg-container .required{
+    color: var(--red);
 }
 
-.addorg-logo > h2 {
-    text-align: center;
-    font-size: 25px;
-    margin: 15px 0px 25px 0px;
+#addorg.form-control{
+    margin: 0 auto;
 }
 
-.addorg-logo input {
-    width: 35%;
-    border-radius: 2px;
+.addorg-container input:focus,
+.addorg-container textarea:focus{
+    outline: 2px;
+    width: 50px;
+}
+    
+#addorg-logo-upload{
+    width: 70%;
+    margin: 0 auto;
     font-size: 18px;
-    margin: 0px 55px 0px 300px;
 }
 
-.addorg-URL > h2 {
-    text-align: center;
-    font-size: 25px;
-    margin: 15px 0px 25px 0px;
-}
-
-.addorg-URL input {
-    text-align: center;
-    width: 35%;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.addorg-submit {
-    margin: 0px 25px 35px 385px;
-}
 /*add-org ends here*/
 
 
@@ -983,11 +958,30 @@ margin-left: 20px;
 }
 
 @media only screen and (max-width: 480px) {   
+    .content-container-width-70 {
+        width: 95%;
+        align-items: center;
+    }
+
+    .content-container-width-70 h1{
+        font-size: 1.5em;
+    }
+
+    .image-organizations-logo {
+        align-items: center;
+    }
+
+    .image-organizations-logo img {
+        width: 70%;
+        height: auto;
+    }
+    
     .container-whole-width-row {
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
-        margin: 20px 10%;
+        margin: 5px;
+        width: auto;
     }
 
     .image-organizations-logo {
@@ -1016,6 +1010,18 @@ margin-left: 20px;
     .collapsible-button-cohort {
         display: inline-block;
     }
+    
+    .container-collapsible-content {
+        flex-direction: column;
+    }
+
+    .container-collapsible-column-right {
+        width: 100%;
+    }
+
+    .container-collapsible-column-left {
+        width: 100%;
+    }
 
     .container-collapsible-column {
         display: flex;
@@ -1043,7 +1049,21 @@ margin-left: 20px;
     }
 
     .image-organizations-logo {
-        margin: 10px 0;
+        align-items: center;
+        margin: 10px;
+    }
+    
+    .image-organizations-logo img {
+        width: 70%;
+        height: auto;
+    }
+    
+    .container-whole-width-row {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5px;
+        width: auto;
     }
 
     .container-modification-height-120 {
