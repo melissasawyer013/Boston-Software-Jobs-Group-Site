@@ -589,153 +589,95 @@ margin-left: 20px;
 /* Search Page Ends Here */
 
 /* add-experience css starts here */
-
 .add-experience-container{
+    display: grid;  
+    background-color: var(--light-light-grey);
     border: 2px solid;
-    margin: 75px 50px;
-}
+    margin: 50px 5px;
+    padding: 2px;
+} 
 
 .add-student-pic{
-    margin: 20px 30px;
+    margin: 50px;
+}
+
+.add-student-pic > img{
+    margin: 5px;
+    width: auto;
+    height: 150px;
 }
 
 .add-student-pic > h2 {
     font-size: 20px;
-    margin: 10px;
+    margin: 10px 25px;
 }
 
-.title-add-experience{
+.title-add-experience > h2{
     text-align: center;
-}
-
-.dropdown-options-addexperience{
-    display: grid;
-    grid-row: span;
-}
-
-/* .add-experience-container{
-    display: grid;
-    border: 1px solid black;
-    margin: 75px 50px;
-    background-color: var(--light-light-grey);
-} */
-/* 
-.add-student-pic{
-    margin: 30px;
-    
-}  
-
-.title-add-experience{
-    text-align: center;
-   
-}
- 
-.dropdown-option-addexperience{
-    display: flex; 
-    margin: 50px auto;
-    max-width: 250px;
-
-}   */
-
-/* .add-student-pic{
-    width: 150px;
-    height: auto;
-    border-radius: 15px;
-    border: 15px groove;
-    margin: 35px 10px 35px 20px;
-}
-
-.add-student-name > h2{
-    margin: 35px 10px 35px 20px;
     font-size: 25px;
 }
 
-.title-add-experience{
-    text-align: center;
-    margin: -235px 10px 35px 20px;
+.dropdown-current-organization,
+.dropdown-previous-organization,
+.dropdown-add-interview{
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 25px 8px;  
+}  
+
+.add-experience-columns{
+    column-width: 20em; 
+} 
+
+.dropdown-current-organization > h2,
+.dropdown-previous-organization > h2,
+.dropdown-add-interview > h2{
+    margin: 15px 15px;
 }
 
-/*add exp: add current org starts here*/
-/* .dropdown-current-organization {
-    border: 3px groove;
-    border-radius: 35px;
-    margin: 185px 25px 65px 25px;
+#dropdown-menu-button,
+#add-new-org,
+#add-previous-org,
+#add-new-interview{
+    margin: 15px;
+    background-color: var(--red);
 }
 
-.dropdown-current-organization > h2 {
-    margin: 15px 10px 15px 15px;
-    font-size: 22px;
+.dropdown-menu{
+    position: relative;
+    width: 210px;
+    background-color: var(--red);
 }
 
-#dropdown-menu-button{
-    margin: 15px 35px 35px 15px;
+.dropdown-menu > a{
+    color: var(--white);
 }
 
-.adding-new-organization{
-    margin: -70px 35px 15px 495px;
+.add-info1 input[type=text],  
+.add-info2 input[type=text],
+.add-info3 input[type=text]{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 50%;
+    border-radius: 5px;
+    margin: 25px;
+    padding: 5px; 
 }
 
-#exp-current-organization{
-    position: absolute;
-    height: auto;
-    width: auto;
-    border-radius: 10px; 
-    margin: -55px 35px 15px 895px;
-    padding: 10px; 
-}    */
-/*add exp: add current org ends here*/
-
-/*add exp: add previous org starts here*/
-/* .dropdown-previous-organization {
-    border: 3px groove;
-    border-radius: 35px;
-    margin: -35px 25px 65px 25px;  
+#exp-current-organization,
+#exp-previous-organization,
+#add-interview{
+    margin: 15px;
 }
 
-.dropdown-previous-organization > h2 {
-    margin: 15px 10px 15px 15px;
-    font-size: 22px;
+.add-experience-submit > button{
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 5px;
+    margin: 15px 50px;
+    padding: 5px;
 }
-
-.adding-previous-experience{
-    margin: -75px 35px 15px 495px;
-}
-
-#exp-previous-organization  {
-    position: absolute;
-    height: auto;
-    width: 250px;
-    border-radius: 10px; 
-    margin: -55px 35px 15px 895px;
-    padding: 10px; 
-}  */
-/*add exp: add previous org ends here*/
-
-/*add exp: add interview starts here*/
-/* .dropdown-add-interview{
-    border: 3px groove;
-    border-radius: 35px;
-    margin: -35px 25px 65px 25px;  
-}
-
-.dropdown-add-interview >h2{
-    margin: 15px 10px 15px 15px;
-    font-size: 22px;
-}
-
-.add-interview{
-    margin: -75px 35px 15px 495px;
-}
-
-#add-interview {
-    position: absolute;
-    height: auto;
-    width: auto;
-    border-radius: 10px; 
-    margin: -55px 35px 15px 895px;
-    padding: 10px; 
-} */
-/*add exp: add interview ends here*/
 /* add-experience css ends here */
 
 /*add-org starts here*/
