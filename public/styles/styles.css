@@ -210,74 +210,25 @@
 }
 
 /* Footer begins here */
-.footer-container{
-    display: grid;
-    grid-template-columns: 50px 50px 50px 50px 50px;
-  
-    
-  
-    height: auto;
-    width: auto;  
-}
-
-.footer-container hr{
-    border: 2px solid grey;
-    border-radius: 5px;
-}
-
 .footer-container img{
-    width: 180px;
+    width: auto;
     height: 150px;
-    margin: 25px 15px 15px 35px;
-}
-
-/* .footer-socialmedia{
-    margin: -150px 0px 0px 1035px;  
-    padding: 2px; 
-}
-
-.footer-socialmedia > h2{
-    color: var(--black);
-    margin: 0px 35px 0px 0px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.footer-socialmedia .symbol{
-    margin: 5px 10px 0px 5px;
-    font-size: 50px;
-}
-
-.footer-affiliate{
-    position: absolute;
-    right: 0px; 
-    margin: 0px 0px 15px 0px;
+    margin: 50px 35px; 
+    object-fit: contain; 
 } 
 
-.footer-affiliate > h4{
-    font-size: 14px;
-    margin: 25px 150px 4px 0px;
+.footer-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr)); 
+    margin: -150px 0px 0px 250px;
+}
+   
+.footer-quicklinks-container > h2,
+.footer-socialmedia > h2{
+    font-size: 24px;
 }
 
-.footer-affiliate img{
-    width: 75px;
-    height: 75px; 
-    object-fit: contain;
-    margin: 3px 0px 3px 0px;
-    
-}
-
-.footer-quicklinks-container {
-    display: flex;
-    justify-content: center;
-    margin: -100px 550px 0px 0px;
-    padding: 2px;
-}
-
-.footer-quicklinks-container a {
-    display: list-item;
-    justify-content: space-evenly;
-    text-align: left;
+.footer-quicklinks-container a{
     text-decoration: none;
     color: var(--black);
     margin: 3px;
@@ -285,64 +236,44 @@
 
 .footer-quicklinks-container a:hover,
 .footer-quicklinks-container a:focus,
-.footer-quicklinks-container a:active {
+.footer-quicklinks-container a:active{
     color: var(--red);
     font-weight: bold;
     text-decoration: none;
     border-bottom: solid;
 }
 
-.footer-access {
-    margin: -140px 35px 0px 595px; 
-} 
-
-.footer-access > h2 {
-    font-size: 16px; 
-    font-weight: bold;
-    margin: 15px;
+.footer-socialmedia .symbol{
+    font-size: 50px;
+    margin: auto 10px;
 }
 
-.footer-login > a {
-    text-decoration: none;
-    box-sizing: border-box;
-    text-align: center;
-    font-weight: 24px;
-    font-weight: bold;
-    color: var(--black);
-    background-color:  var(--light-grey);
-    margin: 0px 0px 20px 20px;    
-}
-
-.footer-login a:hover {
-    color: var(--red);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: solid;
-} */
-/*footer user logged out css ends here*/
-
-/*footer user login css begins here*/
-/* .footer-account-profile > h4 {
-    margin: 5px 0px 15px 320px;
-    padding: 5px;
-    font-size: 20px;
-} 
-
-#footer-account-profile {
+.footer-affiliate{
     display: flex;
-    margin: -10px 0px 15px 325px;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;  
+    justify-content: flex-end;
+    margin: 15px 50px 10px 25px; 
 }
 
-.reserved > h3 {
-    color: var(--black);   
-}  */
-/*footer css ends here*/
+.footer-affiliate img{
+    display: flex;
+    justify-content: flex-end;
+    object-fit: contain;
+    margin: 5px 50px 10px -250px;
+    width: 75px;
+    height: 75px;
+}
 
+.footer-affiliate > h4{
+    font-size: 18px;
+    margin: 5px 50px 20px 100px;
+}
+
+.reserved h3{
+    font-size: 20px;
+    margin: 5px 0px 2px 25px;
+}
+
+/*footer css ends here*/
 
 /*forgot pwd starts here*/
 #forgotpwd-container{
