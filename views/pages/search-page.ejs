@@ -1,0 +1,33 @@
+<!-- Navbar -->
+<%- include('../partials/header')-%>
+<!-- Page Content Starts -->
+<div class="col-10 col-md-8 col-lg-6 top-half-page">
+    <!-- Form -->
+    <h1>Search</h1>
+    <p class="description">Not what you're looking for? Enter the name of an organization or a CodeSquad alumni below.</p>
+    <!-- Input fields -->
+    <div class="search-results-form-container">
+        <form action="/action_page.php" method="post" class="search-form">
+            <input type="search" class="form-control" id="search" name="search" placeholder="search...">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div> 
+</div>
+<!-- Form end --> 
+<br>
+<br>
+<hr> 
+<div class="search-results-main-container">
+    <div class="bottom-half-page">
+        <div class="org-names-and-logos-container">
+            <div class="org-name-and-logo-container">
+                <h6><a href="##">Wayfair</a></h6>
+                <img src="../../public/images/wayfair-logo.jpg" width="100px;">
+            </div>
+        </div>
+    </div>            
+</div>
+<br>
+<br>
+<br>
+<%- include('../partials/footer')-%>
