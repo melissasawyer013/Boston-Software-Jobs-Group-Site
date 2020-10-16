@@ -744,6 +744,13 @@ margin-left: 20px;
 .error-message {
     text-align: center;
 }
+<<<<<<< HEAD
+.error-page-border {
+    border: 1px solid black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 120px 350px; 
+=======
 
 
 /* Media queries for organizations.ejs page and graduates.ejs page starts here */
@@ -1094,4 +1101,5 @@ margin-left: 20px;
     .container-collapsible-column-right {
         width: 100%;
     }
+>>>>>>> 884448971a65a4292e018a7a8af25b6e8a70e6a9
 }
