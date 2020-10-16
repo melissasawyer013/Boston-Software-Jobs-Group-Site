@@ -616,5 +616,15 @@ ul.org-card {
   #employed{
     display: none;
 }
-
+#add_company{
+    background-color: red;
+}
+input[class=uno1] {
+    background-color: red;
+    position: relative;
+    left:-1px;
+}
+input[class=uno] {
+    background-color: red;
+}
 /*END User Profile*/
