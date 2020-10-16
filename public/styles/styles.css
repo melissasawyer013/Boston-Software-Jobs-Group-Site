@@ -209,50 +209,26 @@
     text-shadow: 2px 2px 30px var(--red);
 }
 
-
 /* Footer begins here */
-.footerbar-container{
-    background-color: var(--light-grey);
-    height: auto;
+.footer-container img{
     width: auto;
-}
-
-.footerbar-container h2{
-    margin: 0px 0px 0px 32px;
-}
-
-.footerbar-container img{
-    width: 180px;
     height: 150px;
-    margin: 25px 15px 0px 35px;
-}
+    margin: 50px 35px; 
+    object-fit: contain; 
+} 
 
-.footer-socialmedia{
-    margin: -110px 0px 0px 1035px;  
-    padding: 2px; 
+.footer-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr)); 
+    margin: -150px 0px 0px 250px;
 }
-
+   
+.footer-quicklinks-container > h2,
 .footer-socialmedia > h2{
-    color: var(--black);
-    margin: 0px 35px 0px 0px;
+    font-size: 24px;
 }
 
-.footer-socialmedia .symbol{
-    margin: 5px;
-    font-size: 40px;
-}
-
-.footer-quicklinks-container {
-    display: flex;
-    justify-content: center;
-    margin: -115px 85px 0px 0px;
-    padding: 2px;
-}
-
-.footer-quicklinks-container a {
-    display: list-item;
-    justify-content: space-evenly;
-    text-align: left;
+.footer-quicklinks-container a{
     text-decoration: none;
     color: var(--black);
     margin: 3px;
@@ -260,83 +236,44 @@
 
 .footer-quicklinks-container a:hover,
 .footer-quicklinks-container a:focus,
-.footer-quicklinks-container a:active {
+.footer-quicklinks-container a:active{
     color: var(--red);
     font-weight: bold;
     text-decoration: none;
     border-bottom: solid;
 }
 
+.footer-socialmedia .symbol{
+    font-size: 50px;
+    margin: auto 10px;
+}
 
-/*footer user logged out css begins here*/
-.footer-signup{
+.footer-affiliate{
     display: flex;
-    justify-content: space-evenly;
-    margin: 85px 1100px 25px 0px;
-    padding: 3px;
-} 
-
-.footer-signup input{
-    width: 100%;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: 1px;
-	margin-bottom: 16px;
-    font-weight: bold;
+    justify-content: flex-end;
+    margin: 15px 50px 10px 25px; 
 }
-#footer-joinnow {
+
+.footer-affiliate img{
     display: flex;
-    margin: -80px 0px 10px 285px;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;  
-}   
-
-.footer-login > h4 {
-    margin: 5px 0px 25px 35px;
+    justify-content: flex-end;
+    object-fit: contain;
+    margin: 5px 50px 10px -250px;
+    width: 75px;
+    height: 75px;
 }
 
-.footer-login > a {
-    text-decoration: none;
-    margin: 80px 0px 15px 35px;
-    color: var(--black);
-    font-weight: bold;
+.footer-affiliate > h4{
+    font-size: 18px;
+    margin: 5px 50px 20px 100px;
 }
 
-.footer-login a:hover {
-    color: var(--red);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: solid;
-}
-/*footer user logged out css ends here*/
-
-/*footer user login css begins here*/
-.footer-account-profile > h4 {
-    margin: 5px 0px 15px 320px;
-    padding: 5px;
+.reserved h3{
     font-size: 20px;
-} 
-
-#footer-account-profile {
-    display: flex;
-    margin: -10px 0px 15px 325px;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;  
+    margin: 5px 0px 2px 25px;
 }
 
-.reserved > h3 {
-    color: var(--black);   
-}
-/*footer user login css ends here*/
-
+/*footer css ends here*/
 
 /*forgot pwd starts here*/
 #forgotpwd-container{
