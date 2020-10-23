@@ -21,11 +21,21 @@ app.get('/', (req, res) => {
 //     res.render('pages/about-us')
 // })
 
-router.use(router);
+
 app.use('/', route);
 
-app.listen(PORT, function() {
+
+app.listen(PORT, () => {
     console.log(`App running on port ${PORT}`);
-});
+    let mongo_client = mongodb.MongoClient;
+    mongo_client.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db_client) => {
+        if(err) {
+            console.log("ERROR:" + err);
+        } else {
+            console.log("MONGODB DATABASE CONNECTED");
+            db_handler = db_client.db(DB_NAME);
+        }
+    })
+  }); 
 
 

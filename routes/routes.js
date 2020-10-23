@@ -69,3 +69,5 @@ router.get('/error', (req, res) =>{
 })
 
 module.exports = router;
+
+router.use(router);
