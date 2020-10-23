@@ -1,26 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const PATH = require('path');
-const bodyParser = require('body-parser');
-const route = require('./routes/routes');
-const dotenv = require('dotenv');
-const { ENGINE_METHOD_ALL } = require('constants');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-dotenv.comfig();
 app.set('view engine', 'ejs');
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(PATH.join(_dirname, 'public')));
-
-let db_handler;
-const DB_URL = process.env.DB_URL;
-const DB_NAME = process.env.DB_NAME;
-const DB_ORG = process.env.DB_ORG;
-const DB_GRAD = process.env.DB_GRAD;
 
 // router.get('/about-us', (req, res) => {
 //     res.render('/about-us');
@@ -90,19 +74,3 @@ module.exports = router;
 
 router.use(router);
 
-router.listen(PORT, () => {
-  console.log(`App running on port ${PORT}`);
-  // create connection to our database
-  let mongo_client = mongodb.MongoClient;
-  mongo_client.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db_client) => {
-      if(err) {
-          console.log("ERROR:" + err);
-      } else {
-          // Upon success, print a message saying "Database Connected"
-          console.log("MONGODB DATABASE CONNECTED");
-          // Upon success, you should also connect to the 'bsj' database.
-          // Use db_handler for future use
-          db_handler = db_client.db(DB_NAME);
-      }
-  })
-});
