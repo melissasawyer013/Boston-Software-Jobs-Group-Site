@@ -617,14 +617,18 @@ ul.org-card {
     display: none;
 }
 #add_company{
-    background-color: red;
+    background-color: #cb352a;
+    color: white;
 }
-input[class=uno1] {
-    background-color: red;
+.uno1 {
+    background-color: #cb352a;
+    color: white;
     position: relative;
     left:-1px;
 }
 input[class=uno] {
-    background-color: red;
+    background-color: #cb352a;
+    color: white;
+    
 }
 /*END User Profile*/
