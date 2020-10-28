@@ -1,7 +1,7 @@
 {
   "name": "boston-software-jobs-team-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "<!-- PROJECT INTRO -->\r <br />",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,5 +18,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsimpson667/Boston-Software-Jobs-Group-Site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lsimpson667/Boston-Software-Jobs-Group-Site/issues"
+  },
+  "homepage": "https://github.com/lsimpson667/Boston-Software-Jobs-Group-Site#readme"
 }

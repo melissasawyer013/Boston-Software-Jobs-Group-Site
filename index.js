@@ -2,10 +2,14 @@ const express = require('express');
 const router = express.Router();
 const PATH = require('path');
 const bodyParser = require('body-parser');
-const route = require('./routes/routes')
+const route = require('./routes/routes');
+const mongodb = require('mongodb');
+const dotenv = require('dotenv');
 
 const app = express();
 const PORT = 5000;
+
+dotenv.config();
 
 app.set('view engine', 'ejs');
 
