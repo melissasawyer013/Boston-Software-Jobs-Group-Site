@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const app = express();
 
-app.use("/static", express.static('./static/'));
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.set('view engine', 'ejs');
 
 // router.get('/about-us', (req, res) => {
 //     res.render('/about-us');
@@ -71,7 +73,5 @@ router.get('/error', (req, res) =>{
 router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
-
-
 
 module.exports = router;
