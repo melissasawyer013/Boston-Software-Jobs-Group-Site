@@ -1,5 +1,7 @@
 <!-- Navbar -->
 <%- include('../partials/header')-%>
+<%- include('../partials/graduate-card')-%>
+
 <!-- Page Content Starts -->
 <div class="content-container-whole-page">
     <div class="content-container-width-70">
@@ -68,39 +70,19 @@
                 </div>
             </div>
 
-            <% all_students.forEach( (individual_firstName) => { %>
-            <%=individual_firstName %> , <%=individual_firstName.cohort %>
-            <% }) %>
+            <% for (let i = 0; i < USERS.length; i++) { %>
+                <%= USERS[i].firstName %>
+                <%= USERS[i].lastName %>
+                <%= USERS[i].year %>
+                <%= USERS[i].email %>
+                <%= USERS[i].githubUrl %>
+                <%= USERS[i].linkedinUrl %>
+                <%= USERS[i].phone %>
+                <%= USERS[i].bio %>
+                <%= USERS[i].photo %>
+            <% } %>
 
-            <% all_students.forEach( (individual_lastName) => { %>
-            <%=individual_lastName %> , <%=individual_lastName.cohort %>
-            <% }) %>
-
-            <% all_cohortyear.forEach( (individual_year) => { %>
-            <%=individual_year %> , <%=individual_year.cohort %>
-            <% }) %>
-
-            <% all_email.forEach( (individual_email) => { %>
-            <%=individual_email %> , <%=individual_email.cohort %>
-            <% }) %>
-
-            <% all_githubUrl.forEach( (individual_githubUrl) => { %>
-            <%=individual_githubUrl %> , <%=individual_githubUrl.cohort %>
-            <% }) %>
-
-            <% all_linkedinUrl.forEach( (individual_linkedinUrl) => { %>
-            <%=individual_linkedinUrl %> , <%=individual_linkedinUrl.cohort %>
-            <% }) %>
-
-            <% all_phone.forEach( (individual_phone) => { %>
-            <%=individual_phone %> , <%=individual_phone.cohort %>
-            <% }) %>
-
-            <% all_bio.forEach( (individual_bio) => { %>
-            <%=individual_bio %> , <%=individual_bio.cohort %>
-            <% }) %>
-    
-
+            
 
 
             <br>

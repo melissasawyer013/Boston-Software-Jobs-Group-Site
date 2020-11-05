@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const app = express();
 
-app.use("/static", express.static('./static/'));
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.set('view engine', 'ejs');
 
 // router.get('/about-us', (req, res) => {
 //     res.render('/about-us');
@@ -68,52 +70,9 @@ router.get('/error', (req, res) =>{
   res.render('pages/error')
 })
 
-//CRUD for Read part for graduates begin here//
-app.get('/graduates', (req, res) => {
-  db_handler.collection(COLLECTION_NAME).find({ }).toArray( (err, result) => {
-    if(err){
-      console.log(err);
-    }
-    else {
-      console.log(result);
-      res.render('/graduates', {
-        'all_students':result
-      });
-    }
-  });
-});
-
-app.post('/graduates', (req, res) => {
-  const form_data =req.body;
-  console.log(req.body);
-  const fname = form_data['firstName'];
-  const lname = form_data['lastName'];
-  const year = form_data['year'];
-  const email = form_data['email'];
-  const githubUrl =form_data['githubUrl'];
-  const linkedinUrl =form_data['linkedinUrl'];
-  const phone =form_data['phone'];
-  const bio =form_data['bio'];
-  
-  const graduates_obj = {
-    fname: firstName,
-    lname: lastName,
-    year: year,
-    email: email,
-    githubUrl: githubUrl,
-    linkedinUrl: linkedinUrl,
-    phone: phone,
-    bio: bio,
-  }
-  console.log(graduates_obj);
-  db_handler.collection(COLLECTION_NAME).insertOne(graduates_obj, (error, result) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("2018 Cohorts");
-      res.redirect('/graduates');
-    }
-  })
-});
 
 module.exports = router;
+module.exports = router;
+
+router.use(router);
+
