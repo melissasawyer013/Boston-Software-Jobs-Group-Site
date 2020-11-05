@@ -68,4 +68,8 @@ router.get('/error', (req, res) =>{
   res.render('pages/error')
 })
 
+router.get('/user-profile', (req, res) =>{
+  res.render('pages/userprofile')
+})
+
 module.exports = router;
