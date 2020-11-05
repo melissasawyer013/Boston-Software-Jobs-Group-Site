@@ -1,0 +1,115 @@
+<!-- Navbar -->
+<%- include('../partials/header')-%>
+<!-- Page Content Starts -->
+
+<div class="add-experience-container">
+    <div class="add-student-pic">
+        <source srcset="images/sample-pic-student.png" type="image">
+        <img src="images/sample-pic-student.png" class="img-fluid" alt="Responsive image">
+        <h2>Student name</h2>
+    </div>
+
+    <div class="title-add-experience">
+        <h2>Add an experience</h2>
+    </div>
+
+    <!--add current organization starts here-->
+    <div class="dropdown-options-addexperience">
+        <div class="dropdown-current-organization">
+            <h2>Where I work now</h2>
+            <div class="add-experience-columns">
+                <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu-button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose an organization</button>
+                <div class="dropdown-menu" aria-labelledby="dropdown-menu-button">
+                    <a class="dropdown-item" href="#">Option 1</a>
+                    <a class="dropdown-item" href="#">Option 2</a>
+                    <a class="dropdown-item" href="#">Option 3</a>
+                </div>
+
+                <div class="adding-new-organization">
+                    <button type="button" class="btn btn-secondary" id="add-new-org">Add current organization</button>
+                </div>
+
+                <!--only will display if users clicked add new button starts here-->
+                <div class="add-info1">
+                    <input type="text" id="exp-current-organization" style="display: none"
+                        placeholder="Current Organization Name" required>
+                </div>
+
+                <div class="add-experience-submit">
+                    <button class="btn-1">Submit</button>
+                </div>
+
+            </div>
+        </div>
+                <!--only will display if users clicked add new button ends here-->
+
+    <!--add current organization ends here-->
+
+    <!--add previous organization starts here-->
+        <div class="dropdown-previous-organization">
+            <h2>Where I worked in the past</h2>
+            <div class="add-experience-columns">
+                <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu-button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose previous organization
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="dropdown-menu-button">
+                    <a class="dropdown-item" href="#">Option 1</a>
+                    <a class="dropdown-item" href="#">Option 2</a>
+                    <a class="dropdown-item" href="#">Option 3</a>
+                </div>
+
+                <div class="adding-previous-experience">
+                    <button type="button" class="btn btn-secondary" id="add-previous-org">Add a previous
+                    organization</button>
+                </div>
+
+                <!--only will display if users clicked add new button starts here-->
+                    <div class="add-info2">
+                        <input type="text" id="exp-previous-organization" style="display: none"
+                            placeholder="Previous organization name" required>
+                    </div>
+
+                    <div class="add-experience-submit">
+                        <button class="btn-1">Submit</button>
+                    </div>
+            </div>
+        </div>
+
+    <!--only will display if users clicked add new button ends here-->
+
+    <!--add previous organization ends here-->
+
+    <!--add an interview starts here-->
+        <div class="dropdown-add-interview">
+            <h2>Where I interviewed</h2>
+            <div class="add-experience-columns">
+                <button class="bg btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Choose an organization
+                </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdown-menu-button">
+                <a class="dropdown-item" href="#">Option 1</a>
+                <a class="dropdown-item" href="#">Option 2</a>
+                <a class="dropdown-item" href="#">Option 3</a>
+            </div>
+
+            <div class="add-interview">
+                <button type="button" class="btn btn-secondary" id="add-new-interview">Add an interview</button>
+            </div>
+    <!--only will display if users clicked add new button starts here-->
+            <div class="add-info3">
+                <input type="text" id="add-interview" style="display: none"placeholder="Interview experience" required>
+            </div>
+
+            <div class="add-experience-submit">
+                <button class="btn-1">Submit</button>
+            </div>
+
+            </div>
+    <!--only will display if users clicked add new button ends here-->
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer')-%>

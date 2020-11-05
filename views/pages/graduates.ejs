@@ -7,257 +7,1191 @@
         <br>
         <p class="font-size-130">Click on the plus button next to each graduate's name to see their contact information, bio, where they work, where they've worked in the past, and where they've interviewed. Use this page to reach out and network with past grads, especially if they've interviewed at an organization where you're interested in applying or if they've worked there in the past or work there presently.</p>
     </div>
-    <!-- THE FOLLOWING DIV CAN BE TURNED INTO A PARTIAL AND A LOOP CAN BE USED HERE TO ACCESS NAMES, INDIVIDUAL INFORMATION, PHOTOS, ETC. FROM THE DATABASE -->
-    <div class="content-container-width-70 border-black-1pt">
-        <div class="container-whole-width-row">
-            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Angulo.jpeg)"></div>
-            <h2 class="red-text text-center">Irving Angulo <br>2018 Cohort</h2>
-            <button type="button" class="collapsible-button">+</button>
-        </div>
-        <div class="content">
-            <div class="container-collapsible-content">
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CONTACT INFO</h4>
-                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
-                    <h4 class="red-text">BIO</h4>
-                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+    <br><br>
+    <div class="container-whole-width-row-2">
+        <div class="container-width-30-column" id="div-to-elongate-2018">
+            <h2 class="red-text container-cohort-year">
+                2018 COHORT
+                <span class="container-collapsible-button-cohort"><button type="button" class="collapsible-button-cohort cohort-button-2018">+</button></span>
+            </h2>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Angulo.jpeg)"></div>
+                    <h4 class="black-text text-center">Irving<br>Angulo</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
                 </div>
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CURRENT EMPLOYER</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">INTERVIEWED WITH</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
-    <div class="content-container-width-70 border-black-1pt">
-        <div class="container-whole-width-row">
-            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Beckford.jpg)"></div>
-            <h2 class="red-text text-center">Anthony Beckford <br>2019 Cohort</h2>
-            <button type="button" class="collapsible-button">+</button>
-        </div>
-        <div class="content">
-            <div class="container-collapsible-content">
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CONTACT INFO</h4>
-                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
-                    <h4 class="red-text">BIO</h4>
-                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                </div>
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CURRENT EMPLOYER</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">INTERVIEWED WITH</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
-    <div class="content-container-width-70 border-black-1pt">
-        <div class="container-whole-width-row">
-            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Becquart.jpeg)"></div>
-            <h2 class="red-text text-center">Ninon Becquart <br>2018 Cohort</h2>
-            <button type="button" class="collapsible-button">+</button>
-        </div>
-        <div class="content">
-            <div class="container-collapsible-content">
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CONTACT INFO</h4>
-                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
-                    <h4 class="red-text">BIO</h4>
-                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Becquart.jpeg)"></div>
+                    <h4 class="black-text text-center">Ninon<br>Becquart</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
                 </div>
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CURRENT EMPLOYER</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">INTERVIEWED WITH</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
-    <div class="content-container-width-70 border-black-1pt">
-        <div class="container-whole-width-row">
-            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Cruz.jpg)"></div>
-            <h2 class="red-text text-center">Melissa Cruz <br>2018 Cohort</h2>
-            <button type="button" class="collapsible-button">+</button>
-        </div>
-        <div class="content">
-            <div class="container-collapsible-content">
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CONTACT INFO</h4>
-                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
-                    <h4 class="red-text">BIO</h4>
-                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                </div>
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CURRENT EMPLOYER</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">INTERVIEWED WITH</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
-    <div class="content-container-width-70 border-black-1pt">
-        <div class="container-whole-width-row">
-            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Easington.jpg)"></div>
-            <h2 class="red-text text-center">Tahj Easington <br>2019 Cohort</h2>
-            <button type="button" class="collapsible-button">+</button>
-        </div>
-        <div class="content">
-            <div class="container-collapsible-content">
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CONTACT INFO</h4>
-                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
-                    <h4 class="red-text">BIO</h4>
-                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Cruz.jpg)"></div>
+                    <h4 class="black-text text-center">Melissa<br>Cruz</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
                 </div>
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CURRENT EMPLOYER</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">INTERVIEWED WITH</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
-    <div class="content-container-width-70 border-black-1pt">
-        <div class="container-whole-width-row">
-            <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Freeman.jpeg)"></div>
-            <h2 class="red-text text-center">Clydies Freeman<br>2018 Cohort</h2>
-            <button type="button" class="collapsible-button">+</button>
-        </div>
-        <div class="content">
-            <div class="container-collapsible-content">
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CONTACT INFO</h4>
-                    <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
-                    <h4 class="red-text">BIO</h4>
-                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                </div>
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CURRENT EMPLOYER</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">INTERVIEWED WITH</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <!-- CAN BE REMOVED WHEN DATABASE IS SET UP, THE FIRST DIV IS TURNED INTO A PARTIAL, AND A LOOP IS IMPLEMENTED INTO THIS EJS FILE TO AUTO FILL THE PERSONAL DETAILS -->
-    <div class="content-container-width-70 border-black-1pt">
-        <div class="container-whole-width-row">
-            <div class="image-graduates-headshot" style="background-image: url(/images/headshot.jpg)"></div>
-            <h2 class="red-text text-center">Lois Simpson <br>2020 Cohort</h2>
-            <button type="button" class="collapsible-button">+</button>
-        </div>
-        <div class="content">
-            <div class="container-collapsible-content">
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CONTACT INFO</h4>
-                    <p>lsimpson@gmail.com<br>github.com/lsimpson<br>www.linkedin.com/in/lois-simpson<br>617-283-4555</p>
-                    <h4 class="red-text">BIO</h4>
-                    <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Freeman.jpeg)"></div>
+                    <h4 class="black-text text-center">Clydies<br>Freeman</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
                 </div>
-                <div class="container-collapsible-column">
-                    <h4 class="red-text">CURRENT EMPLOYER</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
-                    <h4 class="red-text">INTERVIEWED WITH</h4>
-                    <ul>
-                        <a href="#"><li>Company Name link + position</li></a>
-                        <a href="#"><li>Company Name link + position</li></a>
-                    </ul>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Hampton.jpg)"></div>
+                    <h4 class="black-text text-center">Amber<br>Hampton</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Juarbe.jpeg)"></div>
+                    <h4 class="black-text text-center">Angel<br>Juarbe</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Kinchen.jpeg)"></div>
+                    <h4 class="black-text text-center">Sydney<br>Kinchen</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Lambright.jpeg)"></div>
+                    <h4 class="black-text text-center">Jasen<br>Lambright</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Murakami-Freeberg.jpeg)"></div>
+                    <h4 class="black-text text-center">Ayana<br>Murakami-<br>Freeberg</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Recinos.jpeg)"></div>
+                    <h4 class="black-text text-center">Jennifer<br>Recinos</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Vertus.jpeg)"></div>
+                    <h4 class="black-text text-center">Isaiah<br>Vertus</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2018">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-von-Vogler.jpeg)"></div>
+                    <h4 class="black-text text-center">Michelle<br>von Vogler</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
         </div>
+        <!-- 2018 COHORT LIST ENDS HERE -->
+        <!-- 2019 COHORT LIST STARTS HERE -->
+        <div class="container-width-30-column" id="div-to-elongate-2019">
+            <h2 class="red-text container-cohort-year">
+                2019 COHORT
+                <span class="container-collapsible-button-cohort"><button type="button" class="collapsible-button-cohort cohort-button-2019">+</button></span>
+            </h2>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Beckford.jpg)"></div>
+                    <h4 class="black-text text-center">Anthony<br>Beckford</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Easington.jpg)"></div>
+                    <h4 class="black-text text-center">Tahj<br>Easington</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Julien.jpg)"></div>
+                    <h4 class="black-text text-center">Darlene<br>Julien</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Lazo.jpg)"></div>
+                    <h4 class="black-text text-center">Nadia<br>Lazo</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-McGhee.jpg)"></div>
+                    <h4 class="black-text text-center">Kewanee<br>McGhee</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Pires.jpg)"></div>
+                    <h4 class="black-text text-center">Arnold<br>Pires</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Saint-Germain.jpg)"></div>
+                    <h4 class="black-text text-center">Carina<br>Saint<br>Germain</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Taboh.jpg)"></div>
+                    <h4 class="black-text text-center">Kiki<br>Taboh</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Tran.jpg)"></div>
+                    <h4 class="black-text text-center">Helen<br>Tran</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2019">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Williams.jpg)"></div>
+                    <h4 class="black-text text-center">Tomiqua<br>Williams</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div> 
+        <!-- 2019 COHORT LIST ENDS HERE -->
+        <!-- 2020 COHORT LIST STARTS HERE -->
+        <div class="container-width-30-column" id="div-to-elongate-2020">
+            <h2 class="red-text container-cohort-year">
+                2020 COHORT
+                <span class="container-collapsible-button-cohort"><button type="button" class="collapsible-button-cohort cohort-button-2020">+</button></span>
+            </h2>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-DuBose.jpg)"></div>
+                    <h4 class="black-text text-center">Adolph<br>DuBose</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Jean.jpg)"></div>
+                    <h4 class="black-text text-center">Andy<br>Louis<br>Jean</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Cruz.jpg)"></div>
+                    <h4 class="black-text text-center">Zin<br>Ma</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Mcquitter.jpg)"></div>
+                    <h4 class="black-text text-center">Karlisha<br>Mcquitter</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Mercado.jpg)"></div>
+                    <h4 class="black-text text-center">Jackie<br>Mercado</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Pierre.png)"></div>
+                    <h4 class="black-text text-center">Lorreno<br>Pierre</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Sawyer.jpg)"></div>
+                    <h4 class="black-text text-center">Melissa<br>Sawyer</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Sharmarke.jpg)"></div>
+                    <h4 class="black-text text-center">Khalid<br>Sharmarke</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Simpson.jpg)"></div>
+                    <h4 class="black-text text-center">Lois<br>Simpson</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Stowers.jpg)"></div>
+                    <h4 class="black-text text-center">Tevin<br>Stowers</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Thompson.jpg)"></div>
+                    <h4 class="black-text text-center">Jamie<br>Thompson</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-container-width-100-column cohort-grads-2020">
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Tinsley.jpg)"></div>
+                    <h4 class="black-text text-center">Brittany<br>Tinsley</h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p>email@email.com<br>github.com/route<br>www.linkedin.com/in/name<br>(###)###-####</p>
+                            <h4 class="red-text">BIO</h4>
+                            <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <!-- 2020 COHORT LIST ENDS HERE -->
     </div>
-
     <br><br>
 </div>
-
-
-
-
-
-
 <%- include('../partials/footer')-%>

@@ -10,33 +10,43 @@
     <script src="https://kit.fontawesome.com/0bf73eb96e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<!-- Navigation Bar Begins -->
-    <nav class="navbar" role="navigation">
-        <div class="navbar-container white-background">
-            <div class="navbar-logo-container">
-                <a href="http://codesquad.org/" target="_blank" title="opens CodeSquad.org in a new tab">
-                    <img src="images/Codesquad-logo-large.png" alt="CodeSquad Logo">
+<!-- Bootstrap Navbar starts Here -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+    <a class="navbar-brand" href="/" title="goes to index page of BSWJ website">
+        <img src="images/BSJ-logo.png" alt="Boston Software Jobs Logo" style="width: 120px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active pr-2">
+                <a class="nav-link nav-links-container" href="/">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item pr-2">
+                <a class="nav-link nav-links-container" href="about-us">ABOUT US</a>
+            </li>
+            <li class="nav-item dropdown pr-2">
+                <a class="nav-link nav-links-container dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ORGANIZATIONS
                 </a>
-            </div>
-            <div class="navbar-links-container">
-                <a href="/">HOME</a>
-                <a href="about-us">ABOUT US</a>
-                <div class="navbar-dropdown dark-grey-text">
-                    <span>ORGANIZATIONS</span>
-                    <div class="dropdown-content white-background">
-                        <br>
-                        <a href="organizations">SEE ALL ORGS</a>
-                        <br><br>
-                        <a href="add-org">ADD AN ORG</a>
-                        <br>
-                        <br>
-                    </div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item nav-links-container" href="organizations">SEE ALL ORGS</a>
+                    <a class="dropdown-item nav-links-container" href="add-org">ADD AN ORG</a>
                 </div>
-                <a href="graduates">GRADUATES</a>
-                <a href="login">LOGIN</a>
-                <label for="navSearch"></label>
-                <input type="text" id="navSearch" name="navSearch" placeholder='&#xF002; SEARCH' style="font-family: FontAwesome;">
-            </div>
-        </div>        
-    </nav>
-
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-links-container" href="graduates">GRADUATES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-links-container" href="login">LOGIN</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button type="button" class="btn btn-outline-dark">Search</button>
+        </form>
+    </div>
+</nav>
+<!-- Bootsrtap Navbar Ends Here -->
