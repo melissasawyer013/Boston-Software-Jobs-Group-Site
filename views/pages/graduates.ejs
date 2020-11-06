@@ -71,21 +71,11 @@
             </div>
 
             <% for (let i = 0; i < USERS.length; i++) { %>
-                <%= USERS[i].firstName %>
-                <%= USERS[i].lastName %>
-                <%= USERS[i].year %>
-                <%= USERS[i].email %>
-                <%= USERS[i].githubUrl %>
-                <%= USERS[i].linkedinUrl %>
-                <%= USERS[i].phone %>
-                <%= USERS[i].bio %>
+                <%= USERS[i].firstName %> <%= USERS[i].lastName %> <%= USERS[i].year %> <%= USERS[i].email %>
+                <%= USERS[i].githubUrl %> <%= USERS[i].linkedinUrl %> <%= USERS[i].phone %> <%= USERS[i].bio %>
                 <%= USERS[i].photo %>
             <% } %>
 
-            
-
-
-            <br>
             <!-- <div class="content-container-width-100-column cohort-grads-2018">
                 <div class="container-whole-width-row-graduate-listing">
                     <div class="image-graduates-headshot" style="background-image: url(/images/headshot-Becquart.jpeg)"></div>
@@ -1262,6 +1252,6 @@
         </div> -->
                     <!-- 2020 COHORT LIST ENDS HERE -->
                 </div>
-                <br><br>
             </div>
-            <%- include('../partials/footer')-%>
+<%- include('../partials/graduate-card', {USERS: users})-%>
+<%- include('../partials/footer')-%>

@@ -736,6 +736,72 @@ margin-left: 20px;
     font-weight: bold;
 } 
 
+
+/*User Profile*/
+
+.user-profile .flex-container{
+    display: flex;
+    
+}
+
+.user-profile .column-left{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    
+    
+}
+.user-profile .column-right{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    
+    
+}
+
+.user-profile input{
+    height: 30px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  #employed{
+    display: none;
+}
+#add_company{
+    background-color: #cb352a;
+    color: white;
+}
+.uno1 {
+    background-color: #cb352a;
+    color: white;
+    position: relative;
+    left:-1px;
+}
+input[class=uno] {
+    background-color: #cb352a;
+    color: white;
+    
+}
+/*END User Profile*/
+
 /* Error Page starts here */
 .error-number {
     text-align: center;
@@ -744,14 +810,13 @@ margin-left: 20px;
 .error-message {
     text-align: center;
 }
-<<<<<<< HEAD
+
 .error-page-border {
     border: 1px solid black;
     padding-top: 100px;
     padding-bottom: 100px;
     margin: 120px 350px; 
-=======
-
+}
 
 /* Media queries for organizations.ejs page and graduates.ejs page starts here */
 @viewport {
@@ -1101,5 +1166,63 @@ margin-left: 20px;
     .container-collapsible-column-right {
         width: 100%;
     }
->>>>>>> 884448971a65a4292e018a7a8af25b6e8a70e6a9
 }
+
+/*User Profile*/
+
+.user-profile .flex-container{
+    display: flex;  
+    flex-direction: row;
+    width: 100%;
+}
+
+.user-profile .column-left,
+.user-profile .column-right {
+    width: 50%;
+    padding-left: 30px; 
+}
+
+.user-profile input{
+    height: 30px;
+}
+
+.user-profile .dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.user-profile .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+  
+.user-profile  .dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.user-profile #employed{
+    display: none;
+}
+
+.user-profile #add_company{
+    background-color: #cb352a;
+    color: white;
+}
+
+.user-profile .uno1 {
+    background-color: #cb352a;
+    color: white;
+    position: relative;
+    left:-1px;
+}
+
+.user-profile input[class=uno] {
+    background-color: #cb352a;
+    color: white;
+} 
+/*END User Profile
