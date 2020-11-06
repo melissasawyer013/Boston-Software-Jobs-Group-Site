@@ -28,6 +28,8 @@ app.get('/', (req, res) => {
     res.render('pages/index');
 })
 
+
+
 // app.get('/about-us', (req, res) => {
 //     res.render('pages/about-us')
 // })
@@ -36,7 +38,7 @@ router.use(router);
 app.use('/', route);
 
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}`);
+  console.log(`Boston Software Jobs up and running on port ${PORT}!!`);
   let mongo_client = mongodb.MongoClient;
   mongo_client.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db_client) => {
       if(err) {
@@ -47,5 +49,4 @@ app.listen(PORT, () => {
       }
   })
 });
-
 

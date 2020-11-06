@@ -46,8 +46,12 @@ router.get('/graduate-card', (req, res) => {
   res.render('pages/graduate-card')
 })
 
-router.get('/organization-card', (req, res) => {
-  res.render('pages/organization-card')
+app.get('/organization-card', (req, res) => {
+  // db_handler.collection(DB_ORG).find({}).toArray((err, org) => {
+  //     if(err) return console.log(err);
+  //     if(org) res.render('pages/organization-card', {orgArray:org})
+  // });
+  res.render('pages/organization-card');
 })
 
 router.get('/registration', (req, res) => {
