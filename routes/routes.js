@@ -60,6 +60,9 @@ router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
 
+
+module.exports = router;
+module.exports = router;
 // This is an example of how to get data from the database and have it available for the page you want to render
 // when the user makes a request to this route
 router.get('/example', (req, res) =>{

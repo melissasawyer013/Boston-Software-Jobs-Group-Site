@@ -1,7 +1,22 @@
 <!-- Navbar -->
-<%- include('../partials/header')-%>
 <!-- Page Content Starts -->
-<div class="grad-card-main-container">
+
+<% for(let i = 0; i < USERS.length; i++) { %>
+    <div>
+        <p><%= USERS[i].firstName%> <%= USERS[i].lastName %> <%= USERS[i].year %> <%= USERS[i].email %> <%= USERS[i].githubUrl %> <%= USERS[i].linkedinUrl %> <%= USERS[i].phone %> <%= USERS[i].bio %> <%= USERS[i].photo %></p>
+
+        <h4>Current Employer</h4>
+        <p><%=ORG[i].name</p>
+
+        <h4>Previous Employers</h4>
+        <p><%=ORG[i].name</p>
+
+        <h4>Interviewed With</h4>
+        <p><%=ORG[i].name</p>
+    </div>
+<% } %>
+
+<!-- <div class="grad-card-main-container">
     <div class="grad-card-headshot-contacts-container">
         <div class="grad-card-headshot">
             
@@ -32,4 +47,4 @@
         </ul>
     </div>
 </div>
-<%- include('../partials/footer')-%>
+ -->
