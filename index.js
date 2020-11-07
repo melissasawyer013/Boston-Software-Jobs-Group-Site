@@ -1,11 +1,14 @@
 const express = require('express');
-const router = express.Router();
 const PATH = require('path');
 const bodyParser = require('body-parser');
-const route = require('./routes/routes')
+const route = require('./routes/routes');
+const dotenv = require('dotenv');
+let client = require('./db');
 
 const app = express();
 const PORT = 5000;
+
+dotenv.config();
 
 app.set('view engine', 'ejs');
 
@@ -13,17 +16,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true})); 
 app.use(express.static(PATH.join(__dirname, 'public')));
 
+app.use('/', route);
 app.get('/', (req, res) => {
-    res.render('pages/index');
+  res.render('pages/index');
 })
 
-// app.get('/about-us', (req, res) => {
-//     res.render('pages/about-us')
-// })
-
-router.use(router);
-app.use('/', route);
-
-app.listen(PORT, function() {
-    console.log(`App running on port ${PORT}`);
+const DB_URL = process.env.DB_URL;
+client.connect(DB_URL, (err) => {
+  if (err) {
+    console.log('Unable to connect to Mongo.');
+    process.exit(1);
+  } else {
+    app.listen(PORT, () => {
+      console.log('Listening on port 5000...');
+    });
+  }
 });
+
+module.exports = app;
+

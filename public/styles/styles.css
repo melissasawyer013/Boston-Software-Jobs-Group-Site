@@ -1,13 +1,15 @@
-/* Variable */
+/* Variables */
 :root {
     --red: #CB352A;
     --light-grey: #A0A09E;
     --dark-grey: #343434;
     --white: #ffffff;
     --black: #000000;
+    --light-light-grey: #f1f1f1;
   }
 
-body {
+
+  body {
     background-color: var(--white);
     size: 100%;
     padding: 0;
@@ -15,7 +17,9 @@ body {
     font-family: Lato, sans-serif;
 }
 
+
 /* Background and Text Classes */
+
 .red-text {
     color: var(--red);
 }
@@ -30,6 +34,10 @@ body {
 
 .light-grey-text {
     color: var(--light-grey);
+}
+
+.black-text {
+    color: var(--black);
 }
 
 .red-background {
@@ -52,83 +60,46 @@ body {
     background-color: var(--black);
 }
 
-/* Navbar */
-.navbar-container {
-    display: flex;
-    width: 100%;
+.text-center {
+    text-align: center;
 }
 
-.navbar-logo-container {
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    padding: 10px 0;
+.text-left {
+    text-align: left;
 }
 
-.navbar-logo-container img{
-    width: 140px;
-    height: 59px;
+.font-size-130 {
+    font-size: 130%;
 }
 
-.navbar-links-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 80%;
-    align-items: center;
-    margin-right: 20px;
+.border-black-1pt {
+    border: 1pt solid var(--black);
 }
 
-.navbar-links-container a {
-    margin: 10px 10px;
-    padding: 5px;
+/* Bootstrap Navbar */
+.navbar-brand {
+    margin-right: 50px;
 }
 
-.navbar-links-container a:link,
-.navbar-links-container a:visited {
-    color: var(--dark-grey);
-    text-decoration: none;
+.nav-wrap{
+    flex-wrap: wrap;
 }
 
-.navbar-links-container a:hover,
-.navbar-links-container a:focus,
-.navbar-links-container a:active {
-    color: var(--red);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid;
+.navbar-codesquad-logo-container {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.navbar-codesquad-logo-container img{
+    width: 90px;
+    height: 40px;
 }
 
-.navbar-dropdown {
-    position: relative;
-    display: inline-block;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px;
-}
-
-.navbar-dropdown:hover {
-    color: var(--red);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid;
-}
-
-.navbar-dropdown:hover .dropdown-content {
-    color: var(--red);
-    font-weight: bold;
-    text-decoration: none;
-    display: block;  
-}
-
+/* Containers */
 .whole-width-content-container-with-image {
     display: flex;
     justify-content: center;
-    background-image: url(../images/stock-image-coders-1.jpg);
+    background-image: url(../images/homepage-image.jpg);
     width: 100%;
     height: 500px;
     background-position: center;
@@ -136,7 +107,18 @@ body {
     background-size: cover;
 }
 
-.three-quarters-width-content-container {
+.whole-width-content-container-with-image-about-us {
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/about-us-image.png);
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.three-quarters-width-content-container-text-over-img {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,6 +129,1100 @@ body {
     text-shadow: 2px 2px 30px var(--red);
 }
 
+/* Footer begins here */
+.footer-container img{
+    width: auto;
+    height: 150px;
+    margin: 50px 35px; 
+    object-fit: contain; 
+} 
+
+.footer-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr)); 
+    margin: -150px 0px 0px 250px;
+}
+   
+.footer-quicklinks-container > h2,
+.footer-socialmedia > h2{
+    font-size: 24px;
+}
+
+.footer-quicklinks-container a{
+    text-decoration: none;
+    color: var(--black);
+    margin: 3px;
+}
+
+.footer-quicklinks-container a:hover,
+.footer-quicklinks-container a:focus,
+.footer-quicklinks-container a:active{
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: solid;
+}
+
+.footer-socialmedia .symbol{
+    font-size: 50px;
+    margin: auto 10px;
+}
+
+.footer-affiliate{
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 50px 10px 25px; 
+}
+
+.footer-affiliate img{
+    display: flex;
+    justify-content: flex-end;
+    object-fit: contain;
+    margin: 5px 50px 10px -250px;
+    width: 75px;
+    height: 75px;
+}
+
+.footer-affiliate > h4{
+    font-size: 18px;
+    margin: 5px 50px 20px 100px;
+}
+
+.reserved h3{
+    font-size: 20px;
+    margin: 5px 0px 2px 25px;
+}
+
+/*footer css ends here*/
+
+/*forgot pwd starts here*/
+#forgotpwd-container{
+    display: grid;
+    justify-content: center;
+    padding: 50px; 
+    
+}
+
+.forgotpwd{
+    border: 1px solid black;
+    padding: 25px;
+    background-color: var(--light-light-grey);
+}
+
+.forgotpwd input {
+    width: auto;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.forgotpwd-reset button{
+    border-radius: 12px;
+    margin-top: 25px;
+}  
+/*forgot pwd ends here*/
+
+/*containers that can be used on multiple pages*/
+.content-container-whole-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.content-container-width-70 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 50px 50px 0 50px;
+    padding: 25px;
+}
+
+.container-whole-width-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10%;
+}
+
+.container-whole-width-row-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-self: center;
+    padding: 0 40px;
+}
+
+.container-cohort-year {
+    width: 100%;
+}
+
+.container-whole-width-row-graduate-listing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    /* margin: 0 20px; */
+    /* padding: 0 10px; */
+}
+
+.container-width-30-column {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
+    
+}
+
+.container-width-30-column h2 {
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.content-container-width-100-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    /* padding: 0 20px; */
+}
+
+.container-modification-height-120 {
+    height: 120px;
+}
+
+/*end of containers that can be used on multiple pages*/
+
+/* Beginning of Grad Card */
+.grad-card-main-container {
+    background-color: white;
+    margin: 50px 100px;
+    border: 2px solid rgb(203, 53, 36);
+    padding: 10px;
+    display: flex;
+ }
+.grad-card-left-container {
+    width: 50%;
+}
+
+.grad-card-right-container {
+    width: 50%;
+    text-align: right;
+}
+
+.grad-card-right-container ul {
+    list-style-type: none;
+}
+
+.grad-card-headshot img { 
+    width: 100px; 
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 100px;
+    background-image: url(../images/headshot.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    margin: 20px;
+}
+
+.image-graduates-headshot {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-organizations-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 150px;
+    height: auto;
+    width: 300px;
+}
+
+.image-organizations-logo img {
+    width: 100%;
+    height: auto;
+}
 
 
+/* Responsive Design for Grad Cards starts here*/
+@media only screen and (max-width: 600px) {
+    .grad-card-headshot-contacts-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
+/* End of grad Card */
+
+/* Beginning of Org-Card */
+.org-card-main-container {
+    background-color: white;
+    margin: 50px 100px;
+    border: 2px solid rgb(203, 53, 36);
+    padding: 10px;
+}
+
+.org-card-name-logo-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.org-card {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.org-card li {
+    padding-right: 30px;
+}
+
+.org-card li a {
+    color: rgb(160, 160, 158);
+}
+
+.org-card-buttons-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+}
+
+.org-card-buttons-container button {
+    margin-bottom: 3px;
+}
+/* End of Org Card */
+
+/* Login starts here */
+.login-main-container {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    border: 1px solid grey;
+    margin-top: 50px;
+    padding-top: 10px;
+}
+
+
+/* Search Page Starts here */
+.search-results-main-container h1 {
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+}
+.search-form input {
+    margin-right: 5px;
+}
+
+.org-name-and-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.org-name-and-logo-container a {
+    margin-right: 20px;
+}
+.top-half-page {
+    margin: auto;
+}
+
+.bottom-half-page {
+margin-left: 20px;
+}
+/* Search Page Ends Here */
+
+/* add-experience css starts here */
+.add-experience-container{
+    display: grid;  
+    background-color: var(--light-light-grey);
+    border: 2px solid;
+    margin: 50px 5px;
+    padding: 2px;
+} 
+
+.add-student-pic{
+    margin: 50px;
+}
+
+.add-student-pic > img{
+    margin: 5px;
+    width: auto;
+    height: 150px;
+}
+
+.add-student-pic > h2 {
+    font-size: 20px;
+    margin: 10px 25px;
+}
+
+.title-add-experience > h2{
+    text-align: center;
+    font-size: 25px;
+}
+
+.dropdown-current-organization,
+.dropdown-previous-organization,
+.dropdown-add-interview{
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 25px 8px;  
+}  
+
+.add-experience-columns{
+    column-width: 20em; 
+} 
+
+.dropdown-current-organization > h2,
+.dropdown-previous-organization > h2,
+.dropdown-add-interview > h2{
+    margin: 15px 15px;
+}
+
+#dropdown-menu-button,
+#add-new-org,
+#add-previous-org,
+#add-new-interview{
+    margin: 15px;
+    background-color: var(--red);
+}
+
+.dropdown-menu{
+    position: relative;
+    width: 210px;
+    background-color: var(--red);
+}
+
+.dropdown-menu > a{
+    color: var(--white);
+}
+
+.add-info1 input[type=text],  
+.add-info2 input[type=text],
+.add-info3 input[type=text]{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 50%;
+    border-radius: 5px;
+    margin: 25px;
+    padding: 5px; 
+}
+
+#exp-current-organization,
+#exp-previous-organization,
+#add-interview{
+    margin: 15px;
+}
+
+.add-experience-submit > button{
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 5px;
+    margin: 15px 50px;
+    padding: 5px;
+}
+/* add-experience css ends here */
+
+/*add-org starts here*/
+.addorg-container{
+    display: grid;
+    grid-gap: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--light-light-grey);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 10px;
+}
+
+.addorg-container > p{
+    font-size: 24px;
+}
+.addorg-container .required{
+    color: var(--red);
+}
+
+#addorg.form-control{
+    margin: 0 auto;
+}
+
+.addorg-container input:focus,
+.addorg-container textarea:focus{
+    outline: 2px;
+    width: 50px;
+}
+    
+#addorg-logo-upload{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/*add-org ends here*/
+
+
+/* collapsibles */
+.collapsible-button, .collapsible-button-grad {
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-size: 20pt;
+    vertical-align: middle;
+    border: none;
+    text-align: center;
+    align-items: center;
+    outline: none;
+  }
+  
+.active, .collapsible-button:hover, .collapsible-button:active, .collapsible-button:focus {
+    background-color: var(--white);
+    color: var(--red);
+    border: 1pt solid var(--red);
+}
+
+.collapsible-button-cohort {
+    display: none;
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-size: 20pt;
+    vertical-align: middle;
+    border: none;
+    text-align: center;
+    align-items: center;
+    outline: none;
+}
+
+.container-collapsible-button-cohort {
+    margin: 0 10px;
+}
+  
+.content {
+    margin: 18px 0 0 0;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--light-light-grey);
+}
+
+.container-collapsible-content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+}
+
+.container-collapsible-content-orgs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.container-collapsible-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px 20px 0 10px;
+}
+
+.container-collapsible-column a:link,
+.container-collapsible-column a:visited {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.container-collapsible-column a:hover,
+.container-collapsible-column a:focus,
+.container-collapsible-column a:active {
+  color: var(--red);
+  font-weight: bold;
+}
+
+.container-collapsible-column-left {
+      display: flex;
+      flex-direction: column;
+      width: 55%;
+      padding: 10px 20px 0 10px;
+}
+
+.container-collapsible-column-left a:link,
+.container-collapsible-column-left a:visited {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.container-collapsible-column-left a:hover,
+.container-collapsible-column-left a:focus,
+.container-collapsible-column-left a:active {
+    color: var(--red);
+    font-weight: bold;
+}
+
+.container-collapsible-column-right {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 10px 10px 0 10px;
+}
+
+.container-collapsible-column-right a:link,
+.container-collapsible-column-right a:visited {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.container-collapsible-column-right a:hover,
+.container-collapsible-column-right a:focus,
+.container-collapsible-column-right a:active {
+  color: var(--red);
+  font-weight: bold;
+}
+
+.container-collapsible-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px 0 10px;
+}
+
+.container-organization-card-buttons {
+    background-color: var(--red);
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    vertical-align: middle;
+    border: none;
+    text-align: center;
+    align-items: center;
+    outline: none;
+    margin: 0 0 18px 0;
+}
+
+.container-organization-card-buttons:hover {
+    font-weight: bold;
+    color: var(--white);
+}
+
+.container-organization-card-buttons a:link,
+.container-organization-card-buttons a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.container-organization-card-buttons a:hover,
+.container-organization-card-buttons a:focus,
+.container-organization-card-buttons a:active {
+    color: var(--white);
+    font-weight: bold;
+} 
+
+
+/*User Profile*/
+
+.user-profile .flex-container{
+    display: flex;
+    
+}
+
+.user-profile .column-left{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    
+    
+}
+.user-profile .column-right{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    
+    
+}
+
+.user-profile input{
+    height: 30px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  #employed{
+    display: none;
+}
+#add_company{
+    background-color: #cb352a;
+    color: white;
+}
+.uno1 {
+    background-color: #cb352a;
+    color: white;
+    position: relative;
+    left:-1px;
+}
+input[class=uno] {
+    background-color: #cb352a;
+    color: white;
+    
+}
+/*END User Profile*/
+
+/* Error Page starts here */
+.error-number {
+    text-align: center;
+}
+
+.error-message {
+    text-align: center;
+}
+
+.error-page-border {
+    border: 1px solid black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 120px 350px; 
+}
+
+/* Media queries for organizations.ejs page and graduates.ejs page starts here */
+@viewport {
+    width: device-width;
+    zoom: 1.0 ;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@media only screen and (max-width: 480px) {   
+    .content-container-width-70 {
+        width: 95%;
+        align-items: center;
+    }
+
+    .content-container-width-70 h1{
+        font-size: 1.5em;
+    }
+
+    .image-organizations-logo {
+        align-items: center;
+    }
+
+    .image-organizations-logo img {
+        width: 70%;
+        height: auto;
+    }
+    
+    .container-whole-width-row {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5px;
+        width: auto;
+    }
+
+    .image-organizations-logo {
+        margin: 10px 0;
+    }
+
+    .container-modification-height-120 {
+        height: auto;
+    }
+
+    .container-whole-width-row-2 {
+        flex-direction: column;
+    }
+
+    .container-width-30-column {
+        width: 100%;
+        height: 100px;
+        margin: 20px 0;
+    }
+
+    .content-container-width-100-column {
+        align-items: center;
+        display: none;
+    }
+
+    .collapsible-button-cohort {
+        display: inline-block;
+    }
+    
+    .container-collapsible-content {
+        flex-direction: column;
+    }
+
+    .container-collapsible-column-right {
+        width: 100%;
+    }
+
+    .container-collapsible-column-left {
+        width: 100%;
+    }
+
+    .container-collapsible-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 20px 0 20px;
+    }
+
+    .container-collapsible-row {
+        flex-direction: column;
+    }
+
+    .container-collapsible-content-orgs {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (min-width:481px) and (max-width:640px){
+    .container-whole-width-row {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 10%;
+    }
+
+    .image-organizations-logo {
+        align-items: center;
+        margin: 10px;
+    }
+    
+    .image-organizations-logo img {
+        width: 70%;
+        height: auto;
+    }
+    
+    .container-whole-width-row {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5px;
+        width: auto;
+    }
+
+    .container-modification-height-120 {
+        height: auto;
+    }
+
+    .container-whole-width-row-2 {
+        flex-direction: column;
+    }
+
+    .container-width-30-column {
+        width: 100%;
+        height: 50px;
+        margin: 20px 0;
+    }
+
+    .content-container-width-100-column {
+        align-items: center;
+        display: none;
+    }
+
+    .container-whole-width-row-graduate-listing {
+        width: 70%;
+    }
+
+    .collapsible-button-cohort {
+        display: inline-block;
+    }
+
+    .container-collapsible-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 20px 0 20px;
+    }
+
+    .container-collapsible-row {
+        flex-direction: column;
+    }
+
+    .container-collapsible-content-orgs {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width:641px) and (max-width:841px) {   
+    .container-whole-width-row {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 10%;
+    }
+
+    .image-organizations-logo {
+        margin: 10px;
+    }
+
+    .container-modification-height-120 {
+        height: auto;
+    }
+
+    .container-whole-width-row-2 {
+        flex-direction: column;
+    }
+
+    .container-width-30-column {
+        width: 100%;
+        height: 50px;
+        margin: 20px 0;
+    }
+
+    .content-container-width-100-column {
+        align-items: center;
+        display: none;
+    }
+
+    .container-whole-width-row-graduate-listing {
+        width: 70%;
+    }
+
+    .collapsible-button-cohort {
+        display: inline-block;
+    }
+
+    .container-collapsible-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 20px 0 20px;
+    }
+
+    .container-collapsible-row {
+        flex-direction: column;
+    }
+
+    .container-collapsible-content-orgs {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width:842px) and (max-width:877px) {
+    .container-whole-width-row {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 10%;
+    }
+
+    .image-organizations-logo {
+        margin: 10px;
+    }
+
+    .container-modification-height-120 {
+        height: auto;
+    }
+
+    .container-whole-width-row-2 {
+        flex-direction: column;
+
+    }
+
+    .container-width-30-column {
+        width: 100%;
+        height: 50px;
+        margin: 20px 0;
+    }
+
+    .content-container-width-100-column {
+        align-items: center;
+        display: none;
+    }
+
+    .container-whole-width-row-graduate-listing {
+        width: 60%;
+    }
+
+    .collapsible-button-cohort {
+        display: inline-block;
+    }
+
+    .container-collapsible-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 20px 0 20px;
+    }
+
+    .container-collapsible-row {
+        flex-direction: column;
+    }
+
+    .container-collapsible-content-orgs {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width:878px) and (max-width:1100px) {
+    .container-whole-width-row {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 10%;
+    }
+
+    .image-organizations-logo {
+        margin: 10px;
+    }
+
+    .container-modification-height-120 {
+        height: auto;
+    }
+
+    .content-container-width-100-column {
+        align-items: center;
+    }
+
+    .container-whole-width-row-graudate-listing {
+        flex-wrap: wrap;
+    }
+
+    .image-graduates-headshot {
+        margin: 0 10px;
+        width: 49px;
+        border-radius: 0;
+    }
+
+    .collapsible-button-grad {
+        margin: 0 10px;
+    }
+
+    .container-collapsible-content {
+        flex-direction: column;
+    }
+
+    .container-collapsible-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 20px 0 20px;
+    }
+
+    .container-collapsible-row {
+        flex-direction: column;
+    }
+
+    .container-collapsible-content-orgs {
+        flex-direction: column;
+    }
+
+    .container-collapsible-column-left {
+        width: 100%;
+    }
+
+    .container-collapsible-column-right {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width:1101px) and (max-width:1353px) {
+    .container-collapsible-content {
+        flex-direction: column;
+    }
+
+    .container-collapsible-column-left {
+        width: 100%;
+    }
+
+    .container-collapsible-column-right {
+        width: 100%;
+    }
+}
+
+/*User Profile*/
+
+.user-profile .flex-container{
+    display: flex;  
+    flex-direction: row;
+    width: 100%;
+}
+
+.user-profile .column-left,
+.user-profile .column-right {
+    width: 50%;
+    padding-left: 30px; 
+}
+
+.user-profile input{
+    height: 30px;
+}
+
+.user-profile .dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.user-profile .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+  
+.user-profile  .dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.user-profile #employed{
+    display: none;
+}
+
+.user-profile #add_company{
+    background-color: #cb352a;
+    color: white;
+}
+
+.user-profile .uno1 {
+    background-color: #cb352a;
+    color: white;
+    position: relative;
+    left:-1px;
+}
+
+.user-profile input[class=uno] {
+    background-color: #cb352a;
+    color: white;
+} 
+/*END User Profile
