@@ -1,50 +1,131 @@
-<!-- Navbar -->
-<!-- Page Content Starts -->
-
-<% for(let i = 0; i < USERS.length; i++) { %>
-    <div>
-        <p><%= USERS[i].firstName%> <%= USERS[i].lastName %> <%= USERS[i].year %> <%= USERS[i].email %> <%= USERS[i].githubUrl %> <%= USERS[i].linkedinUrl %> <%= USERS[i].phone %> <%= USERS[i].bio %> <%= USERS[i].photo %></p>
-
-        <h4>Current Employer</h4>
-        <p><%=ORG[i].name</p>
-
-        <h4>Previous Employers</h4>
-        <p><%=ORG[i].name</p>
-
-        <h4>Interviewed With</h4>
-        <p><%=ORG[i].name</p>
-    </div>
-<% } %>
-
-<!-- <div class="grad-card-main-container">
-    <div class="grad-card-headshot-contacts-container">
-        <div class="grad-card-headshot">
-            
+<div class="container-whole-width-row-2">
+    <div class="container-width-30-column" id="div-to-elongate-2018">
+        <h2 class="red-text container-cohort-year">
+            2018 COHORT
+            <span class="container-collapsible-button-cohort"><button type="button" class="collapsible-button-cohort cohort-button-2018">+</button></span>
+        </h2>
+        <br>
+        <div class="content-container-width-100-column cohort-grads-2018">
+            <% grads2018.forEach((single_grad) => { %>
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(<%= single_grad.photo %>)"></div>
+                    <h4 class="black-text text-center"><%= single_grad.firstName %><br><%= single_grad.lastName %></h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p><%= single_grad.email %><br><%= single_grad.githubUrl %><br><%= single_grad.linkedinUrl %><br><%= single_grad.phone %></p>
+                            <h4 class="red-text">BIO</h4>
+                            <p><%= single_grad.bio %></p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>                
+            <%});%>
         </div>
-        <div>
-            <h4>Lois Simpson</h4>
-            <h4>CodeSquad Cohort 2020</h4>
-            <p>lsimpson@gmail.com, github.com/lsimpson, <br>www.linkedin.com/in/lois-simpson, <br>617-283-4555</p>
-            
+    </div>
+    <div class="container-width-30-column" id="div-to-elongate-2019">
+        <h2 class="red-text container-cohort-year">
+            2019 COHORT
+            <span class="container-collapsible-button-cohort"><button type="button" class="collapsible-button-cohort cohort-button-2019">+</button></span>
+        </h2>
+        <br>
+        <div class="content-container-width-100-column cohort-grads-2019">
+            <% grads2019.forEach((single_grad) => { %>
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(<%= single_grad.photo %>)"></div>
+                    <h4 class="black-text text-center"><%= single_grad.firstName %><br><%= single_grad.lastName %></h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p><%= single_grad.email %><br><%= single_grad.githubUrl %><br><%= single_grad.linkedinUrl %><br><%= single_grad.phone %></p>
+                            <h4 class="red-text">BIO</h4>
+                            <p><%= single_grad.bio %></p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>                
+            <%});%>
         </div>
     </div>
-        <div class="codesquad-logo-container">
-        <h4>Bio</h4>
-        <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-        
-        <h4>Current Employer</h4>
-        <p>Company Name</p>
-
-        <h4>Previous Employers</h4>
-        <ul>
-            <li>Company Names</li>
-            <li>Company Names</li>
-        </ul>
-        <h4>Interviewed With</h4>
-        <ul>
-            <li>Company Names</li>
-            <li>Company Names</li>
-        </ul>
+    <div class="container-width-30-column" id="div-to-elongate-2020">
+        <h2 class="red-text container-cohort-year">
+            2020 COHORT
+            <span class="container-collapsible-button-cohort"><button type="button" class="collapsible-button-cohort cohort-button-2020">+</button></span>
+        </h2>
+        <br>
+        <div class="content-container-width-100-column cohort-grads-2020">
+            <% grads2020.forEach((single_grad) => { %>
+                <div class="container-whole-width-row-graduate-listing">
+                    <div class="image-graduates-headshot" style="background-image: url(<%= single_grad.photo %>)"></div>
+                    <h4 class="black-text text-center"><%= single_grad.firstName %><br><%= single_grad.lastName %></h4>
+                    <button type="button" class="collapsible-button-grad">+</button>
+                </div>
+                <div class="content">
+                    <div class="container-collapsible-content">
+                        <div class="container-collapsible-column-left">
+                            <h4 class="red-text">CONTACT INFO</h4>
+                            <p><%= single_grad.email %><br><%= single_grad.githubUrl %><br><%= single_grad.linkedinUrl %><br><%= single_grad.phone %></p>
+                            <h4 class="red-text">BIO</h4>
+                            <p><%= single_grad.bio %></p>
+                        </div>
+                        <div class="container-collapsible-column-right">
+                            <h4 class="red-text">CURRENT EMPLOYER</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                            <h4 class="red-text">INTERVIEWED WITH</h4>
+                            <ul>
+                                <a href="#"><li>Company Name link + position</li></a>
+                                <a href="#"><li>Company Name link + position</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>                
+            <%});%>
+        </div>
     </div>
 </div>
- -->
