@@ -113,7 +113,14 @@ function confirmAddWorkedHere () {
 
 function confirmInterviewHere () {
     prompt("Do you want to add yourself to the list of people who have interviewed at this organization?\n \nTell us briefly about your experience being interviewed here.", " hiring process | interviewing questions | whiteboard challenge | etc.");
-};
+}
+//USerProfile add_ a_ btton 
+document.getElementById("add_company").addEventListener("click",addNewCompany)
+
+function addNewCompany(){
+    document.getElementById("employed").style.display="block"
+}
+
 
 /**addexperience starts here */
 let addneworgbutton = document.getElementById('add-new-org');
@@ -158,3 +165,10 @@ function mynewInterview(){
     }
 };
 /**addexperience ends here */
+
+//USerProfile add_ a_ btton 
+document.getElementById("add_company").addEventListener("click",addNewCompany)
+
+function addNewCompany(){
+    document.getElementById("employed").style.display="block"
+}

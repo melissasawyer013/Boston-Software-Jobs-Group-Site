@@ -1,0 +1,12 @@
+<%- include('../partials/header')-%>
+
+<h1>This is an example</h1>
+
+<!-- 
+  Here is the partial that is needed to repeat each person in the database
+  Within the include, you select the partial you want to use and then the data you want to use in that partial
+  The data is coming from the route that is called in order to see this page
+-->
+<%- include('../partials/example-partial', {peopleProp: people})-%>
+
+<%- include('../partials/footer')-%>
