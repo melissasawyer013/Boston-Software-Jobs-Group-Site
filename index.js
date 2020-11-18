@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 let client = require('./db');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 
@@ -20,20 +20,6 @@ app.use('/', route);
 app.get('/', (req, res) => {
   res.render('pages/index');
 })
-
-
-app.listen(PORT, () => {
-  console.log(`Boston Software Jobs up and running on port ${PORT}!!`);
-  let mongo_client = mongodb.MongoClient;
-  mongo_client.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db_client) => {
-      if(err) {
-          console.log("ERROR:" + err);
-      } else {
-          console.log("MONGODB DATABASE CONNECTED");
-          db_handler = db_client.db(DB_NAME);
-      }
-  })
-});
 
 const DB_URL = process.env.DB_URL;
 client.connect(DB_URL, (err) => {

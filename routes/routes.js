@@ -80,4 +80,20 @@ router.get('/error', (req, res) =>{
   res.render('pages/error')
 })
 
+// This is an example of how to get data from the database and have it available for the page you want to render
+// when the user makes a request to this route
+router.get('/example', (req, res) =>{
+  let peopleFromDB = client.db(DB_NAME).collection(DB_GRAD)
+  peopleFromDB.find().toArray( (err, arrayOfPeopleFromDb) => {
+    console.log(arrayOfPeopleFromDb)
+      res.render('pages/example', {
+        people: arrayOfPeopleFromDb
+      });
+  });
+})
+
+router.get('/error', (req, res) =>{
+  res.render('pages/error')
+})
+
 module.exports = router;
