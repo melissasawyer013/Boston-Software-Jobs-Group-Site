@@ -2,31 +2,31 @@
 <%- include('../partials/header')-%>
 <!-- Page Content Starts -->
 
-<form>
+
     <div class="addorg-container">
-        <form action="">
+        <form action="/add-org" method="POST">
             <p>
-                <label for="">Organization name:<span class="required">*</span></label>
-                <input type="text" class="form-control" id="addorg" placeholder="Please input organization name.">
+                <label for="name">Organization name:<span class="required">*</span></label>
+                <input type="text" name="name" class="form-control addorg" id="name" placeholder="Please input organization name.">
             </p>
 
             <p>
-                <label for="">Organization URL:<span class="required">*</span></label></label>
-                <input type="text" class="form-control" id="addorg" placeholder="Please input organization URL.">
+                <label for="url">Organization URL:<span class="required">*</span></label>
+                <input type="text" name="url" class="form-control addorg" id="url" placeholder="Please input organization URL.">
             </p>
 
             <p class="addorg-logo">
-                <label for="">Organization logo:</label>
-                <input type="file" class="form-control-file" id="addorg-logo-upload" placeholder="Default input">
+                <label for="logo">Organization logo:</label>
+                <input type="file" name="logo" class="form-control-file addorg-logo-upload" id="logo" placeholder="Default input">
             </p>
 
             <p>
-                <button type="addorg-submit">Submit</button>
+                <button type="submit">Submit</button>
             </p>
 
         </form>
         
     </div>
-</form>
+
 
 <%- include('../partials/footer')-%>
