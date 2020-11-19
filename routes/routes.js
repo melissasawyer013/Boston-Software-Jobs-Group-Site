@@ -36,9 +36,9 @@ router.post('/add-org', (req, res) => {
   const form_data =req.body;
   console.log(form_data);
 
-  const orgName = form_data['orgName'];
-  const orgUrl = form_data['orgUrl'];
-  const orgLogo = form_data['orgLogo'];
+  const orgName = form_data['name'];
+  const orgUrl = form_data['url'];
+  const orgLogo = form_data['logo'];
 
   console.log(orgName, orgUrl, orgLogo);
 
