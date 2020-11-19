@@ -1,0 +1,55 @@
+<% all_orgs.forEach((single_org) => { %>
+    <div class="content-container-width-70 border-black-1pt">
+        <div class="container-whole-width-row container-modification-height-120">
+            <h2 class="red-text text-center"><%= single_org.name %></h2>
+            <div class="image-organizations-logo">
+                <img src="<%= single_org.logo %>" alt="athenahealth logo">
+            </div>
+            <button type="button" class="collapsible-button">+</button>
+        </div>
+        <div class="content">
+            <div class="container-collapsible-content-orgs">
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">WHO WORKS HERE</h4>
+                    <ul>
+                        <a href="#"><li>Name link</li></a>
+                        <a href="#"><li>Name link</li></a>
+                    </ul>
+                    <h4 class="red-text">WHO HAS WORKED HERE</h4>
+                    <ul>
+                        <a href="#"><li>Name link</li></a>
+                        <a href="#"><li>Name link</li></a>
+                        <a href="#"><li>Name link</li></a>
+                    </ul>
+                    <h4 class="red-text">WHO HAS INTERVIEWED HERE</h4>
+                    <ul>
+                        <a href="#"><li>Name link</li></a>
+                        <a href="#"><li>Name link</li></a>
+                        <a href="#"><li>Name link</li></a>
+                        <a href="#"><li>Name link</li></a>
+                        <a href="#"><li>Name link</li></a>
+                    </ul>
+                </div>
+                <div class="container-collapsible-column">
+                    <h4 class="red-text">INTERVIEWING INSIGHTS</h4>
+                    <p>Breif Description of: hiring process | interviewing questions | whiteboard challenge | other relevant information. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+                    <button type="button" class="container-organization-card-buttons"><a target="_blank" href="#">SEE OPEN<br>POSITIONS</a></button>
+                </div>
+            </div>
+            <div class="container-collapsible-row">
+                <h4 class="red-text text-center">ADD YOURSELF TO THE LISTS ABOVE</h4>
+            </div>
+            <div class="container-collapsible-row">
+                <button type="button" class="container-organization-card-buttons" onclick="confirmAddWorkHere()">
+                    I WORK HERE NOW
+                </button>
+                <button type="button" class="container-organization-card-buttons" onclick="confirmAddWorkedHere()">
+                    I USED TO WORK HERE
+                </button>
+                <button type="button" class="container-organization-card-buttons" onclick="confirmInterviewHere()">
+                    I INTERVIEWED HERE
+                </button>
+            </div>
+        </div>
+    </div>
+<%});%>

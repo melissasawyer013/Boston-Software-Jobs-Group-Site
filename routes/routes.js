@@ -2,7 +2,9 @@ const express = require('express');
 const router = express();
 let client = require('../db');
 const dotenv = require('dotenv');
+const db = require('../db');
 const bodyParser = require('body-parser');
+
 dotenv.config();
 
 router.use(bodyParser.json());
@@ -25,8 +27,19 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/organizations', (req, res) => {
-  res.render('pages/organizations')
+  //This part isn't working.
+  let orgsFromDB = client.db(DB_NAME).collection(DB_ORG);
+  orgsFromDB.find().toArray((err, arrayOfOrgsFromDb) => {
+    //This console.log below shows a length of 0, meaning either our info is not in the database, it's not connecting to the collection properly, or I haven't brought in the data correctly.
+    console.log(`length of arrayofOrgsFromDB: ${arrayOfOrgsFromDb.length}`);
+    //This renders, but the information is being pulled from the hardcoded array of objects for each company coded above the route.
+    res.render('pages/organizations', {
+      all_orgs: arrayOfOrgsFromDb,
+    })
+  })
 })
+
+
 
 router.get('/add-org', (req, res) => {
   res.render('pages/add-org')
@@ -106,7 +119,7 @@ router.get('/user-profile', (req, res) =>{
 router.get('/example', (req, res) =>{
   let peopleFromDB = client.db(DB_NAME).collection(DB_GRAD)
   peopleFromDB.find().toArray( (err, arrayOfPeopleFromDb) => {
-    console.log(arrayOfPeopleFromDb)
+    console.log(arrayOfPeopleFromDb);
       res.render('pages/example', {
         people: arrayOfPeopleFromDb
       });
