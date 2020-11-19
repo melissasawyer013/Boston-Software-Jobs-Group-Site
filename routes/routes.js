@@ -1,8 +1,12 @@
 const express = require('express');
-const router = express.Router();
+const router = express();
 let client = require('../db');
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
 dotenv.config();
+
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded( {extended: true} ));
 
 const DB_NAME = process.env.DB_NAME;
 const DB_ORG = process.env.DB_ORG;
@@ -27,6 +31,39 @@ router.get('/organizations', (req, res) => {
 router.get('/add-org', (req, res) => {
   res.render('pages/add-org')
 })
+
+router.post('/add-org', (req, res) => {
+  const form_data =req.body;
+  console.log(form_data);
+
+  const orgName = form_data['orgName'];
+  const orgUrl = form_data['orgUrl'];
+  const orgLogo = form_data['orgLogo'];
+
+  console.log(orgName, orgUrl, orgLogo);
+
+  const org_obj = {
+    name: orgName,
+    url: orgUrl,
+    logo: orgLogo
+  }
+  console.log(org_obj);
+  
+
+  let orgsFromDB =client.db(DB_NAME).collection(DB_ORG)
+  orgsFromDB.insertOne(org_obj, (error, result) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("AN ORG ENTRY HAS BEEN ADDED")
+
+    res.redirect('/add-org');
+  }
+    
+  })
+})
+
+
 
 router.get('/style-guide', (req, res) => {
   res.render('pages/style-guide')
