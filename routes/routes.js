@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const app = express();
 
-app.use("/static", express.static('./static/'));
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.set('view engine', 'ejs');
 
 // router.get('/about-us', (req, res) => {
 //     res.render('/about-us');
@@ -72,6 +74,39 @@ router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
 
+
+
+app.post('/user-profile', (req, res) => {
+  // req.body contains form information
+  const form_data = req.body;
+  console.log(form_data);
+const clientName = form_data['clientName'];
+const bags = parseInt(form_data['bags']);
+
+const my_object = {
+      "Name": Name,
+      "email": email,
+      "PhoneNumber": PhoneNumber,
+      "LinkedIn": LinkedIn,
+      "Bio": Bio,
+      "email": email,
+      "Where_you_interviewed":Where_you_interviewed,
+      "Where_you_worked":Where_you_worked,
+      "Where_you_currently_work":Where_you_currently_work,
+      "Interview_expirence":Interview_expirence
+  }
+  
+  db_handler.collection().insertOne(my_object, (err, result) => {
+      if (err) {
+          console.log(err);
+      } else {
+          console.log("Profile entered.");
+           res.redirect('/');
+      }
+      
+  });
+  
+});
 
 
 module.exports = router;
