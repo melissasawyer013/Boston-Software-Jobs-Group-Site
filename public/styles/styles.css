@@ -557,7 +557,7 @@ margin-left: 20px;
     color: var(--red);
 }
 
-#addorg.form-control{
+.addorg.form-control{
     margin: 0 auto;
 }
 
@@ -567,7 +567,7 @@ margin-left: 20px;
     width: 50px;
 }
     
-#addorg-logo-upload{
+.addorg-logo-upload{
     width: 70%;
     margin: 0 auto;
     font-size: 18px;
