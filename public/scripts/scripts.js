@@ -165,3 +165,10 @@ function mynewInterview(){
     }
 };
 /**addexperience ends here */
+
+//USerProfile add_ a_ btton 
+document.getElementById("add_company").addEventListener("click",addNewCompany)
+
+function addNewCompany(){
+    document.getElementById("employed").style.display="block"
+}

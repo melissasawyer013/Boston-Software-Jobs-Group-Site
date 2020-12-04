@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "CodeSquad 2020 Grads",
   "license": "ISC",
+  "engines": {
+    "node": "12.18.4"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "heroku": "^7.47.0",
     "mongodb": "^3.6.2",
     "webpack-dev-server": "^3.11.0"
   },

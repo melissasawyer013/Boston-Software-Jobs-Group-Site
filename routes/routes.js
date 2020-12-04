@@ -1,42 +1,82 @@
 const express = require('express');
-const router = express.Router();
+const router = express();
+let client = require('../db');
+const dotenv = require('dotenv');
+const db = require('../db');
+const bodyParser = require('body-parser');
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+dotenv.config();
 
-app.set('view engine', 'ejs');
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded( {extended: true} ));
 
-// router.get('/about-us', (req, res) => {
-//     res.render('/about-us');
-// })
+const DB_NAME = process.env.DB_NAME;
+const DB_ORG = process.env.DB_ORG;
+const DB_GRAD = process.env.DB_GRAD;
 
 router.get('/about-us', (req, res) => {
-    res.render('pages/about-us')
+  res.render('pages/about-us')
 })
 
 router.get('/graduates', (req, res) => {
-    res.render('pages/graduates')
-})
-
-router.get('/graduates-2', (req, res) => {
-  res.render('pages/graduates-2')
-})
-
-router.get('/graduates-3', (req, res) => {
-  res.render('pages/graduates-3')
+  res.render('pages/graduates')
 })
 
 router.get('/login', (req, res) => {
-    res.render('pages/login')
+  res.render('pages/login')
 })
 
 router.get('/organizations', (req, res) => {
-    res.render('pages/organizations')
+  //This part isn't working.
+  let orgsFromDB = client.db(DB_NAME).collection(DB_ORG);
+  orgsFromDB.find().toArray((err, arrayOfOrgsFromDb) => {
+    //This console.log below shows a length of 0, meaning either our info is not in the database, it's not connecting to the collection properly, or I haven't brought in the data correctly.
+    console.log(`length of arrayofOrgsFromDB: ${arrayOfOrgsFromDb.length}`);
+    //This renders, but the information is being pulled from the hardcoded array of objects for each company coded above the route.
+    res.render('pages/organizations', {
+      all_orgs: arrayOfOrgsFromDb,
+    })
+  })
 })
 
+
+
 router.get('/add-org', (req, res) => {
-    res.render('pages/add-org')
+  res.render('pages/add-org')
 })
+
+router.post('/add-org', (req, res) => {
+  const form_data =req.body;
+  console.log(form_data);
+
+  const orgName = form_data['name'];
+  const orgUrl = form_data['url'];
+  const orgLogo = form_data['logo'];
+
+  console.log(orgName, orgUrl, orgLogo);
+
+  const org_obj = {
+    name: orgName,
+    url: orgUrl,
+    logo: orgLogo
+  }
+  console.log(org_obj);
+  
+
+  let orgsFromDB =client.db(DB_NAME).collection(DB_ORG)
+  orgsFromDB.insertOne(org_obj, (error, result) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("AN ORG ENTRY HAS BEEN ADDED")
+
+    res.redirect('/add-org');
+  }
+    
+  })
+})
+
+
 
 router.get('/style-guide', (req, res) => {
   res.render('pages/style-guide')
@@ -47,7 +87,11 @@ router.get('/graduate-card', (req, res) => {
 })
 
 router.get('/organization-card', (req, res) => {
-  res.render('pages/organization-card')
+  // db_handler.collection(DB_ORG).find({}).toArray((err, org) => {
+  //     if(err) return console.log(err);
+  //     if(org) res.render('pages/organization-card', {orgArray:org})
+  // });
+  res.render('pages/organization-card');
 })
 
 router.get('/registration', (req, res) => {
@@ -66,22 +110,16 @@ router.get('/forgotpwd', (req, res) =>{
   res.render('pages/forgotpwd')
 })
 
-router.get('/error', (req, res) =>{
-  res.render('pages/error')
-})
 
 router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
 
-
-
 app.post('/user-profile', (req, res) => {
   // req.body contains form information
   const form_data = req.body;
   console.log(form_data);
-const clientName = form_data['clientName'];
-const bags = parseInt(form_data['bags']);
+
 
 const my_object = {
       "Name": Name,
@@ -91,9 +129,10 @@ const my_object = {
       "Bio": Bio,
       "email": email,
       "Where_you_interviewed":Where_you_interviewed,
+      "Interview_expirence":Interview_expirence,
       "Where_you_worked":Where_you_worked,
-      "Where_you_currently_work":Where_you_currently_work,
-      "Interview_expirence":Interview_expirence
+      "Where_you_currently_work":Where_you_currently_work
+      
   }
   
   db_handler.collection().insertOne(my_object, (err, result) => {
@@ -107,6 +146,40 @@ const my_object = {
   });
   
 });
+
+
+
+// This is an example of how to get data from the database and have it available for the page you want to render
+// when the user makes a request to this route
+router.get('/example', (req, res) =>{
+  let peopleFromDB = client.db(DB_NAME).collection(DB_GRAD)
+  peopleFromDB.find().toArray( (err, arrayOfPeopleFromDb) => {
+    console.log(arrayOfPeopleFromDb);
+      res.render('pages/example', {
+        people: arrayOfPeopleFromDb
+      });
+  });
+})
+
+router.get('/error', (req, res) =>{
+  res.render('pages/error')
+})
+
+// This is an example of how to get data from the database and have it available for the page you want to render
+// when the user makes a request to this route
+router.get('/example', (req, res) =>{
+  let peopleFromDB = client.db(DB_NAME).collection(DB_GRAD)
+  peopleFromDB.find().toArray( (err, arrayOfPeopleFromDb) => {
+    console.log(arrayOfPeopleFromDb)
+      res.render('pages/example', {
+        people: arrayOfPeopleFromDb
+      });
+  });
+})
+
+router.get('/error', (req, res) =>{
+  res.render('pages/error')
+})
 
 
 module.exports = router;
