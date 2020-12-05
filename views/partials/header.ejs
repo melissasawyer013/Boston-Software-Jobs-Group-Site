@@ -11,7 +11,7 @@
 </head>
 <body>
 <!-- Bootstrap Navbar starts Here -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+<nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="/" title="goes to index page of BSWJ website">
         <img src="images/BSJ-logo.png" alt="Boston Software Jobs Logo" style="width: 120px">
     </a>
@@ -21,8 +21,11 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active pr-2">
-                <a class="nav-link nav-links-container" href="/">HOME <span class="sr-only">(current)</span></a>
+            <!-- Took out the class "active from the li directly below this comment to take away the red outline around HOME on the navbar" -->
+            <li class="nav-item pr-2">
+                <a class="nav-link nav-links-container" href="/">HOME 
+                    <!-- <span class="sr-only">(current)</span> -->
+                </a>
             </li>
             <li class="nav-item pr-2">
                 <a class="nav-link nav-links-container" href="about-us">ABOUT US</a>
