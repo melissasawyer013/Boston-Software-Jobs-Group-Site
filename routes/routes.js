@@ -115,35 +115,54 @@ router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
 
-app.post('/user-profile', (req, res) => {
+router.post('/user-profile', (req, res) => {
   // req.body contains form information
   const form_data = req.body;
+   const firstName= form_data['fname']
+   const lastName = form_data['lname']
+   const year = form_data['year']
+   const gitHubUrl = form_data['git']
+   const email = form_data['email']
+   const LinkedIn = form_data['link']
+   const PhoneNumber = form_data['phone']
+   const Bio = form_data['bio']
+   const Where_You_Interviewed = form_data['where_you_interviewed']
+   const Where_you_worked = form_data['where_you_worked']
+   const Where_you_currently_work = form_data['where_you_currently_work']
+   const Interview_expirence = form_data['interview_Expirence']
+
+
   console.log(form_data);
 
 
 const my_object = {
-      "Name": Name,
+      "firstName": firstName,
+      "lastName" : lastName,
+      "year"     :   year,
+      "githubUrl": gitHubUrl,
       "email": email,
-      "PhoneNumber": PhoneNumber,
-      "LinkedIn": LinkedIn,
-      "Bio": Bio,
-      "email": email,
-      "Where_you_interviewed":Where_you_interviewed,
+      "linkedinUrl": LinkedIn,
+      "phone": PhoneNumber,
+      "bio": Bio,
+      "Where_you_interviewed": Where_You_Interviewed,
       "Interview_expirence":Interview_expirence,
       "Where_you_worked":Where_you_worked,
       "Where_you_currently_work":Where_you_currently_work
       
   }
+
+  let usersFromDB =client.db(DB_NAME).collection(DB_GRAD)
+  usersFromDB.insertOne(my_object, (error, result) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("A USER ENTRY HAS BEEN ADDED")
+
+    res.redirect('/user-profile');
+  }
+    
+  })
   
-  db_handler.collection().insertOne(my_object, (err, result) => {
-      if (err) {
-          console.log(err);
-      } else {
-          console.log("Profile entered.");
-           res.redirect('/');
-      }
-      
-  });
   
 });
 
