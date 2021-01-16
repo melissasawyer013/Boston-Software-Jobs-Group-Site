@@ -622,6 +622,12 @@ margin-left: 20px;
     display: none;
     overflow: hidden;
     background-color: var(--light-light-grey);
+    max-width: 100%;
+    
+}
+
+.content p {
+    overflow-wrap: break-word;
 }
 
 .container-collapsible-content {

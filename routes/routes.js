@@ -19,7 +19,18 @@ router.get('/about-us', (req, res) => {
 })
 
 router.get('/graduates', (req, res) => {
-  res.render('pages/graduates')
+  let gradsFromDB = client.db(DB_NAME).collection(DB_GRAD);
+  gradsFromDB.find({"year":2018}).toArray((err, arrayOfGradsFromDb2018) => {
+    gradsFromDB.find({"year":2019}).toArray((err, arrayOfGradsFromDb2019) => {
+      gradsFromDB.find({"year":2020}).toArray((err, arrayOfGradsFromDb2020) => {
+        res.render('pages/graduates', {
+          grads2018: arrayOfGradsFromDb2018,
+          grads2019: arrayOfGradsFromDb2019,
+          grads2020: arrayOfGradsFromDb2020,
+        })
+      })
+    })
+  })
 })
 
 router.get('/login', (req, res) => {
@@ -27,12 +38,8 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/organizations', (req, res) => {
-  //This part isn't working.
   let orgsFromDB = client.db(DB_NAME).collection(DB_ORG);
   orgsFromDB.find().toArray((err, arrayOfOrgsFromDb) => {
-    //This console.log below shows a length of 0, meaning either our info is not in the database, it's not connecting to the collection properly, or I haven't brought in the data correctly.
-    console.log(`length of arrayofOrgsFromDB: ${arrayOfOrgsFromDb.length}`);
-    //This renders, but the information is being pulled from the hardcoded array of objects for each company coded above the route.
     res.render('pages/organizations', {
       all_orgs: arrayOfOrgsFromDb,
     })
@@ -114,6 +121,9 @@ router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
 
+
+module.exports = router;
+module.exports = router;
 // This is an example of how to get data from the database and have it available for the page you want to render
 // when the user makes a request to this route
 router.get('/example', (req, res) =>{
