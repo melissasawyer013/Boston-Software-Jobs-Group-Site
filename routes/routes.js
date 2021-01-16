@@ -101,6 +101,14 @@ router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
 
+router.get('/add-user-page', (req, res) => {
+  res.render('pages/add-user-page')
+})
+
+router.get('/profile', (req, res) => {
+  res.render('pages/profile')
+})
+
 // This is an example of how to get data from the database and have it available for the page you want to render
 // when the user makes a request to this route
 router.get('/example', (req, res) =>{
