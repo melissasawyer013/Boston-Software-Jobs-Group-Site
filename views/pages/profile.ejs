@@ -1,0 +1,17 @@
+<%- include('../partials/header')-%>
+<!-- Page Content Starts -->
+
+<div class="content-container-whole-page">
+    <div class="content-container-width-70"> 
+        <h1 class="text-center red-text">THIS IS YOUR PROFILE</h1>
+        <p class="black-text font-size-130">
+            You are authorized <%= user.email %>
+            <br><br>
+            <%= user.firstName %>
+        </p>
+        <a href="/logout">Logout</a>
+        <br><br>
+    </div>
+</div>
+
+<%- include('../partials/footer')-%>

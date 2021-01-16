@@ -103,7 +103,13 @@ for (let i = 0; i < cohortButton2020.length; i++) {
 };
 
 //JS for the organizations.ejs page - confirmations and prompts pop up when a user tries to add themselves to any of the three lists
+// function confirmAddWorkHere () {
+//     confirm("Do you want to add yourself to the list of people who currently work at this organization?");
+// };
+
 function confirmAddWorkHere () {
+    //edit function to get userID from user logged in, push the name associated with the userID to the array in the company object for people who work there now
+    //function should also update user object to include name of org in the array for current workplaces
     confirm("Do you want to add yourself to the list of people who currently work at this organization?");
 };
 
@@ -115,7 +121,7 @@ function confirmInterviewHere () {
     prompt("Do you want to add yourself to the list of people who have interviewed at this organization?\n \nTell us briefly about your experience being interviewed here.", " hiring process | interviewing questions | whiteboard challenge | etc.");
 }
 //USerProfile add_ a_ btton 
-document.getElementById("add_company").addEventListener("click",addNewCompany)
+document.getElementById("add_company").addEventListener("click", addNewCompany);
 
 function addNewCompany(){
     document.getElementById("employed").style.display="block"
