@@ -17,9 +17,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(PATH.join(__dirname, 'public')));
 
 app.use('/', route);
-app.get('/', (req, res) => {
-  res.render('pages/index');
-})
+// app.get('/', (req, res) => {
+//   res.render('pages/index');
+// })
 
 const DB_URL = process.env.DB_URL;
 client.connect(DB_URL, (err) => {

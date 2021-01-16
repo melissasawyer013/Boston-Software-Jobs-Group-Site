@@ -1,0 +1,19 @@
+<!-- Navbar -->
+<%- include('../partials/header')-%>
+<!-- Page Content Starts -->
+
+<div class="content-container-whole-page">
+    <div class="content-container-width-70"> 
+        <h1 class="text-center red-text">AUTHORIZED</h1>
+        <p class="black-text font-size-130">
+            You are authorized <%= userEmail %>
+            <br>
+            Your user name is <%= user.firstName %>
+            <br>
+            Your user Id is <%= user._id %>
+        </p>
+        <br><br>
+    </div>
+</div>
+
+<%- include('../partials/footer')-%>

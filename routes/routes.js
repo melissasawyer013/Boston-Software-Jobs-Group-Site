@@ -4,6 +4,11 @@ let client = require('../db');
 const dotenv = require('dotenv');
 const db = require('../db');
 const bodyParser = require('body-parser');
+const axios = require('axios');
+let token = null;
+const GitHubStrategy = require('passport-github2').Strategy;
+const passport = require('passport');
+const session = require('express-session');
 
 dotenv.config();
 
@@ -13,32 +18,195 @@ router.use(bodyParser.urlencoded( {extended: true} ));
 const DB_NAME = process.env.DB_NAME;
 const DB_ORG = process.env.DB_ORG;
 const DB_GRAD = process.env.DB_GRAD;
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const SESSION_SECRET = process.env.SESSION_SECRET;
+
+
+// router.set('trust proxy', 1); // trust first proxy
+router.use(session({
+  secret: SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  cookie: { 
+    httpOnly: true,
+    secure: false, 
+    maxAge: 24 * 60 * 60 * 1000,
+  },
+}))
+
+router.use(passport.initialize());
+router.use(passport.session());
+
+
+
+const isAuth = (req, res, next, done) => {
+  if (req.user) {
+    console.log(`${user.firstName} is authenticated`)
+    next();
+  } else {
+    console.log("Not authenticated.")
+    return done()
+  }
+};
+
+// passport.use(new GitHubStrategy({
+//   clientID: CLIENT_ID,
+//   clientSecret: CLIENT_SECRET,
+//   callbackURL: "http://localhost:5000/auth/github/callback"
+// },
+// function(accessToken, refreshToken, profile, done) {
+//   User.findOrCreate({ githubId: profile.id }, function (err, user) {
+//     return done(err, user);
+//   });
+// }
+// ));
+
+passport.use(new GitHubStrategy({
+  clientID: CLIENT_ID,
+  clientSecret: CLIENT_SECRET,
+  callbackURL: "http://localhost:5000/auth/github/callback"
+},
+function(accessToken, refreshToken, profile, done) {
+  // console.log(`The profile from github is: ${profile}`);
+  console.log(`The "html_url": ${profile.html_url}`)
+  return done(null, profile)
+}
+));
+
+
+
+passport.serializeUser(function(user,cb) {
+  cb(null, user)
+});
+
+passport.deserializeUser(function (user, cb) {
+  user=undefined;
+  cb(null, user);
+})
+
+router.get('/login', isAuth, (req, res) => {
+  if (user) {
+    res.redirect('/profile')
+  } else {
+    res.render ('pages/login');
+  } 
+});
+
+let userEmail;
+let user;
+
+router.post('/checkEmail', (req, res) => {
+  let formData = req.body;
+  userEmail = formData['emailAddress'];
+  let gradsFromDB = client.db(DB_NAME).collection(DB_GRAD);
+  gradsFromDB.find({"email":userEmail}).toArray((err, arrayOfMatches) => {
+    user = arrayOfMatches[0];
+    console.log (`The user object is ${JSON.stringify(user)}`)
+    let match = arrayOfMatches[0].email;
+    if (match === userEmail) {
+      res.redirect('/login-after-email');
+    } else {
+      console.log(`match status betweetn ${arrayOfMatches[0]} and ${userEmail} is FALSE`);
+      res.redirect('/login')
+    }
+  });  
+});
+
+router.get('/login-after-email', (req, res) => {
+  res.redirect(`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}`);
+});
+
+
+router.get('/auth/github',
+  passport.authenticate('github', {scope: [ 'user:user.html_url' ]
+  })
+);
+
+
+router.get('/auth/github/callback', 
+  passport.authenticate('github', { failureRedirect: '/login' }),
+  function(req, res) {
+    req.user.html_url;
+    console.log(`html_url: ${user.html_url}`);
+    // Successful authentication, redirect to authorized page.
+    // console.log(user);
+    res.redirect('/authorized', {
+      user: user,
+      userEmail: userEmail,
+    });
+  }
+);
+
+router.get('/authorized', isAuth, (req, res) => {
+  req.user;
+  if (user) {
+    res.render('pages/authorized', {
+      userEmail: userEmail,
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
+});
+
+router.get('/profile', (req, res) => {
+  if (user) {
+    return res.render('pages/profile', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  }
+})
+
+router.get('/', (req, res) => {
+  if (user) {
+    res.render('pages/index', {
+      user: user,
+    });
+  } else {
+    res.render('pages/index');
+  }
+})
 
 router.get('/about-us', (req, res) => {
-  res.render('pages/about-us')
+  if (user) {
+    res.render('pages/about-us', {
+      user: user,
+    });
+  } else {
+    res.render('pages/about-us');
+  }
 })
 
 router.get('/graduates', (req, res) => {
-  let gradsFromDB = client.db(DB_NAME).collection(DB_GRAD);
-  gradsFromDB.find({"year":2018}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2018) => {
-    // arrayOfGradsFromDb2018.sort();
-    gradsFromDB.find({"year":2019}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2019) => {
-      // arrayOfGradsFromDb2019.sort();
-      gradsFromDB.find({"year":2020}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2020) => {
-        // arrayOfGradsFromDb2020.sort();
-        res.render('pages/graduates', {
-          grads2018: arrayOfGradsFromDb2018,
-          grads2019: arrayOfGradsFromDb2019,
-          grads2020: arrayOfGradsFromDb2020,
+  
+  if (user) {
+    let gradsFromDB = client.db(DB_NAME).collection(DB_GRAD);
+    gradsFromDB.find({"year":2018}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2018) => {
+      // arrayOfGradsFromDb2018.sort();
+      gradsFromDB.find({"year":2019}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2019) => {
+        // arrayOfGradsFromDb2019.sort();
+        gradsFromDB.find({"year":2020}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2020) => {
+          // arrayOfGradsFromDb2020.sort();
+          res.render('pages/graduates', {
+            user: user,
+            grads2018: arrayOfGradsFromDb2018,
+            grads2019: arrayOfGradsFromDb2019,
+            grads2020: arrayOfGradsFromDb2020,
+          })
         })
       })
-    })
-  })
-})
+    });
+  } else {
+    res.render('pages/login');
+  };
+});
 
-router.get('/login', (req, res) => {
-  res.render('pages/login')
-})
+// router.get('/login', (req, res) => {
+//   res.render('pages/login')
+// })
 
 router.get('/organizations', (req, res) => {
   let orgsFromDB = client.db(DB_NAME).collection(DB_ORG);
@@ -49,11 +217,26 @@ router.get('/organizations', (req, res) => {
   })
 })
 
-
-
 router.get('/add-org', (req, res) => {
   res.render('pages/add-org')
 })
+
+// working kind of 
+// router.post('/checkEmail', (req, res) => {
+//   let formData = req.body;
+//   let userEmail = formData['emailAddress'];
+//   console.log(userEmail);
+//   let gradsFromDB = client.db(DB_NAME).collection(DB_GRAD);
+//   let searchResults = gradsFromDB.find({"email":userEmail});
+//   console.log(gradsFromDB.find({"email":userEmail}));
+//   if (searchResults != undefined) {
+//     console.log(searchResults);
+//     console.log("I think it was successful");
+//     res.redirect('/');
+//   } else {
+//     res.redirect('/login')
+//   }
+// });
 
 router.post('/add-org', (req, res) => {
   const form_data =req.body;
@@ -85,7 +268,6 @@ router.post('/add-org', (req, res) => {
     
   })
 })
-
 
 
 router.get('/style-guide', (req, res) => {
