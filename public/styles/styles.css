@@ -452,7 +452,6 @@ footer {
     }
 }
 
-/* End of grad Card */
 
 /* Beginning of Org-Card */
 .org-card-main-container {
@@ -895,6 +894,18 @@ input[class=uno] {
     
 }
 /*END User Profile*/
+
+/* Add User Page starts here */
+.add-user-border {
+    border: 1px solid black;
+}
+/* user-profile-page starts here*/
+.profile-button {
+    margin-right: 10px;
+}
+.edit-profile-button {
+    float:right;
+}
 
 /* Error Page starts here */
 .error-number {
@@ -1345,6 +1356,14 @@ input[class=uno] {
         width: 100%;
     }
 }
+/* Media Query for user-profile-page
+@media only screen and (max-width:300px) {
+    .gcard-user-profile {
+        display: flex;
+        flex-wrap: wrap;
+    }
+} */
+
 
 /*User Profile*/
 

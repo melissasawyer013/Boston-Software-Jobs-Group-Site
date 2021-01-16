@@ -266,6 +266,15 @@ router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
 
+<<<<<<< HEAD
+router.get('/add-user-page', (req, res) => {
+  res.render('pages/add-user-page')
+})
+
+router.get('/profile', (req, res) => {
+  res.render('pages/profile')
+})
+=======
 router.post('/user-profile', (req, res) => {
   const form_data = req.body;
   const lastName = form_data['lname']
@@ -308,6 +317,7 @@ router.post('/user-profile', (req, res) => {
     } 
   })
 });
+>>>>>>> c74fc5a7c13a1757af855a95495bf0f087d3eb08
 
 // This is an example of how to get data from the database and have it available for the page you want to render
 // when the user makes a request to this route
