@@ -265,13 +265,17 @@ router.get('/graduates', (req, res) => {
 // })
 
 router.get('/organizations', (req, res) => {
-  let orgsFromDB = client.db(DB_NAME).collection(DB_ORG);
-  orgsFromDB.find().toArray((err, arrayOfOrgsFromDb) => {
-    res.render('pages/organizations', {
-      all_orgs: arrayOfOrgsFromDb,
-    })
-  })
-})
+  if (user) {
+    let orgsFromDB = client.db(DB_NAME).collection(DB_ORG);
+    orgsFromDB.find().toArray((err, arrayOfOrgsFromDb) => {
+      res.render('pages/organizations', {
+        all_orgs: arrayOfOrgsFromDb,
+    });
+  });
+  } else {
+    res.render('pages/login');
+  };
+});
 
 router.get('/add-org', (req, res) => {
   res.render('pages/add-org')
