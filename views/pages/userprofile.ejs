@@ -1,78 +1,89 @@
+
 <%-include('../partials/header')-%>
 <div class="content-container-whole-page user-profile">
-  <form>
-    <div class="flex-container">
+        
+        
+          <form action="/user-profile" method = "post">
+            <div class="flex-container">
+            <div class="column-left">
+                <label for="pic">Image:</label>
+                <img src="images/missing_crop.png">
+                <button class="uno1">Choose File</button><br>
+                <label for="name">First Name:*</label>
+                <input type="text" id="fname" name="fname"required><br>
+                <label for="name">Last Name:*</label>
+                <input type="text" id="lname" name="lname"required><br>
+                <label for="year">Year of Graduation*</label>
+                <input type="text" id="year" name="year"required><br>
+                <label for="email">Email:*</label>
+                <input type="text" id="email" name="email" required><br>
+                <label for="phone">Phone number:</label>
+                <input type="tel" name="phone"><br>
+                <label for="link">LinkedIn:</label>
+                <input type="text"  height="50" name="link"><br>
+                <label for="link">Github:</label>
+                <input type="text"  height="50" name="git"><br>
+                <label for="bio">Bio:</label>
+                <textarea rows="10" cols="50" name="bio" ></textarea><br>
+            </div>
+            <div class="column-right">
+                <label for="employed">Where you interviewed:</label><br>
+                
+                <div class="dropdown">
+                  <label for="cars">Choose a company:</label>
+                  <select name="where_you_interviewed" >
+                    <option value="company">Company 1</option>
+                    <option value="company">Company 2</option>
+                    <option value="company">Company 3</option>
+                    <option value="company">Compnay 4</option>
+                  </select><br>
+                <button id="add_company">Add a company</button>
+                <input type="text" id="employed" name="employed">
+                </div>
+                  
+                  
 
-      <div class="column-left">
-        <label for="pic">Image:</label>
-        <img src="images/missing_crop.png">
-        <button class="uno1">Choose File</button><br>
-        <label for="name">Name:*</label>
-        <input type="text" id="flname" name="name" required><br>
-        <label for="email">Email:*</label>
-        <input type="text" id="flname" name="email" required><br>
-        <label for="phone">Phone number:</label>
-        <input type="tel" name="phone"><br>
-        <label for="link">LinkedIn:</label>
-        <input type="text" height="50" name="link"><br>
-        <label for="bio">Bio:</label>
-        <textarea rows="10" cols="50" name="bio"></textarea><br>
-      </div>
+                <label for="employed">Where you worked:</label><br>
+                
+                <div class="dropdown">
+                  <label for="where_you_worked">Choose a Company:</label>
+                  <select name="cars" id="cars">
+                    <option value="volvo">Company 1</option>
+                    <option value="saab">Company 2</option>
+                    <option value="opel">Company 3</option>
+                    <option value="audi">Compnay 4</option>
+                  </select><br>
+                <button id="add_company">Add a company</button>
+                <input type="text" id="employed" name="employed">
+                </div>
+                  
+                  
+                <label for="exp-interview">Where you currently work:</label><br>
+                <textarea rows="5" cols="50" name="where_you_currently_work"></textarea><br>
 
-      <div class="column-right">
+                <label for="employed">Interview Expirence:</label><br>
+                
+              <div class="dropdown">
+                    <label for="cars">Choose a company:</label>
+                    <select name="interview_Expirence" id="cars">
+                      <option value="volvo">Company 1</option>
+                      <option value="saab">Company 2</option>
+                      <option value="opel">Company 3</option>
+                      <option value="audi">Compnay 4</option>
+                    </select><br>
+                  <button id="add_company">Add a company</button>
+                  <input type="text" id="employed" name="employed">
+                </div>
+                    
+                    
+ 
+        <input class="uno" type="submit" value="Submit"> </div>
+       
+      </div>  
+      </form>
+        
+    
 
-        <label for="employed">Previous employment history:</label><br>
-
-        <div class="dropdown">
-          <label for="cars">Choose a company:</label>
-          <select name="cars" id="cars">
-            <option value="volvo">Company 1</option>
-            <option value="saab">Company 2</option>
-            <option value="opel">Company 3</option>
-            <option value="audi">Compnay 4</option>
-          </select><br>
-          <button id="add_company">Add a company</button>
-          <input type="text" id="employed" name="employed">
-        </div>
-
-        <label for="employed">Where You Interviewed:</label><br>
-
-        <div class="dropdown">
-          <label for="cars">Choose a Company:</label>
-          <select name="cars" id="cars">
-            <option value="volvo">Company 1</option>
-            <option value="saab">Company 2</option>
-            <option value="opel">Company 3</option>
-            <option value="audi">Compnay 4</option>
-          </select><br>
-          <button id="add_company">Add a company</button>
-          <input type="text" id="employed" name="employed">
-        </div>
-
-        <label for="exp-interview">Interview experience:</label><br>
-        <textarea rows="5" cols="50" name="exp-interview"></textarea><br>
-
-        <label for="employed">Currently employed:</label><br>
-
-        <div class="dropdown">
-          <label for="cars">Choose a company:</label>
-          <select name="cars" id="cars">
-            <option value="volvo">Company 1</option>
-            <option value="saab">Company 2</option>
-            <option value="opel">Company 3</option>
-            <option value="audi">Compnay 4</option>
-          </select><br>
-          <button id="add_company">Add a company</button>
-          <input type="text" id="employed" name="employed">
-        </div>
-
-        <div>
-          <input class="uno" type="submit" value="Submit">
-        </div>
-
-      </div>
-    </div>
-  </form>
 </div>
 
 <%-include('../partials/footer')-%>
