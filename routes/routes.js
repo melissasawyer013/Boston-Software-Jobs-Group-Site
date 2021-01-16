@@ -20,9 +20,12 @@ router.get('/about-us', (req, res) => {
 
 router.get('/graduates', (req, res) => {
   let gradsFromDB = client.db(DB_NAME).collection(DB_GRAD);
-  gradsFromDB.find({"year":2018}).toArray((err, arrayOfGradsFromDb2018) => {
-    gradsFromDB.find({"year":2019}).toArray((err, arrayOfGradsFromDb2019) => {
-      gradsFromDB.find({"year":2020}).toArray((err, arrayOfGradsFromDb2020) => {
+  gradsFromDB.find({"year":2018}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2018) => {
+    // arrayOfGradsFromDb2018.sort();
+    gradsFromDB.find({"year":2019}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2019) => {
+      // arrayOfGradsFromDb2019.sort();
+      gradsFromDB.find({"year":2020}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2020) => {
+        // arrayOfGradsFromDb2020.sort();
         res.render('pages/graduates', {
           grads2018: arrayOfGradsFromDb2018,
           grads2019: arrayOfGradsFromDb2019,
