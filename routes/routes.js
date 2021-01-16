@@ -86,8 +86,6 @@ router.post('/add-org', (req, res) => {
   })
 })
 
-
-
 router.get('/style-guide', (req, res) => {
   res.render('pages/style-guide')
 })
@@ -124,9 +122,49 @@ router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
 
+router.post('/user-profile', (req, res) => {
+  const form_data = req.body;
+  const lastName = form_data['lname']
+  const year = form_data['year']
+  const gitHubUrl = form_data['git']
+  const email = form_data['email']
+  const LinkedIn = form_data['link']
+  const PhoneNumber = form_data['phone']
+  const Bio = form_data['bio']
+  const Where_You_Interviewed = form_data['where_you_interviewed']
+  const Where_you_worked = form_data['where_you_worked']
+  const Where_you_currently_work = form_data['where_you_currently_work']
+  const Interview_expirence = form_data['interview_Expirence']
+  const firstName= form_data['fname']
 
-module.exports = router;
-module.exports = router;
+  console.log(form_data);
+
+  const my_object = {
+    "firstName": firstName,
+    "lastName": lastName,
+    "year": year,
+    "githubUrl": gitHubUrl,
+    "email": email,
+    "linkedinUrl": LinkedIn,
+    "phone": PhoneNumber,
+    "bio": Bio,
+    "Where_you_interviewed": Where_You_Interviewed,
+    "Interview_expirence": Interview_expirence,
+    "Where_you_worked": Where_you_worked,
+    "Where_you_currently_work": Where_you_currently_work  
+  }
+
+  let usersFromDB =client.db(DB_NAME).collection(DB_GRAD)
+  usersFromDB.insertOne(my_object, (error, result) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("A USER ENTRY HAS BEEN ADDED");
+      res.redirect('/user-profile');
+    } 
+  })
+});
+
 // This is an example of how to get data from the database and have it available for the page you want to render
 // when the user makes a request to this route
 router.get('/example', (req, res) =>{
@@ -158,5 +196,6 @@ router.get('/example', (req, res) =>{
 router.get('/error', (req, res) =>{
   res.render('pages/error')
 })
+
 
 module.exports = router;
