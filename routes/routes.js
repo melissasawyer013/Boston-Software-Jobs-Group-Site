@@ -23,6 +23,33 @@ const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 
 
+
+let userEmail;
+let user;
+let githubUrl;
+let profileUrl;
+
+router.post('/checkEmail', (req, res) => {
+  let formData = req.body;
+  userEmail = formData['emailAddress'];
+  let gradsFromDB = client.db(DB_NAME).collection(DB_GRAD);
+  gradsFromDB.find({"email":userEmail}).toArray((err, arrayOfMatches) => {
+    user = arrayOfMatches[0];
+    githubUrl = user.githubUrl;
+    console.log (`The user object is ${JSON.stringify(user)}`);
+    console.log(`Their GitHub url is ${githubUrl}`);
+    let match = arrayOfMatches[0].email;
+    if (match === userEmail) {
+      res.redirect('/login-after-email');
+    } else {
+      console.log(`match status betweetn ${arrayOfMatches[0]} and ${userEmail} is FALSE`);
+      res.redirect('/login')
+    }
+  });  
+});
+
+
+
 // router.set('trust proxy', 1); // trust first proxy
 router.use(session({
   secret: SESSION_SECRET,
@@ -37,6 +64,50 @@ router.use(session({
 
 router.use(passport.initialize());
 router.use(passport.session());
+
+passport.serializeUser(function(user, done) {
+  done(null, user)
+});
+
+passport.deserializeUser(function (user, done) {
+  // user=undefined;
+  // githubUrl=undefined;
+  // userEmail=undefined;
+  done(null, user);
+})
+
+// passport.deserializeUser(function (user, cb) {
+//   user=undefined;
+//   githubUrl=undefined;
+//   userEmail=undefined;
+//   cb(null, user);
+// })
+
+passport.use(new GitHubStrategy({
+  clientID: CLIENT_ID,
+  clientSecret: CLIENT_SECRET,
+  // login: githubUsername,
+  callbackURL: "http://localhost:5000/auth/github/callback"
+},
+function(accessToken, refreshToken, profile, done) {
+  // console.log(`The profile from github is: ${profile}`);
+  console.log(`Access token: ${accessToken}`);
+  console.log(`Refresh token: ${refreshToken}`);
+  console.log(`The profile is: ${JSON.stringify(profile)}`);
+  profileUrl = profile.profileUrl;
+  console.log(`The url from the authroizer is: ${profile.profileUrl}`);
+  console.log("Now I'm heading to the /auth/github/callback")
+  return done(null, profile, accessToken, refreshToken);
+  // if (profile.profileUrl === githubUrl) {
+  //   console.log("THEY'RE A MATCH JOHNNY!");
+  //   res.redirect('/authorized')
+    
+  // } else {
+  //   res.redirect('/access-denied')
+  // }
+  
+}
+));
 
 
 
@@ -62,28 +133,8 @@ const isAuth = (req, res, next, done) => {
 // }
 // ));
 
-passport.use(new GitHubStrategy({
-  clientID: CLIENT_ID,
-  clientSecret: CLIENT_SECRET,
-  callbackURL: "http://localhost:5000/auth/github/callback"
-},
-function(accessToken, refreshToken, profile, done) {
-  // console.log(`The profile from github is: ${profile}`);
-  console.log(`The "html_url": ${profile.html_url}`)
-  return done(null, profile)
-}
-));
 
 
-
-passport.serializeUser(function(user,cb) {
-  cb(null, user)
-});
-
-passport.deserializeUser(function (user, cb) {
-  user=undefined;
-  cb(null, user);
-})
 
 router.get('/login', isAuth, (req, res) => {
   if (user) {
@@ -93,29 +144,26 @@ router.get('/login', isAuth, (req, res) => {
   } 
 });
 
-let userEmail;
-let user;
+router.get('/logout', isAuth, (req, res) => {
+  req.logout();
+  user=undefined;
+  githubUrl=undefined;
+  userEmail=undefined;
+  res.redirect('/login');
+});
 
-router.post('/checkEmail', (req, res) => {
-  let formData = req.body;
-  userEmail = formData['emailAddress'];
-  let gradsFromDB = client.db(DB_NAME).collection(DB_GRAD);
-  gradsFromDB.find({"email":userEmail}).toArray((err, arrayOfMatches) => {
-    user = arrayOfMatches[0];
-    console.log (`The user object is ${JSON.stringify(user)}`)
-    let match = arrayOfMatches[0].email;
-    if (match === userEmail) {
-      res.redirect('/login-after-email');
-    } else {
-      console.log(`match status betweetn ${arrayOfMatches[0]} and ${userEmail} is FALSE`);
-      res.redirect('/login')
-    }
-  });  
+router.get('/access-denied', (req, res) => {
+  user=undefined;
+  githubUrl=undefined;
+  userEmail=undefined;
+  res.render('pages/access-denied');
 });
 
 router.get('/login-after-email', (req, res) => {
   res.redirect(`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}`);
 });
+
+//https://github.com/login?client_id=044b8661035f08c4bb41&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D044b8661035f08c4bb41
 
 
 router.get('/auth/github',
@@ -124,22 +172,30 @@ router.get('/auth/github',
 );
 
 
-router.get('/auth/github/callback', 
+router.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
-    req.user.html_url;
-    console.log(`html_url: ${user.html_url}`);
+    req.user;
+    console.log("I made it to the /auth/github/callback function");
+    console.log(`The githubUrl from the database is ${githubUrl} and the profileURL from the user is ${profileUrl}`);
+    // req.user.html_url;
+    // console.log(`html_url: ${user.html_url}`);
     // Successful authentication, redirect to authorized page.
     // console.log(user);
-    res.redirect('/authorized', {
-      user: user,
-      userEmail: userEmail,
-    });
+    if (githubUrl === profileUrl) {
+      console.log('The urls from the user and the database match!');
+      console.log(JSON.stringify(user));
+      res.redirect('/authorized');
+    } else {
+      console.log("The urls from the user and the database don't match");
+      // req.session.destroy();
+      res.redirect('/access-denied');
+    }
+    
   }
 );
 
-router.get('/authorized', isAuth, (req, res) => {
-  req.user;
+router.get('/authorized', (req, res) => {
   if (user) {
     res.render('pages/authorized', {
       userEmail: userEmail,
