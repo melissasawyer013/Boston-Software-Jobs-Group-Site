@@ -42,14 +42,28 @@
             <li class="nav-item">
                 <a class="nav-link nav-links-container" href="graduates">GRADUATES</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link nav-links-container" href="login">LOGIN</a>
-            </li>
+            <% if(locals.user) { %>
+                <li class="nav-item dropdown pr-2">
+                    <a class="nav-link nav-links-container dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ACCOUNT
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item nav-links-container" href="user-profile">VIEW PROFILE</a>
+                        <a class="dropdown-item nav-links-container" href="user-profile-edit">EDIT PROFILE</a>
+                        <a class="dropdown-item nav-links-container" href="/logout">LOGOUT</a>
+                    </div>
+                </li>
+            <% } else { %>
+                <li class="nav-item">
+                    <a class="nav-link nav-links-container" href="login">LOGIN</a>
+                </li>
+            <% } %>
+            
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button type="button" class="btn btn-outline-dark">Search</button>
-        </form>
+        </form> -->
     </div>
 </nav>
 <!-- Bootsrtap Navbar Ends Here -->

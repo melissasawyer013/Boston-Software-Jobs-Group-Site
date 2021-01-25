@@ -21,10 +21,10 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 
-let userEmail;
-let user;
-let githubUrl;
-let profileUrl;
+let userEmail = undefined;
+let user = undefined;
+let githubUrl = undefined;
+let profileUrl = undefined;
 
 router.post('/checkEmail', (req, res) => {
   let formData = req.body;
@@ -89,7 +89,7 @@ const isAuth = (req, res, next, done) => {
 
 router.get('/login', isAuth, (req, res) => {
   if (user) {
-    res.redirect('/profile')
+    res.redirect('/user-profile')
   } else {
     res.render ('pages/login');
   } 
@@ -124,27 +124,27 @@ router.get('/auth/github/callback',
   function(req, res) {
     req.user;
     if (githubUrl === profileUrl) {
-      res.redirect('/authorized');
+      res.redirect('/user-profile');
     } else {
       res.redirect('/access-denied');
     };
   }
 );
 
-router.get('/authorized', (req, res) => {
-  if (user) {
-    res.render('pages/authorized', {
-      userEmail: userEmail,
-      user: user,
-    })
-  } else {
-    res.redirect('/login');
-  };
-});
+// router.get('/authorized', (req, res) => {
+//   if (user) {
+//     res.render('pages/authorized', {
+//       userEmail: userEmail,
+//       user: user,
+//     })
+//   } else {
+//     res.redirect('/login');
+//   };
+// });
 
-router.get('/profile', (req, res) => {
+router.get('/user-profile', (req, res) => {
   if (user) {
-    return res.render('pages/profile', {
+    return res.render('pages/user-profile', {
       user: user,
     })
   } else {
@@ -199,6 +199,7 @@ router.get('/organizations', (req, res) => {
     orgsFromDB.find().toArray((err, arrayOfOrgsFromDb) => {
       res.render('pages/organizations', {
         all_orgs: arrayOfOrgsFromDb,
+        user: user,
     });
   });
   } else {
@@ -207,7 +208,13 @@ router.get('/organizations', (req, res) => {
 });
 
 router.get('/add-org', (req, res) => {
-  res.render('pages/add-org')
+  if (user) {
+    res.render('pages/add-org', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.post('/add-org', (req, res) => {
@@ -239,34 +246,70 @@ router.get('/style-guide', (req, res) => {
 })
 
 router.get('/graduate-card', (req, res) => {
-  res.render('pages/graduate-card')
+  if (user) {
+    res.render('pages/graduate-card', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/organization-card', (req, res) => {
-  res.render('pages/organization-card');
+  if (user) {
+    res.render('pages/organization-card', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/registration', (req, res) => {
-  res.render('pages/registration')
+  if (user) {
+    res.render('pages/registration', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/search-page', (req, res) => {
-  res.render('pages/search-page')
+  if (user) {
+    res.render('pages/search-page', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/add-experience', (req, res) => {
-  res.render('pages/add-experience')
+  if (user) {
+    res.render('pages/add-experience', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/forgotpwd', (req, res) =>{
   res.render('pages/forgotpwd')
 })
 
-router.get('/user-profile', (req, res) =>{
-  res.render('pages/userprofile')
+router.get('/user-profile-edit', (req, res) =>{
+  if (user) {
+    res.render('pages/user-profile-edit', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
-router.post('/user-profile', (req, res) => {
+router.post('/update-user-profile', (req, res) => {
   const form_data = req.body;
   const lastName = form_data['lname']
   const year = form_data['year']
@@ -322,7 +365,13 @@ router.get('/example', (req, res) =>{
 })
 
 router.get('/error', (req, res) =>{
-  res.render('pages/error')
+  if (user) {
+    res.render('pages/error', {
+      user: user,
+    })
+  } else {
+    res.render('pages/error');
+  };
 })
 
 // This is an example of how to get data from the database and have it available for the page you want to render
@@ -337,8 +386,14 @@ router.get('/example', (req, res) =>{
   });
 })
 
-router.get('/error', (req, res) =>{
-  res.render('pages/error')
+router.get('/error', (req, res) => {
+  if (user) {
+    res.render('pages/add-org', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 
