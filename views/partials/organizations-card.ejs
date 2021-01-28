@@ -40,18 +40,18 @@
                 <h4 class="red-text text-center">ADD YOURSELF TO THE LISTS ABOVE</h4>
             </div>
             <div class="container-collapsible-row">
-                <!-- <button type="button" class="container-organization-card-buttons" onclick="confirmAddWorkHere()">
-                    I WORK HERE NOW
-                </button> -->
-                <button type="button" class="container-organization-card-buttons" onclick="confirmAddWorkHere()">
-                    I WORK HERE NOW
-                </button>
-                <button type="button" class="container-organization-card-buttons" onclick="confirmAddWorkedHere()">
-                    I USED TO WORK HERE
-                </button>
-                <button type="button" class="container-organization-card-buttons" onclick="confirmInterviewHere()">
-                    I INTERVIEWED HERE
-                </button>
+                <form action="/addCurrentEmployer" method="POST" onsubmit="return confirm('Do you want to add yourself to the list of people who currently work at this organization?')">
+                    <input type="text" style="display: none;" value="<%= single_org._id %>" id="orgId" name="orgId">
+                    <input type="submit" class="container-organization-card-buttons" value="I WORK HERE NOW">
+                </form>
+                <form action="/addPastEmployer" method="POST" onsubmit="return confirm('Do you want to add yourself to the list of people who have worked at this organization in the past?')">
+                    <input type="text" style="display: none;" value="<%= single_org._id %>" id="orgId" name="orgId">
+                    <input type="submit" class="container-organization-card-buttons" value="I USED TO WORK HERE">
+                </form>
+                <form action="/addInterviewedOrg" method="POST" onsubmit="return confirm('Do you want to add yourself to the list of people who have interviewed at this organization?')">
+                    <input type="text" style="display: none;" value="<%= single_org._id %>" id="orgId" name="orgId">
+                    <input type="submit" class="container-organization-card-buttons" value="I INTERVIEWED HERE">
+                </form>
             </div>
         </div>
     </div>

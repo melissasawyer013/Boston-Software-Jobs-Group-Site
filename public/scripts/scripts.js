@@ -110,7 +110,11 @@ for (let i = 0; i < cohortButton2020.length; i++) {
 function confirmAddWorkHere () {
     //edit function to get userID from user logged in, push the name associated with the userID to the array in the company object for people who work there now
     //function should also update user object to include name of org in the array for current workplaces
-    confirm("Do you want to add yourself to the list of people who currently work at this organization?");
+    if(confirm("Do you want to add yourself to the list of people who currently work at this organization?") === true) {
+        console.log(`Add in the id of ${user.name}, which is ${user._id}`);
+    } else {
+        console.log("abort add");
+    };
 };
 
 function confirmAddWorkedHere () {

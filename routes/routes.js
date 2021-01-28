@@ -8,6 +8,7 @@ let token = null;
 const GitHubStrategy = require('passport-github2').Strategy;
 const passport = require('passport');
 const session = require('express-session');
+const { ObjectID } = require('mongodb');
 
 dotenv.config();
 
@@ -396,5 +397,50 @@ router.get('/error', (req, res) => {
   };
 })
 
+router.post('/addCurrentEmployer', (req, res) => {
+  let userIdToAdd = user._id;
+  const formData = req.body;
+  let orgId = formData['orgId'];
+  client.db(DB_NAME).collection(DB_ORG).updateOne(
+    { "_id": ObjectID(orgId)},
+    { $push: {employedGrads: userIdToAdd}}
+    )
+  client.db(DB_NAME).collection(DB_GRAD).updateOne(
+    {"_id": ObjectID(user._id)},
+    { $push: {currentOrg: orgId}}
+  )
+  res.redirect('/organizations');
+})
+
+
+router.post('/addPastEmployer', (req, res) => {
+  let userIdToAdd = user._id;
+  const formData = req.body;
+  let orgId = formData['orgId'];
+  client.db(DB_NAME).collection(DB_ORG).updateOne(
+    { "_id": ObjectID(orgId)},
+    { $push: {pastGrads: userIdToAdd}}
+    )
+  client.db(DB_NAME).collection(DB_GRAD).updateOne(
+    {"_id": ObjectID(user._id)},
+    { $push: {pastOrgs: orgId}}
+  )
+  res.redirect('/organizations');
+})
+
+router.post('/addInterviewedOrg', (req, res) => {
+  let userIdToAdd = user._id;
+  const formData = req.body;
+  let orgId = formData['orgId'];
+  client.db(DB_NAME).collection(DB_ORG).updateOne(
+    { "_id": ObjectID(orgId)},
+    { $push: {interviewedGrads: userIdToAdd}}
+    )
+  client.db(DB_NAME).collection(DB_GRAD).updateOne(
+    {"_id": ObjectID(user._id)},
+    { $push: {interviewedOrgs: orgId}}
+  )
+  res.redirect('/organizations');
+})
 
 module.exports = router;
