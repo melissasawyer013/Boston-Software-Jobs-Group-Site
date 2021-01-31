@@ -98,6 +98,9 @@ nav {
     height: 40px;
 }
 
+.profile-button a {
+    color: white;
+}
 
 /* Containers */
 .whole-width-content-container-with-image {
@@ -905,6 +908,10 @@ input[class=uno] {
 }
 .edit-profile-button {
     float:right;
+}
+
+.edit-profile-button a {
+    color: white;
 }
 
 /* Error Page starts here */

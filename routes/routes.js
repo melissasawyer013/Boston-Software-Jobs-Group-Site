@@ -266,15 +266,48 @@ router.get('/user-profile', (req, res) =>{
   res.render('pages/userprofile')
 })
 
-<<<<<<< HEAD
-router.get('/add-user-page', (req, res) => {
-  res.render('pages/add-user-page')
+router.get('/add-user', (req, res) => {
+  res.render('pages/add-user')
+})
+
+router.post('/add-user', (req, res) => {
+  const form_data = req.body;
+  const firstName= form_data['fname']
+  const lastName = form_data['lname']
+  const email = form_data['email']
+  const year = form_data['year']
+  const gitHubUrl = form_data['git']
+  
+  console.log(form_data);
+  
+  const my_object = {
+    "firstName": firstName,
+    "lastName": lastName,
+    "email": email,
+    "year": year,
+    "githubUrl": gitHubUrl,
+  }
+
+  let usersFromDB =client.db(DB_NAME).collection(DB_GRAD)
+  usersFromDB.insertOne(my_object, (error, result) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("A NEW USER HAS BEEN ADDED");
+      res.redirect('/profile');
+    } 
+  })
+});
+
+
+
+router.get('/admin', (req, res) => {
+  res.render('pages/admin')
 })
 
 router.get('/profile', (req, res) => {
   res.render('pages/profile')
 })
-=======
 router.post('/user-profile', (req, res) => {
   const form_data = req.body;
   const lastName = form_data['lname']
@@ -317,7 +350,6 @@ router.post('/user-profile', (req, res) => {
     } 
   })
 });
->>>>>>> c74fc5a7c13a1757af855a95495bf0f087d3eb08
 
 // This is an example of how to get data from the database and have it available for the page you want to render
 // when the user makes a request to this route
