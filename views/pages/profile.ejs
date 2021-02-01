@@ -37,44 +37,15 @@
         <br>
         
         <h5><b><%= user.bio %></b></h5>
-        <p>Breif Description of what they're doing in the coding world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
-        
+        <br>        
         <h5><b>Current Employer</b></h5>
         <p><%= user.currentOrg %></p>
-
+        <br>
         <h5><b>Previous Employers</b></h5>
-        <ul>
-            <li><%= user.pastOrgs %></li>
-        </ul>
+        <p><%= user.pastOrgs %></p>
+        <br>
         <h5><b>Interviewed With</b></h5>
-        <ul>
-            <li><%= user.interviewedOrgs %></li>
-        </ul>
+        <p><%= user.interviewedOrgs %></p>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-<%- include('../partials/header')-%>
-<!-- Page Content Starts -->
-
-<div class="content-container-whole-page">
-    <div class="content-container-width-70"> 
-        <h1 class="text-center red-text">THIS IS YOUR PROFILE</h1>
-        <p class="black-text font-size-130">
-            You are authorized <%= user.email %>
-            <br><br>
-            <%= user.firstName %>
-        </p>
-        <a href="/logout">Logout</a>
-        <br><br>
-    </div>
-</div>
-
 <%- include('../partials/footer')-%>

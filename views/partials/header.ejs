@@ -39,17 +39,32 @@
                     <a class="dropdown-item nav-links-container" href="add-org">ADD AN ORG</a>
                 </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown pr-2">
+                <a class="nav-link nav-links-container dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                GRADUATES
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item nav-links-container" href="graduates">SEE ALL GRADS</a>
+                    <a class="dropdown-item nav-links-container" href="/add-user">ADD NEW USER</a>
+                </div>
+            </li>
+            <!-- <li class="nav-item">
                 <a class="nav-link nav-links-container" href="graduates">GRADUATES</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item"> -->
                 <a class="nav-link nav-links-container" href="login">LOGIN</a>
             </li>
-        </ul>
-        <button type="button" class="btn btn btn-danger profile-button">
-            <a href="/profile">Profile</a>
-        </button>
+            <li class="nav-item dropdown pr-2">
+                <a class="nav-link nav-links-container dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MY ACCOUNT
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item nav-links-container" href="/profile">PROFILE</a>
+                    <a class="dropdown-item nav-links-container" href="/logout">LOGOUT</a>
+                </div>
+            </li>
 
+        </ul>         
         <!-- Searchbar starts here -->
         <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
