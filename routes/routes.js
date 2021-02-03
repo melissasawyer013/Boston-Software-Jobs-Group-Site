@@ -272,12 +272,12 @@ router.get('/add-user', (req, res) => {
 
 router.post('/add-user', (req, res) => {
   const form_data = req.body;
-  const firstName= form_data['fname']
-  const lastName = form_data['lname']
+  const firstName= form_data['firstName']
+  const lastName = form_data['lastName']
   const email = form_data['email']
   const year = form_data['year']
-  const gitHubUrl = form_data['git']
-  
+  const githubUrl = form_data['githubUrl']
+  const level = form_data['level']
   console.log(form_data);
   
   const my_object = {
@@ -285,7 +285,8 @@ router.post('/add-user', (req, res) => {
     "lastName": lastName,
     "email": email,
     "year": year,
-    "githubUrl": gitHubUrl,
+    "githubUrl": githubUrl,
+    "level": level
   }
 
   let usersFromDB =client.db(DB_NAME).collection(DB_GRAD)
