@@ -182,3 +182,6 @@ document.getElementById("add_company").addEventListener("click",addNewCompany)
 function addNewCompany(){
     document.getElementById("employed").style.display="block"
 }
+
+
+
