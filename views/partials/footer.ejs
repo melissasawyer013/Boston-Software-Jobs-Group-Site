@@ -26,7 +26,16 @@
                     <ul>
                         <!-- <li><a href="/" class="footer-button">Access my profile</a></li> -->
                         <!-- text below should change from Login to Profile when a user is logged in -->
-                        <li> <a href="/" class="footer-button">Login</a></li>
+                        <% if(locals.user) { %>
+                            <li><a href="user-profile" class="footer-button">Profile</a></li>
+                        <% } else { %>
+                            <li> <a href="login" class="footer-button">Login</a></li>
+                        <% } %>
+
+
+
+
+                        
                     </ul>
                 </div>
             </div>

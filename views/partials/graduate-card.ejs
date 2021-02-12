@@ -16,24 +16,46 @@
                     <div class="container-collapsible-content">
                         <div class="container-collapsible-column-left">
                             <h4 class="red-text">CONTACT INFO</h4>
-                            <p><%= single_grad.email %><br><%= single_grad.githubUrl %><br><%= single_grad.linkedinUrl %><br><%= single_grad.phone %></p>
+                            <!-- This should probably be changed to an unordered list with no bullet points. Same for the 2019 list and the 2020 list -->
+                            <p>
+                                <%= single_grad.email %><br>
+                                <%= single_grad.githubUrl %><br>
+                                <%= single_grad.linkedinUrl %><br>
+                                <%= single_grad.phone %>
+                            </p>
                             <h4 class="red-text">BIO</h4>
                             <p><%= single_grad.bio %></p>
                         </div>
                         <div class="container-collapsible-column-right">
                             <h4 class="red-text">CURRENT EMPLOYER</h4>
                             <ul>
-                                <a href="#"><li>Company Name link + position</li></a>
+                                <% if (single_grad.currentOrg[0]) { %>
+                                    <% for (let i=0; i<single_grad.currentOrg.length; i++) { %>
+                                        <li> <%= single_grad.currentOrg[i] %> </li>
+                                    <% }; %>
+                                <% } else { %>
+                                    <li>no organizations listed</li>
+                                <% }; %>
                             </ul>
                             <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
                             <ul>
-                                <a href="#"><li>Company Name link + position</li></a>
-                                <a href="#"><li>Company Name link + position</li></a>
+                                <% if (single_grad.pastOrgs[0]) { %>
+                                    <% for (let i=0; i<single_grad.pastOrgs.length; i++) { %>
+                                        <li> <%= single_grad.pastOrgs[i] %> </li>
+                                    <% }; %>
+                                <% } else { %>
+                                    <li>no organizations listed</li>
+                                <% }; %>
                             </ul>
                             <h4 class="red-text">INTERVIEWED WITH</h4>
                             <ul>
-                                <a href="#"><li>Company Name link + position</li></a>
-                                <a href="#"><li>Company Name link + position</li></a>
+                                <% if (single_grad.interviewedOrgs[0]) { %>
+                                    <% for (let i=0; i<single_grad.interviewedOrgs.length; i++) { %>
+                                        <li> <%= single_grad.interviewedOrgs[i] %> </li>
+                                    <% }; %>
+                                <% } else { %>
+                                    <li>no organizations listed</li>
+                                <% }; %> 
                             </ul>
                         </div>
                     </div>
@@ -59,24 +81,45 @@
                     <div class="container-collapsible-content">
                         <div class="container-collapsible-column-left">
                             <h4 class="red-text">CONTACT INFO</h4>
-                            <p><%= single_grad.email %><br><%= single_grad.githubUrl %><br><%= single_grad.linkedinUrl %><br><%= single_grad.phone %></p>
+                            <p>
+                                <%= single_grad.email %><br>
+                                <%= single_grad.githubUrl %><br>
+                                <%= single_grad.linkedinUrl %><br>
+                                <%= single_grad.phone %>
+                            </p>
                             <h4 class="red-text">BIO</h4>
                             <p><%= single_grad.bio %></p>
                         </div>
                         <div class="container-collapsible-column-right">
                             <h4 class="red-text">CURRENT EMPLOYER</h4>
                             <ul>
-                                <a href="#"><li>Company Name link + position</li></a>
+                                <% if (single_grad.currentOrg[0]) { %>
+                                    <% for (let i=0; i<single_grad.currentOrg.length; i++) { %>
+                                        <li> <%= single_grad.currentOrg[i] %> </li>
+                                    <% }; %>
+                                <% } else { %>
+                                    <li>no organizations listed</li>
+                                <% }; %>
                             </ul>
                             <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
                             <ul>
-                                <a href="#"><li>Company Name link + position</li></a>
-                                <a href="#"><li>Company Name link + position</li></a>
+                                <% if (single_grad.pastOrgs[0]) { %>
+                                    <% for (let i=0; i<single_grad.pastOrgs.length; i++) { %>
+                                        <li> <%= single_grad.pastOrgs[i] %> </li>
+                                    <% }; %>
+                                <% } else { %>
+                                    <li>no organizations listed</li>
+                                <% }; %>
                             </ul>
                             <h4 class="red-text">INTERVIEWED WITH</h4>
                             <ul>
-                                <a href="#"><li>Company Name link + position</li></a>
-                                <a href="#"><li>Company Name link + position</li></a>
+                                <% if (single_grad.interviewedOrgs[0]) { %>
+                                    <% for (let i=0; i<single_grad.interviewedOrgs.length; i++) { %>
+                                        <li> <%= single_grad.interviewedOrgs[i] %> </li>
+                                    <% }; %>
+                                <% } else { %>
+                                    <li>no organizations listed</li>
+                                <% }; %>
                             </ul>
                         </div>
                     </div>
@@ -102,24 +145,45 @@
                     <div class="container-collapsible-content">
                         <div class="container-collapsible-column-left">
                             <h4 class="red-text">CONTACT INFO</h4>
-                            <p><%= single_grad.email %><br><%= single_grad.githubUrl %><br><%= single_grad.linkedinUrl %><br><%= single_grad.phone %></p>
+                            <p>
+                                <%= single_grad.email %><br>
+                                <%= single_grad.githubUrl %><br>
+                                <%= single_grad.linkedinUrl %><br>
+                                <%= single_grad.phone %>
+                            </p>
                             <h4 class="red-text">BIO</h4>
                             <p><%= single_grad.bio %></p>
                         </div>
                         <div class="container-collapsible-column-right">
                             <h4 class="red-text">CURRENT EMPLOYER</h4>
                             <ul>
-                                <a href="#"><li>Company Name link + position</li></a>
+                                <% if (single_grad.currentOrg[0]) { %>
+                                    <% for (let i=0; i<single_grad.currentOrg.length; i++) { %>
+                                        <li> <%= single_grad.currentOrg[i] %> </li>
+                                    <% }; %>
+                                <% } else { %>
+                                    <li>no organizations listed</li>
+                                <% }; %>
                             </ul>
                             <h4 class="red-text">PREVIOUS EMPLOYERS</h4>
                             <ul>
-                                <a href="#"><li>Company Name link + position</li></a>
-                                <a href="#"><li>Company Name link + position</li></a>
+                                <% if (single_grad.pastOrgs[0]) { %>
+                                    <% for (let i=0; i<single_grad.pastOrgs.length; i++) { %>
+                                        <li> <%= single_grad.pastOrgs[i] %> </li>
+                                    <% }; %>
+                                <% } else { %>
+                                    <li>no organizations listed</li>
+                                <% }; %>
                             </ul>
                             <h4 class="red-text">INTERVIEWED WITH</h4>
                             <ul>
-                                <a href="#"><li>Company Name link + position</li></a>
-                                <a href="#"><li>Company Name link + position</li></a>
+                                <% if (single_grad.interviewedOrgs[0]) { %>
+                                    <% for (let i=0; i<single_grad.interviewedOrgs.length; i++) { %>
+                                        <li> <%= single_grad.interviewedOrgs[i] %> </li>
+                                    <% }; %>
+                                <% } else { %>
+                                    <li>no organizations listed</li>
+                                <% }; %>
                             </ul>
                         </div>
                     </div>

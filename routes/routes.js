@@ -8,6 +8,7 @@ let token = null;
 const GitHubStrategy = require('passport-github2').Strategy;
 const passport = require('passport');
 const session = require('express-session');
+const { ObjectID } = require('mongodb');
 
 dotenv.config();
 
@@ -21,10 +22,10 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 
-let userEmail;
-let user;
-let githubUrl;
-let profileUrl;
+let userEmail = undefined;
+let user = undefined;
+let githubUrl = undefined;
+let profileUrl = undefined;
 
 router.post('/checkEmail', (req, res) => {
   let formData = req.body;
@@ -89,7 +90,7 @@ const isAuth = (req, res, next, done) => {
 
 router.get('/login', isAuth, (req, res) => {
   if (user) {
-    res.redirect('/profile')
+    res.redirect('/user-profile')
   } else {
     res.render ('pages/login');
   } 
@@ -124,27 +125,16 @@ router.get('/auth/github/callback',
   function(req, res) {
     req.user;
     if (githubUrl === profileUrl) {
-      res.redirect('/authorized');
+      res.redirect('/user-profile');
     } else {
       res.redirect('/access-denied');
     };
   }
 );
 
-router.get('/authorized', (req, res) => {
+router.get('/user-profile', (req, res) => {
   if (user) {
-    res.render('pages/authorized', {
-      userEmail: userEmail,
-      user: user,
-    })
-  } else {
-    res.redirect('/login');
-  };
-});
-
-router.get('/profile', (req, res) => {
-  if (user) {
-    return res.render('pages/profile', {
+    return res.render('pages/user-profile', {
       user: user,
     })
   } else {
@@ -173,7 +163,6 @@ router.get('/about-us', (req, res) => {
 })
 
 router.get('/graduates', (req, res) => {
-  
   if (user) {
     let gradsFromDB = client.db(DB_NAME).collection(DB_GRAD);
     gradsFromDB.find({"year":2018}).sort({"lastName":1}).toArray((err, arrayOfGradsFromDb2018) => {
@@ -193,21 +182,90 @@ router.get('/graduates', (req, res) => {
   };
 });
 
+
 router.get('/organizations', (req, res) => {
   if (user) {
     let orgsFromDB = client.db(DB_NAME).collection(DB_ORG);
     orgsFromDB.find().toArray((err, arrayOfOrgsFromDb) => {
+      //creates an array of the grads that currently work at each org, each array element is an array (the order of the associated org is the same order of orgs in the big array(arrayOfOrgsFromDb))
+      let arrayOfCurrentGrads = [];
+      for (let i=0; i<arrayOfOrgsFromDb.length; i++) {
+        arrayOfCurrentGrads.push(arrayOfOrgsFromDb[i].employedGrads); 
+      }
+      //creates an array of the grads that used to work at each org, each array element is an array (the order of the associated org is the same order of orgs in the big array(arrayOfOrgsFromDb))
+      let arrayOfPastGrads = [];
+      for (let i=0; i<arrayOfOrgsFromDb.length; i++) {
+        arrayOfPastGrads.push(arrayOfOrgsFromDb[i].pastGrads); 
+      }
+      //creates an array of the grads that interviewed at each org, each array element is an array (the order of the associated org is the same order of orgs in the big array(arrayOfOrgsFromDb))
+      let arrayOfInterviewedGrads = [];
+      for (let i=0; i<arrayOfOrgsFromDb.length; i++) {
+        arrayOfInterviewedGrads.push(arrayOfOrgsFromDb[i].interviewedGrads); 
+      }
       res.render('pages/organizations', {
         all_orgs: arrayOfOrgsFromDb,
+        user: user,
+        arrayOfCurrentGrads: arrayOfCurrentGrads,
+        arrayOfPastGrads: arrayOfPastGrads,
+        arrayOfInterviewedGrads: arrayOfInterviewedGrads,
+      });
     });
-  });
   } else {
     res.render('pages/login');
-  };
-});
+  }
+})
+
+//This function isn't currently in use
+let getNamesFromIds = function getNamesFromIds(id) {
+  client.db(DB_NAME).collection(DB_GRAD).find({"_id": ObjectID(id)}).toArray( (err, arrayOfPeople) => {
+  let fullName = arrayOfPeople[0].firstName + " " + arrayOfPeople[0].lastName;
+  console.log(`fullName from routes: ${fullName}`)
+  return fullName;
+  })
+};
+
+
+// ORGANIZATIONS CARD ALMOST ELEGANT
+// router.get('/organizations', (req, res) => {
+//   if (user) {
+//     let orgsFromDB = client.db(DB_NAME).collection(DB_ORG);
+//     orgsFromDB.find().toArray((err, arrayOfOrgsFromDb) => {
+//       let arrayOfGrads = [];
+//       for (let i=0; i<arrayOfOrgsFromDb.length; i++) {
+//         arrayOfGrads.push(arrayOfOrgsFromDb[i].employedGrads); 
+//       }
+//       console.log(`arrayOfGrads from routes: ${arrayOfGrads}`);
+
+
+//       let getNamesFromIds = function getNamesFromIds(id) {
+//         client.db(DB_NAME).collection(DB_GRAD).find({"_id": ObjectID(id)}).toArray( (err, arrayOfPeople) => {
+//         let fullName = arrayOfPeople[0].firstName + " " + arrayOfPeople[0].lastName;
+//         console.log(`fullName from routes: ${fullName}`)
+//         return fullName;
+//         })
+//       };
+//       res.render('pages/organizations', {
+//         all_orgs: arrayOfOrgsFromDb,
+//         user: user,
+//         arrayOfGrads: arrayOfGrads,
+//         nameFunction: getNamesFromIds,
+//         fullName: fullName, 
+//       });
+//     });
+//   } else {
+//     res.render('pages/login');
+//   }
+// })
+
 
 router.get('/add-org', (req, res) => {
-  res.render('pages/add-org')
+  if (user) {
+    res.render('pages/add-org', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.post('/add-org', (req, res) => {
@@ -239,34 +297,70 @@ router.get('/style-guide', (req, res) => {
 })
 
 router.get('/graduate-card', (req, res) => {
-  res.render('pages/graduate-card')
+  if (user) {
+    res.render('pages/graduate-card', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/organization-card', (req, res) => {
-  res.render('pages/organization-card');
+  if (user) {
+    res.render('pages/organization-card', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/registration', (req, res) => {
-  res.render('pages/registration')
+  if (user) {
+    res.render('pages/registration', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/search-page', (req, res) => {
-  res.render('pages/search-page')
+  if (user) {
+    res.render('pages/search-page', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/add-experience', (req, res) => {
-  res.render('pages/add-experience')
+  if (user) {
+    res.render('pages/add-experience', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
 router.get('/forgotpwd', (req, res) =>{
   res.render('pages/forgotpwd')
 })
 
-router.get('/user-profile', (req, res) =>{
-  res.render('pages/userprofile')
+router.get('/user-profile-edit', (req, res) =>{
+  if (user) {
+    res.render('pages/user-profile-edit', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
-router.post('/user-profile', (req, res) => {
+router.post('/update-user-profile', (req, res) => {
   const form_data = req.body;
   const lastName = form_data['lname']
   const year = form_data['year']
@@ -322,7 +416,13 @@ router.get('/example', (req, res) =>{
 })
 
 router.get('/error', (req, res) =>{
-  res.render('pages/error')
+  if (user) {
+    res.render('pages/error', {
+      user: user,
+    })
+  } else {
+    res.render('pages/error');
+  };
 })
 
 // This is an example of how to get data from the database and have it available for the page you want to render
@@ -337,9 +437,86 @@ router.get('/example', (req, res) =>{
   });
 })
 
-router.get('/error', (req, res) =>{
-  res.render('pages/error')
+router.get('/error', (req, res) => {
+  if (user) {
+    res.render('pages/add-org', {
+      user: user,
+    })
+  } else {
+    res.redirect('/login');
+  };
 })
 
+//saved old route to in case we try add ids to arrays instead of names
+// router.post('/addCurrentEmployer', (req, res) => {
+//   let userIdToAdd = user._id;
+//   const formData = req.body;
+//   let orgId = formData['orgId'];
+//   client.db(DB_NAME).collection(DB_ORG).updateOne(
+//     { "_id": ObjectID(orgId)},
+//     { $push: {employedGrads: userIdToAdd}}
+//     )
+//   client.db(DB_NAME).collection(DB_GRAD).updateOne(
+//     {"_id": ObjectID(user._id)},
+//     { $push: {currentOrg: orgId}}
+//   )
+//   res.redirect('/organizations');
+// })
+
+router.post('/addCurrentEmployer', (req, res) => {
+  let userName = user.firstName + " " + user.lastName;
+  const formData = req.body;
+  let orgId = formData['orgId'];
+  let orgName = formData['orgName']; 
+
+  //Updates the organization's database object to push the user's name to the array of grads that currently work at this org
+  client.db(DB_NAME).collection(DB_ORG).updateOne(
+    { "_id": ObjectID(orgId)},
+    { $push: {employedGrads: userName}}
+    )
+  //Updates the graduate's database object to push the name of the organization to the currentOrg array
+  client.db(DB_NAME).collection(DB_GRAD).updateOne(
+    {"_id": ObjectID(user._id)},
+    { $push: {currentOrg: orgName}}
+  )
+  res.redirect('/organizations');
+})
+
+
+router.post('/addPastEmployer', (req, res) => {
+  let userName = user.firstName + " " + user.lastName;
+  const formData = req.body;
+  let orgId = formData['orgId'];
+  let orgName = formData['orgName']; 
+  //Updates the organization's database object to push the user's name to the array of grads that used to work at this org
+  client.db(DB_NAME).collection(DB_ORG).updateOne(
+    { "_id": ObjectID(orgId)},
+    { $push: {pastGrads: userName}}
+    )
+  //Updates the graduate's database object to push the name of the organization to the pastOrgs array
+  client.db(DB_NAME).collection(DB_GRAD).updateOne(
+    {"_id": ObjectID(user._id)},
+    { $push: {pastOrgs: orgName}}
+  )
+  res.redirect('/organizations');
+})
+
+router.post('/addInterviewedOrg', (req, res) => {
+  let userName = user.firstName + " " + user.lastName;
+  const formData = req.body;
+  let orgId = formData['orgId'];
+  let orgName = formData['orgName']; 
+  //Updates the organization's database object to push the user's name to the array of grads that interviewed at this org
+  client.db(DB_NAME).collection(DB_ORG).updateOne(
+    { "_id": ObjectID(orgId)},
+    { $push: {interviewedGrads: userName}}
+    )
+  //Updates the graduate's database object to push the name of the organization to the interviewedOrgs array
+  client.db(DB_NAME).collection(DB_GRAD).updateOne(
+    {"_id": ObjectID(user._id)},
+    { $push: {interviewedOrgs: orgName}}
+  )
+  res.redirect('/organizations');
+})
 
 module.exports = router;

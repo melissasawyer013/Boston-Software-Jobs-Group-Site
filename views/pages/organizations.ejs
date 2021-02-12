@@ -5,9 +5,9 @@
     <div class="content-container-width-70">
         <h1 class="red-text text-center">ORGANIZATIONS</h1>
         <br>
-        <p class="font-size-130">Click on the plus button next to each organization's logo to see if any CodeSquad graduates work there, have worked there in the past, and/or have interviewed there. Graduate-submitted insights into the interviewing process are included if that information is available. Additionally, there is a button at the bottom that will take you  to the organization's open positions page. There are three other buttons that will allow you to add yourself to any of three lists if you work at this organization currently, have worked there in the past, and/or have interviewed there.</p>
+        <p class="font-size-130">Hello <%= user.firstName %>. Click on the plus button next to each organization's logo to see if any CodeSquad graduates work there, have worked there in the past, and/or have interviewed there. Graduate-submitted insights into the interviewing process are included if that information is available. Additionally, there is a button at the bottom that will take you  to the organization's open positions page. There are three other buttons that will allow you to add yourself to any of three lists if you work at this organization currently, have worked there in the past, and/or have interviewed there.</p>
     </div>
-    <%- include('../partials/organizations-card', {all_orgs: all_orgs})-%>
+    <%- include('../partials/organizations-card', {all_orgs: all_orgs, user: user, arrayOfCurrentGrads: arrayOfCurrentGrads, arrayOfPastGrads: arrayOfPastGrads, arrayOfInterviewedGrads: arrayOfInterviewedGrads})-%>
     <br><br><br><br><br>
 </div>
 <!-- FOOTER -->

@@ -1,8 +1,9 @@
 <!-- The counter variable will increase by one each time the forEach loop below it iterates. -->
 <!-- The number represented by the counter variable will be usefull in telling the page which array of grads to access -->
-<!-- The /organizations route, when creating an array that contains all of the orgs, also creates parallel arrays in the same order of the orgs that contain the grad names associated with that org. So arrayOfCurrentGrads[0] aligns with all_orgs[0]  -->
+<!-- The /organizations route, when creating an array that contains all of the orgs, also creates a parallel array in the same order of the orgs that contains the grad Ids associated with that org. So arrayOfGrads[0]  -->
 <% let counter = 0;  %>
 <% all_orgs.forEach((single_org) => { %>
+    
     <div class="content-container-width-70 border-black-1pt">
         <div class="container-whole-width-row container-modification-height-120">
             <h2 class="red-text text-center"><%= single_org.name %></h2>
@@ -15,48 +16,42 @@
             <div class="container-collapsible-content-orgs">
                 <div class="container-collapsible-column">
                     <h4 class="red-text">WHO WORKS HERE</h4>
-                    <ul>
-                        <% let currentGrads = arrayOfCurrentGrads[counter]; %>
-                        <% if (currentGrads != undefined) { %>
-                            <% if (currentGrads[0]) { %>
-                                <% for (let i=0; i<currentGrads.length; i++) { %>
-                                    <li> <%= currentGrads[i] %> </li>
-                                <% } %> 
-                            <% } else { %>
-                                <li>no CodeSquad grads in this list</li>
-                            <% } %>
-                        <% }; %>
-                    </ul>
 
+                    <ul>
+                        <!-- Try JSON.parse to get stringified array back to array. Try reviver function. -->
+                        
+                        
+                        <% let grads = arrayOfGrads[counter]; %>
+                        
+                        <!-- WHY does this do this? It says grads is an array, but then treats it as undefined immediately below. -->
+                        <% if (grads != undefined) { %>
+                            <% if (grads[0]) { %>
+                                <% for (let i=0; i<grads.length; i++) { %>
+                                    <% console.log(`nameFunction from ejs: ${nameFunction(grads[i])}`); %>
+                                    <li> <%= grads[i] %> </li>
+                                <% } %>
+                                
+                            <% } %>
+                            
+                        <% }; %>
+                       
+
+                        <% counter++; %>
+                        
+                        
+                     
+                        
+                    </ul>
                     <h4 class="red-text">WHO HAS WORKED HERE</h4>
+                    
                     <ul>
-                        <% let pastGrads = arrayOfPastGrads[counter]; %>
-                        <% if (pastGrads != undefined) { %>
-                            <% if (pastGrads[0]) { %>
-                                <% for (let i=0; i<pastGrads.length; i++) { %>
-                                    <li> <%= pastGrads[i] %> </li>
-                                <% } %> 
-                            <% } else { %>
-                                <li>no CodeSquad grads in this list</li>
-                            <% } %>
-                        <% }; %>
+                      
                     </ul>
-
                     <h4 class="red-text">WHO HAS INTERVIEWED HERE</h4>
+                    
                     <ul>
-                        <% let interviewedGrads = arrayOfInterviewedGrads[counter]; %>
-                        <% if (interviewedGrads != undefined) { %>
-                            <% if (interviewedGrads[0]) { %>
-                                <% for (let i=0; i<interviewedGrads.length; i++) { %>
-                                    <li> <%= interviewedGrads[i] %> </li>
-                                <% } %> 
-                            <% } else { %>
-                                <li>no CodeSquad grads in this list</li>
-                            <% } %>
-                        <% }; %>
+                       
                     </ul>
-                    <!-- Increases the counter to keep up with the array element being iterated through -->
-                    <% counter++; %>
                 </div>
                 <div class="container-collapsible-column">
                     <h4 class="red-text">INTERVIEWING INSIGHTS</h4>
@@ -68,22 +63,16 @@
                 <h4 class="red-text text-center">ADD YOURSELF TO THE LISTS ABOVE</h4>
             </div>
             <div class="container-collapsible-row">
-                
                 <form action="/addCurrentEmployer" method="POST" onsubmit="return confirm('Do you want to add yourself to the list of people who currently work at this organization?')">
                     <input type="text" style="display: none;" value="<%= single_org._id %>" id="orgId" name="orgId">
-                    <input type="text" style="display: none;" value="<%= single_org.name %>" id="orgName" name="orgName">
                     <input type="submit" class="container-organization-card-buttons" value="I WORK HERE NOW">
                 </form>
-
                 <form action="/addPastEmployer" method="POST" onsubmit="return confirm('Do you want to add yourself to the list of people who have worked at this organization in the past?')">
                     <input type="text" style="display: none;" value="<%= single_org._id %>" id="orgId" name="orgId">
-                    <input type="text" style="display: none;" value="<%= single_org.name %>" id="orgName" name="orgName">
                     <input type="submit" class="container-organization-card-buttons" value="I USED TO WORK HERE">
                 </form>
-
                 <form action="/addInterviewedOrg" method="POST" onsubmit="return confirm('Do you want to add yourself to the list of people who have interviewed at this organization?')">
                     <input type="text" style="display: none;" value="<%= single_org._id %>" id="orgId" name="orgId">
-                    <input type="text" style="display: none;" value="<%= single_org.name %>" id="orgName" name="orgName">
                     <input type="submit" class="container-organization-card-buttons" value="I INTERVIEWED HERE">
                 </form>
             </div>
